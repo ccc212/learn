@@ -1,6 +1,4 @@
-package day1.stringmethod;
-
-import java.sql.SQLOutput;
+package day1.case2.stringmethod;
 
 public class demo1 {
     public static void main(String[] args) {

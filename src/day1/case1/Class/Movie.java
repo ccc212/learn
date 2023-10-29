@@ -1,4 +1,4 @@
-package day1.Class;
+package day1.case1.Class;
 
 public class Movie {
     private int id;

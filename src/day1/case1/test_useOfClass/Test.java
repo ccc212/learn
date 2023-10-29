@@ -1,4 +1,4 @@
-package day1.case1.test;
+package day1.case1.test_useOfClass;
 
 import day1.case1.Class.Movie;
 

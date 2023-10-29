@@ -1,4 +1,4 @@
-package day1.case2.test;
+package day1.case2.test_login;
 
 import java.util.Scanner;
 
