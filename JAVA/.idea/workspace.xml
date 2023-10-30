@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32db480c-138c-4c37-856c-84a20b26b6ff" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/day1/Class/Movie.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/day1/test/MovieService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/day1/test/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day1/Class/Movie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day1/case1/Class/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day1/case1/Class/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day1/case1/test_useOfClass/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day1/case1/test_useOfClass/MovieService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day1/case1/test_useOfClass/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day1/case1/test_useOfClass/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day1/case2/stringmethod/demo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day1/case2/stringmethod/demo1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day1/case2/test_login/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day1/case2/test_login/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day1/test/MovieService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day1/test/Test.java" beforeDir="false" />
-    </list>
+    <list default="true" id="32db480c-138c-4c37-856c-84a20b26b6ff" name="变更" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
