@@ -2,37 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32db480c-138c-4c37-856c-84a20b26b6ff" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/day1/_string/string/demo2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day1/_string/string/demo3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day1/_string/string/demo4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day1/_string/test/test2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day1/_string/test/test3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day1/_string/test/test4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day2/_list/list/ArrayListDemo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day2/_list/list/ArrayListDemo2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day2/_list/test/ArrayListTest1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day2/_list/test/ArrayListTest2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day2/_list/test/ArrayListTest3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day2/_list/test/ArrayListTest4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day2/_list/test/ArrayListTest5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day2/_list/test/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day2/_stringbuilder/stringbuilder/StringBuilderDemo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day2/_stringbuilder/stringbuilder/StringBuilderDemo2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day2/_stringbuilder/stringbuilder/StringBuilderDemo3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day2/_stringbuilder/test/StringBuilderTest1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day2/_stringbuilder/test/StringBuilderTest2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day2/_studentManager/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day2/_studentManager/test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/day1/case1/Class/Movie.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/day1/case1/test/MovieService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/day1/case1/test/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/day1/case2/stringmethod/demo1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/day1/case2/test/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day1/case1/Class/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day1/_class/Class/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day1/case1/test_useOfClass/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day1/_class/test/MovieService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day1/case1/test_useOfClass/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day1/_class/test/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day1/case2/stringmethod/demo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day1/_string/string/demo1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day1/case2/test_login/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day1/_string/test/test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/day2/_123.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +52,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="应用程序.StringBuilderTest2">
+  <component name="RunManager" selected="应用程序.test">
     <configuration name="StringBuilderTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="day2._stringbuilder.test.StringBuilderTest2" />
       <module name="learn" />
@@ -106,12 +79,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day1._string.test.test2" />
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day2._studentManager.test" />
       <module name="learn" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day1._string.test.*" />
+          <option name="PATTERN" value="day2._studentManager.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,11 +120,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.test" />
         <item itemvalue="应用程序.StringBuilderTest2" />
         <item itemvalue="应用程序.demo2" />
         <item itemvalue="应用程序.test4" />
         <item itemvalue="应用程序.test3" />
-        <item itemvalue="应用程序.test2" />
       </list>
     </recent_temporary>
   </component>
