@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32db480c-138c-4c37-856c-84a20b26b6ff" name="变更" comment="" />
+    <list default="true" id="32db480c-138c-4c37-856c-84a20b26b6ff" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/src/day3/_extends/ExtendsDemo1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day3/_extends/ExtendsDemo2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day3/_extends/ExtendsDemo3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day3/_extends/ExtendsDemo4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day3/_extends/constructor/constructor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day3/_extends/test/Coder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day3/_extends/test/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day3/_extends/test/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day3/_extends/test/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day3/_extends/test/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day3/_extends/test/Teacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day3/_extends/test/Test1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day3/_extends/test/Test2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day3/_final/FinalDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day3/_static/StaticDemo1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day3/_static/StaticDemo2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day3/_static/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day3/_static/test/ArrayTools.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day3/_static/test/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day3/_super/SuperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day3/_super/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
