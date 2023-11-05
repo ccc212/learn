@@ -1,4 +1,4 @@
-package com.itheima.design.template;
+package day6._template;
 
 public class Test {
     public static void main(String[] args) {

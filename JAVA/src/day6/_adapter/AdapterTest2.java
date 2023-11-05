@@ -1,4 +1,4 @@
-package com.itheima.design.adapter;
+package day6._adapter;
 
 public class AdapterTest2 {
     /*

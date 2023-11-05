@@ -1,4 +1,4 @@
-package com.itheima.listener;
+package day6._listener;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

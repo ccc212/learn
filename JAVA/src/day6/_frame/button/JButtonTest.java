@@ -1,4 +1,4 @@
-package com.itheima.frame.button;
+package day6._frame.button;
 
 import javax.swing.*;
 

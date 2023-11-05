@@ -1,4 +1,4 @@
-package com.itheima.frame;
+package day6._frame;
 
 import javax.swing.*;
 

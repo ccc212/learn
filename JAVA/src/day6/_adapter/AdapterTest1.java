@@ -1,4 +1,4 @@
-package com.itheima.design.adapter;
+package day6._adapter;
 
 import javax.swing.*;
 import java.awt.event.KeyAdapter;

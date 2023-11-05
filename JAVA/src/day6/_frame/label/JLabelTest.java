@@ -1,4 +1,4 @@
-package com.itheima.frame.label;
+package day6._frame.label;
 
 import javax.swing.*;
 
@@ -26,15 +26,15 @@ public class JLabelTest {
         frame.getContentPane().add(jl2);
 
         // JLabel展示图片
-        JLabel imgLabel_3png = new JLabel(new ImageIcon("D:\\image\\3.png"));
+        JLabel imgLabel_3png = new JLabel(new ImageIcon("E:\\gitProject\\learn\\JAVA\\image\\3.png"));
         imgLabel_3png.setBounds(50, 150, 100,100);
         frame.getContentPane().add(imgLabel_3png);
 
-        JLabel imgLabel_2png = new JLabel(new ImageIcon("D:\\image\\2.png"));
+        JLabel imgLabel_2png = new JLabel(new ImageIcon("E:\\gitProject\\learn\\JAVA\\image\\2.png"));
         imgLabel_2png.setBounds(150, 150, 100, 100);
         frame.getContentPane().add(imgLabel_2png);
 
-        JLabel img = new JLabel(new ImageIcon("D:\\image\\win.png"));
+        JLabel img = new JLabel(new ImageIcon("E:\\gitProject\\learn\\JAVA\\image\\win.png"));
         img.setBounds(50, 250, 266, 88);
         frame.getContentPane().add(img);
 
