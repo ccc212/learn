@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/maven-project01/pom.xml" />
+        <option value="$PROJECT_DIR$/maven-project02/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../BaiduNetdiskDownload/资料/JavaWeb/day04-Maven-SpringBootWeb入门/资料/Maven/04. 依赖管理-准备工作/maven-projectA/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../BaiduNetdiskDownload/资料/JavaWeb/day04-Maven-SpringBootWeb入门/资料/Maven/04. 依赖管理-准备工作/maven-projectB/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../BaiduNetdiskDownload/资料/JavaWeb/day04-Maven-SpringBootWeb入门/资料/Maven/04. 依赖管理-准备工作/maven-projectC/pom.xml" />
+        <option value="$PROJECT_DIR$/maven-projectA/pom.xml" />
+        <option value="$PROJECT_DIR$/maven-projectB/pom.xml" />
+        <option value="$PROJECT_DIR$/maven-projectC/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/pom.xml" />
       </list>
     </option>
   </component>
