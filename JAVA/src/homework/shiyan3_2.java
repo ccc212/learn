@@ -2,6 +2,8 @@ package homework;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+//编写简单的成绩管理应用程序，定义二个异常类：录入的成绩低于0分和成绩超过100分的异常。
+//当录入一门课程的成绩（整数）时，能够处理录入数据的类型错误异常、录入的成绩低于0分和成绩超过100分的异常。
 
 class OverflowException extends Exception {
     String message;

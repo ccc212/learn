@@ -1,4 +1,7 @@
 package homework;
+//编写程序,　设计一个父类People及其二个子类Student、Teacher,分别为这三个类设计相应的成员属性和行为，
+// 要求：Student、Teacher类重写People类的printInfo方法，并声明父类对象来表示子类的对象，
+// 通过该对象调用被子类重写的printInfo方法来输出其相应的属性值。
 class People{
     String name;
     int age;

@@ -4,7 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+//编写程序，从界面输入学生的姓名和学号信息，按下“确定”按钮后，则判断学号信息是否满足：
+// 以2020打头、长度为10位的数字串，满足则在文本框中输出“欢迎你！XX同学！”，否则在文本框中输出“格式不对！”。
 public class shiyan5_2 extends JFrame {
     private JTextField nameField;
     private JTextField idField;

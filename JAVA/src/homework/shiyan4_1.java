@@ -2,7 +2,7 @@ package homework;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+//编程实现输入若干英文个姓名，输出以chen(不分大小写)开头的姓名。
 public class shiyan4_1 {
     static ArrayList<String>list=new ArrayList<>();
 
