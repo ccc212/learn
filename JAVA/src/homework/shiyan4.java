@@ -64,6 +64,17 @@ class MyList<T extends Entity>{
         MyList.remove(entity);
         printEntity();
     }
+    public int size(){
+        return MyList.size();
+    }
+    public T getEntity(int index){
+        if(index<0||index>size()){
+            System.out.println("下标越界");
+            return null;
+        }else{
+            return MyList.get(index);
+        }
+    }
 }
 public class shiyan4 {
     public static void main(String[] args) {
