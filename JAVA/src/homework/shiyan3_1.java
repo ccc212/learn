@@ -2,6 +2,7 @@ package homework;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+//编程实现输入二个整数，输出它们的商。要求使用异常机制：当除数为0时，输出除数为0。当输入的数据出现其它字符时，重新输入数据。
 
 public class shiyan3_1 {
     public static void main(String[] args) {

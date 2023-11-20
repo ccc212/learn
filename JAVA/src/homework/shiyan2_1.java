@@ -1,5 +1,6 @@
 package homework;
 import java.util.Scanner;
+//编写程序，读取1到100之间的整数，然后计算每个数出现的次数。(假设输入是以0结束的)
 public class shiyan2_1 {
     public static void main(String[] args) {
         int [] num = new int[101];

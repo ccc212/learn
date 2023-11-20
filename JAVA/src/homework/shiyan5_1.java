@@ -5,7 +5,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+//编写一个猜数字的游戏，按下“产生随机数”按钮产生一个0~9的随机数，则在屏幕的提示框显示“输入所猜测的数字”，
+// 当输入所猜测的数字并按“确定”按钮后，在提示框中提示“输入正确”(或“猜小了”、或“猜大了”)。
 public class shiyan5_1 extends JFrame {
     private int randomNumber;
     private JTextField inputField;

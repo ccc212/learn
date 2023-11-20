@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="32db480c-138c-4c37-856c-84a20b26b6ff" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day8/_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/homework/~$1223_赖明轩（实验二）.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/learn/day1/_class/Class/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day1/_class/Class/Movie.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/learn/day1/_class/test/MovieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day1/_class/test/MovieService.class" afterDir="false" />
@@ -163,6 +166,13 @@
       <change beforePath="$PROJECT_DIR$/out/production/learn/day5/_lambda/test/RandomNumHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day5/_lambda/test/RandomNumHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/learn/day5/_lambda/test/ShowHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day5/_lambda/test/ShowHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/learn/day5/_lambda/test/StringHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day5/_lambda/test/StringHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/day6/_adapter/AdapterTest1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day6/_adapter/AdapterTest1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/day6/_adapter/AdapterTest1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day6/_adapter/AdapterTest1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/day6/_adapter/AdapterTest2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day6/_adapter/AdapterTest2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/day6/_adapter/和尚.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day6/_adapter/和尚.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/day6/_adapter/和尚Adapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day6/_adapter/和尚Adapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/day6/_adapter/唐僧.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day6/_adapter/唐僧.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/day6/_adapter/鲁智深.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day6/_adapter/鲁智深.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/learn/day6/_frame/JFrameTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day6/_frame/JFrameTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/learn/day6/_frame/button/JButtonTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day6/_frame/button/JButtonTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/learn/day6/_frame/label/JLabelTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day6/_frame/label/JLabelTest.class" afterDir="false" />
@@ -173,7 +183,15 @@
       <change beforePath="$PROJECT_DIR$/out/production/learn/day6/_listener/Tips$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day6/_listener/Tips$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/learn/day6/_listener/Tips$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day6/_listener/Tips$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/learn/day6/_listener/Tips.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day6/_listener/Tips.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/day6/_test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/day6/_template/CompositionTemplate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day6/_template/CompositionTemplate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/day6/_template/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day6/_template/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/day6/_template/Tom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day6/_template/Tom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/day6/_template/Tony.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day6/_template/Tony.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day7/_1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/homework/shiyan4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/homework/shiyan4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/homework/shiyan5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/homework/shiyan5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/homework/软件1223_赖明轩（实验二）.docx" beforeDir="false" afterPath="$PROJECT_DIR$/src/homework/软件1223_赖明轩（实验二）.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,6 +219,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2XQfxbYlOhpzruCRBqIYmfDviQf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -210,31 +231,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="项目" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
-  <component name="RunManager" selected="应用程序.test">
-    <configuration name="ActionListenerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day6._listener.ActionListenerTest" />
-      <module name="learn" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="day6._listener.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "E:/gitProject/learn/JAVA",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="应用程序.JButtonTest">
     <configuration name="JButtonTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="day6._frame.button.JButtonTest" />
       <module name="learn" />
@@ -261,12 +273,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day6._test" />
+    <configuration name="shiyan5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.shiyan5" />
       <module name="learn" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day6.*" />
+          <option name="PATTERN" value="homework.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -274,20 +286,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test" />
+    <configuration name="shiyan5_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.shiyan5_1" />
       <module name="learn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="shiyan5_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.shiyan5_2" />
+      <module name="learn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.test" />
-        <item itemvalue="应用程序.ActionListenerTest" />
-        <item itemvalue="应用程序.JLabelTest" />
-        <item itemvalue="应用程序._test" />
         <item itemvalue="应用程序.JButtonTest" />
+        <item itemvalue="应用程序.shiyan5" />
+        <item itemvalue="应用程序.JLabelTest" />
+        <item itemvalue="应用程序.shiyan5_1" />
+        <item itemvalue="应用程序.shiyan5_2" />
       </list>
     </recent_temporary>
   </component>
@@ -299,8 +330,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698566476482</updated>
+      <workItem from="1700231859722" duration="1428000" />
+      <workItem from="1700283225838" duration="1486000" />
+      <workItem from="1700299397889" duration="4695000" />
+      <workItem from="1700455760683" duration="6974000" />
+      <workItem from="1700465784040" duration="998000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

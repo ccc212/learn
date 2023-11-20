@@ -2,6 +2,7 @@ package homework;
 
 import java.util.ArrayList;
 import java.util.List;
+//编写二个实体类(如学生、用户、老师等)，再编写泛型类，该类的成员变量是一个存放以上实体类的List,该泛型类具有插入实体对象和输出List内容的方法。
 class Student {
     private int id;
     private String name;
