@@ -5,37 +5,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32db480c-138c-4c37-856c-84a20b26b6ff" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/day7/CharacterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day7/CopyDirTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day7/CopyTest1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day7/CopyTest2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day7/DeleteTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day7/ImageTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day7/buffer/BufferedStreamDemo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day7/buffer/BufferedStreamDemo2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day7/buffer/BufferedStreamDemo3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day7/character/StringDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day7/character/reader/FileInputStreamDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day7/character/reader/FileReaderDemo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day7/character/reader/FileReaderDemo2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day7/character/writer/FileWriterDemo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day7/character/writer/FileWriterDemo2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/day7/CharacterTest$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/day7/CharacterTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/day7/CopyDirTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/day7/CopyTest1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/day7/CopyTest2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/day7/DeleteTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/day7/ImageTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/day7/buffer/BufferedStreamDemo1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/day7/buffer/BufferedStreamDemo2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/day7/buffer/BufferedStreamDemo3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/day7/character/StringDemo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/day7/character/reader/FileInputStreamDemo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/day7/character/reader/FileReaderDemo1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/day7/character/reader/FileReaderDemo2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/day7/character/writer/FileWriterDemo1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/day7/character/writer/FileWriterDemo2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/day8/_ip/InetAddressTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/day8/_udp1/Client.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/day8/_udp1/Server.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/day8/_udp2/Client.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/day8/_udp2/Server.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/test/_1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/learn/test/_2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day8/_ip/InetAddressTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day8/_tcp1/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day8/_tcp1/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day8/_tcp2/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day8/_tcp2/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day8/_tcp3/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day8/_tcp3/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day8/_tcp3/ServerReaderThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day8/_tcp4/ClentReaderThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day8/_tcp4/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day8/_tcp4/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day8/_tcp4/ServerReaderThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day8/_tcp5/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day8/_tcp5/ServerReaderThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day8/_tcp6/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day8/_tcp6/ServerReaderRunnable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day8/_udp1/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day8/_udp1/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day8/_udp2/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day8/_udp2/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaWeb/springboot-web-quickstart/springboot-web-quickstart/src/main/resources/static/01. GET-POST.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaWeb/springboot-web-quickstart/springboot-web-quickstart/响应状态码.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/Entity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/MyList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/MyList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/Stu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/Stu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/shiyan4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/shiyan4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/shiyan5$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/shiyan5$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/shiyan5$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/shiyan5$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/shiyan5$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/shiyan5$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/shiyan5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/shiyan5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/~$1223_赖明轩（实验二）.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/软件1223_赖明轩.docx" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/软件1223_赖明轩.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/软件1223_赖明轩（实验二）.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/homework/~$1223_赖明轩（实验二）.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/homework/软件1223_赖明轩.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/homework/软件1223_赖明轩（实验三）.docx" beforeDir="false" afterPath="$PROJECT_DIR$/src/homework/软件1223_赖明轩（实验三）.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/day1/_string/string/demo4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/day1/_string/string/demo4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/day8/_1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/~$1223_赖明轩（实验三）.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/软件1223_赖明轩.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/软件1223_赖明轩（实验三）.docx" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/软件1223_赖明轩（实验三）.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day8/_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaWeb/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaWeb/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaWeb/springboot-web-quickstart/springboot-web-quickstart/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaWeb/springboot-web-quickstart/springboot-web-quickstart/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaWeb/springboot-web-quickstart/springboot-web-quickstart/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaWeb/springboot-web-quickstart/springboot-web-quickstart/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaWeb/springboot-web-quickstart/springboot-web-quickstart/mvnw.cmd" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,29 +104,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "E:/BaiduNetdiskDownload/资料/进阶篇",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/BaiduNetdiskDownload/资料/进阶篇&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="应用程序.shiyan5 (3)">
-    <configuration name="shiyan5 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.shiyan5" />
+}</component>
+  <component name="RunManager" selected="应用程序._1">
+    <configuration name="Client" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day8._udp2.Client" />
       <module name="learn" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.*" />
+          <option name="PATTERN" value="day8._udp2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day8._udp2.Server" />
+      <module name="learn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day8._udp2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,12 +152,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="shiyan5 (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.shiyan5" />
+    <configuration name="_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test._1" />
       <module name="learn" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.*" />
+          <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,12 +165,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="shiyan5 (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.shiyan5" />
+    <configuration name="_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test._2" />
       <module name="learn" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.*" />
+          <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -131,12 +178,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="shiyan5 (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.shiyan5" />
+    <configuration name="demo4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day1._string.string.demo4" />
       <module name="learn" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.*" />
+          <option name="PATTERN" value="day1._string.string.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,26 +191,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="shiyan5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.shiyan5" />
-      <module name="learn" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="homework.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="应用程序._1" />
+      <item itemvalue="应用程序._2" />
+      <item itemvalue="应用程序.Client" />
+      <item itemvalue="应用程序.demo4" />
+      <item itemvalue="应用程序.Server" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.shiyan5 (3)" />
-        <item itemvalue="应用程序.shiyan5" />
-        <item itemvalue="应用程序.shiyan5 (2)" />
-        <item itemvalue="应用程序.shiyan5 (1)" />
-        <item itemvalue="应用程序.shiyan5 (5)" />
+        <item itemvalue="应用程序._1" />
+        <item itemvalue="应用程序._2" />
+        <item itemvalue="应用程序.Client" />
+        <item itemvalue="应用程序.Server" />
+        <item itemvalue="应用程序.demo4" />
       </list>
     </recent_temporary>
   </component>
@@ -183,6 +224,7 @@
       <workItem from="1700468505179" duration="517000" />
       <workItem from="1700469039501" duration="4843000" />
       <workItem from="1700555140603" duration="2741000" />
+      <workItem from="1701839598845" duration="9477000" />
     </task>
     <servers />
   </component>

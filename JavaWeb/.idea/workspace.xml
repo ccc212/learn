@@ -10,38 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14b70131-43b2-4d6d-af1b-fb87aab2e822" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/../JAVA/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day7/_1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maven-project01/src/test/java/com/ccc212/DemoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maven-project02/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maven-project02/src/main/java/com/itheima/HelloWorld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maven-project02/src/test/java/com/itheima/test/DemoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maven-projectA/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maven-projectB/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maven-projectC/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/src/main/java/com/ccc212/SpringbootWebQuickstartApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/src/main/java/com/ccc212/controller/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/src/test/java/com/ccc212/SpringbootWebQuickstartApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maven-project01/maven-project01.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maven-project01/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/maven-project01/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maven-project01/src/main/java/com/ccc212/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/maven-project01/src/main/java/com/ccc212/HelloWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/mvnw.cmd" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +77,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "E:/gitProject/learn/JAVA",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/test",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -158,6 +131,7 @@
       <updated>1699858974623</updated>
       <workItem from="1699932461101" duration="3053000" />
       <workItem from="1700231837351" duration="1225000" />
+      <workItem from="1701336278920" duration="2101000" />
     </task>
     <servers />
   </component>
