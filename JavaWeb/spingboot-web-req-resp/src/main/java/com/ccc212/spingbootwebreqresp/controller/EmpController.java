@@ -1,9 +1,11 @@
 package com.ccc212.spingbootwebreqresp.controller;
 
-
 import com.ccc212.spingbootwebreqresp.pojo.Emp;
 import com.ccc212.spingbootwebreqresp.pojo.Result;
+import com.ccc212.spingbootwebreqresp.service.EmpService;
+import com.ccc212.spingbootwebreqresp.service.impl.EmpServiceA;
 import com.ccc212.spingbootwebreqresp.utils.XmlParserUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,8 +13,20 @@ import java.util.List;
 
 @RestController
 public class EmpController {
+    @Autowired //运行时,需要从IOC容器中获取该类型对象,赋值给该变量 - 依赖注入
+    private EmpService empService = new EmpServiceA();
 
     @RequestMapping("/listEmp")
+    public Result list(){
+        //1. 调用service, 获取数据
+        List<Emp> empList = empService.listEmp();
+
+        //3. 响应数据
+        return Result.success(empList);
+    }
+
+
+    /*@RequestMapping("/listEmp")
     public Result list(){
         //1. 加载并解析emp.xml
         String file = this.getClass().getClassLoader().getResource("emp.xml").getFile();
@@ -43,5 +57,6 @@ public class EmpController {
         //3. 响应数据
         return Result.success(empList);
     }
+*/
 
 }
