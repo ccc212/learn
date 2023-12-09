@@ -10,11 +10,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14b70131-43b2-4d6d-af1b-fb87aab2e822" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/mvnw.cmd" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/test/_thread_1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/test/_thread_2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAVA/src/test/_thread_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAVA/src/test/_thread_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day4/_package/c/Scanner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/shiyan8_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/shiyan8_1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/shiyan8_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/shiyan8_2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/test/_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/test/_1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/test/_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/test/_2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day4/_package/c/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day4/_package/c/Scanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/homework/shiyan8_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/homework/shiyan8_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/homework/shiyan8_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/homework/shiyan8_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/test/_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/test/_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/test/_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/test/_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/test/_thread.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,11 +88,12 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/test",
+    "last_opened_file_path": "E:/gitProject/learn",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "项目",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -89,6 +101,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\gitProject\learn\JavaWeb\springboot-web-quickstart\springboot-web-quickstart" />
+      <recent name="E:\gitProject\learn\JavaWeb\springboot-web-quickstart\springboot-web-quickstart\src\main\resources\static" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn -U idea:idea" />
@@ -131,7 +149,7 @@
       <updated>1699858974623</updated>
       <workItem from="1699932461101" duration="3053000" />
       <workItem from="1700231837351" duration="1225000" />
-      <workItem from="1701336278920" duration="2101000" />
+      <workItem from="1701336278920" duration="6264000" />
     </task>
     <servers />
   </component>
