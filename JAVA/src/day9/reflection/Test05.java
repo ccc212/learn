@@ -7,7 +7,7 @@ public class Test05 {
 
         /*
         1. 加载到内存，会产生一个类对应Class对象
-        2. 链接，链接结束后 m =
+        2. 链接，链接结束后 m = 0
         3. 初始化
         <clinit>(){
             System.out.println("A类静态代码块初始化")；

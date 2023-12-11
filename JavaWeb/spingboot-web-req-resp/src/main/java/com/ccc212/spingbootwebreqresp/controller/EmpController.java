@@ -6,6 +6,7 @@ import com.ccc212.spingbootwebreqresp.service.EmpService;
 import com.ccc212.spingbootwebreqresp.service.impl.EmpServiceA;
 import com.ccc212.spingbootwebreqresp.utils.XmlParserUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,6 +14,7 @@ import java.util.List;
 
 @RestController
 public class EmpController {
+    @Qualifier("empServiceA")
     @Autowired //运行时,需要从IOC容器中获取该类型对象,赋值给该变量 - 依赖注入
     private EmpService empService = new EmpServiceA();
 

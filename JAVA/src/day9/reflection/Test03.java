@@ -24,7 +24,7 @@ public class Test03 {
 
         //获得父类类型
         Class c5 = c1.getSuperclass();
-        System.out.println(c5);
+        System.out.println(c5.hashCode());
     }
 }
 

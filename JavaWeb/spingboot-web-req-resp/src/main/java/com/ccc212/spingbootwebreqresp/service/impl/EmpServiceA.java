@@ -6,10 +6,12 @@ import com.ccc212.spingbootwebreqresp.pojo.Emp;
 import com.ccc212.spingbootwebreqresp.service.EmpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 //@Component//将当前类交给IOC容器管理，成为IOC容器中的bean
+@Service
 public class EmpServiceA implements EmpService {
     @Autowired //运行时,需要从IOC容器中获取该类型对象,赋值给该变量 - 依赖注入
     private EmpDao empDao = new EmpDaoA();
