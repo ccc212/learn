@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/maven-projectB/pom.xml" />
         <option value="$PROJECT_DIR$/maven-projectC/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-web-quickstart/springboot-web-quickstart/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-mybatis-quickstart/springboot-mybatis-quickstart/pom.xml" />
       </list>
     </option>
   </component>
