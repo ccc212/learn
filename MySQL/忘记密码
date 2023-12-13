@@ -1,0 +1,7 @@
+﻿找到my.ini文件
+
+#忽略密码
+#skip-grant-tables=1
+
+#改密码
+#update user set authentication_string=password('123456'),password_last_changed=now() where user='root';

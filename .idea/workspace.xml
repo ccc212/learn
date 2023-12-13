@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e81661c8-b727-49a3-94ad-25b5e64f383f" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/JavaWeb/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-crud/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-crud/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-crud/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-crud/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-crud/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-crud/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-crud/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-crud/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-crud/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-crud/springboot-mybatis-crud.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/.idea/springboot-mybatis-quickstart.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/springboot-mybatis-quickstart/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/springboot-mybatis-quickstart/src/main/java/com/ccc212/SpringbootMybatisQuickstartApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/springboot-mybatis-quickstart/src/main/java/com/ccc212/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/springboot-mybatis-quickstart/src/main/java/com/ccc212/pojo/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/springboot-mybatis-quickstart/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/springboot-mybatis-quickstart/src/test/java/com/ccc212/SpringbootMybatisQuickstartApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/springboot-mybatis-quickstart/src/test/java/com/ccc212/原始JDBC程序.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mybatis/.idea/Mybatis.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaWeb/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaWeb/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaWeb/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaWeb/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaWeb/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaWeb/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaWeb/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaWeb/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/dp01.jR8vAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/dp01.jR8vAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/dp03.jx8vAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/dp03.jx8vAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2ZFKXrfWTuWd4rPzLjmgj693ZLS" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "21",
+    "last_opened_file_path": "E:/gitProject/learn",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\gitProject\learn\JavaWeb\spingboot-web-req-resp\src\main\resources" />
+      <recent name="E:\gitProject\learn\JavaWeb\spingboot-web-req-resp\src\main\resources\static" />
+      <recent name="E:\gitProject\learn\JavaWeb" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ccc212.spingbootwebreqresp.service.impl" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SpingbootWebReqRespApplication">
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itheima.Server" />
+      <module name="learn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itheima.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpingbootWebReqRespApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="spingboot-web-req-resp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ccc212.spingbootwebreqresp.SpingbootWebReqRespApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootWebQuickstartApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="springboot-web-quickstart" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ccc212.SpringbootWebQuickstartApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.Server" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="e81661c8-b727-49a3-94ad-25b5e64f383f" name="更改" comment="" />
+      <created>1702012429392</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702012429392</updated>
+      <workItem from="1702012430401" duration="27342000" />
+      <workItem from="1702355359209" duration="50000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
