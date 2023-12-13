@@ -5,22 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e81661c8-b727-49a3-94ad-25b5e64f383f" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/learn.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/src/main/java/com/ccc212/spingbootwebreqresp/controller/EmpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/src/main/java/com/ccc212/spingbootwebreqresp/controller/EmpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/src/main/java/com/ccc212/spingbootwebreqresp/service/impl/EmpServiceA.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/src/main/java/com/ccc212/spingbootwebreqresp/service/impl/EmpServiceA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/target/classes/com/ccc212/spingbootwebreqresp/SpingbootWebReqRespApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/target/classes/com/ccc212/spingbootwebreqresp/SpingbootWebReqRespApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/target/classes/com/ccc212/spingbootwebreqresp/controller/EmpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/target/classes/com/ccc212/spingbootwebreqresp/controller/EmpController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/target/classes/com/ccc212/spingbootwebreqresp/service/impl/EmpServiceA.class" beforeDir="false" afterPath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/target/classes/com/ccc212/spingbootwebreqresp/service/impl/EmpServiceA.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/com/itheima/Handler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/learn/com/itheima/Server.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/spingboot-web-req-resp/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-crud/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-crud/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-crud/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-crud/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-crud/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-crud/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-crud/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-crud/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-crud/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-crud/springboot-mybatis-crud.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/.idea/springboot-mybatis-quickstart.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/springboot-mybatis-quickstart/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/springboot-mybatis-quickstart/src/main/java/com/ccc212/SpringbootMybatisQuickstartApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/springboot-mybatis-quickstart/src/main/java/com/ccc212/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/springboot-mybatis-quickstart/src/main/java/com/ccc212/pojo/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/springboot-mybatis-quickstart/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/springboot-mybatis-quickstart/src/test/java/com/ccc212/SpringbootMybatisQuickstartApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaWeb/springboot-mybatis-quickstart/springboot-mybatis-quickstart/src/test/java/com/ccc212/原始JDBC程序.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mybatis/.idea/Mybatis.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaWeb/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaWeb/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaWeb/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaWeb/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaWeb/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaWeb/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaWeb/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaWeb/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/dp01.jR8vAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/dp01.jR8vAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/dp03.jx8vAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/dp03.jx8vAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/.idea/dataSources/d8936d75-dcaa-4da3-a477-d829554ab677/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +70,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2ZFKXrfWTuWd4rPzLjmgj693ZLS" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -64,7 +93,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "21",
-    "last_opened_file_path": "E:/gitProject/learn/MySQL",
+    "last_opened_file_path": "E:/gitProject/learn",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -129,6 +158,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702012429392</updated>
       <workItem from="1702012430401" duration="27342000" />
+      <workItem from="1702355359209" duration="50000" />
     </task>
     <servers />
   </component>
