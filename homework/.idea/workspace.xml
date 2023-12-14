@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10121b1c-405d-463f-8f67-99280b2a7e09" name="更改" comment="" />
+    <list default="true" id="10121b1c-405d-463f-8f67-99280b2a7e09" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gobang/src/Start.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gobang/src/UI/ChessBoard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gobang/src/UI/ChessPiece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/Gobang.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Gobang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Menu.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,10 +27,16 @@
       </list>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2ZTO7fhfToQC9noa704iem00gyM" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -29,9 +45,11 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "21",
-    "last_opened_file_path": "C:/Users/Administrator/AppData/Local/Temp/MicrosoftEdgeDownloads/8df19dd8-cade-4677-9504-18db34e89059",
+    "last_opened_file_path": "E:/gitProject/learn/homework",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -48,7 +66,7 @@
       <recent name="ui" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.Game (5)">
+  <component name="RunManager" selected="应用程序.Game">
     <configuration name="Game (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.UI.Game" />
       <module name="practice" />
@@ -116,10 +134,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.Game" />
         <item itemvalue="应用程序.Game (5)" />
         <item itemvalue="应用程序.Game (4)" />
         <item itemvalue="应用程序.Game (3)" />
-        <item itemvalue="应用程序.Game" />
         <item itemvalue="应用程序.Game (2)" />
       </list>
     </recent_temporary>
@@ -133,6 +151,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702442436891</updated>
       <workItem from="1702442437902" duration="13915000" />
+      <workItem from="1702555597077" duration="6735000" />
     </task>
     <servers />
   </component>

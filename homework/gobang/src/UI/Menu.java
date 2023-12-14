@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Menu {
-    public static void main(String[] args) {
+    public Menu(){
         JFrame frame = new JFrame("Menu");
         frame.setSize(400,300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -15,6 +15,9 @@ public class Menu {
         placeComponents1(panel);
 
         frame.setVisible(true);
+    }
+    public static void main(String[] args) {
+        Menu menu = new Menu();
     }
 
     private static void placeComponents1(JPanel panel) {
@@ -38,7 +41,6 @@ public class Menu {
         panel.add(userText);
 
         btn1.addActionListener(e -> System.out.println("创建"));
-
         btn2.addActionListener(e -> System.out.println("加入"));
 
     }
