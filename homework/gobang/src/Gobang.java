@@ -10,7 +10,7 @@ public class Gobang {
     static int row,column;
     static int[][] board;
 
-    public static void main(String[] args) {
+    public Gobang(){
         System.out.print("输入棋盘行数和列数:");
         boolean winner;
         row = sc.nextInt();
