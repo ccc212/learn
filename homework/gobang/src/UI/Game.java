@@ -7,7 +7,7 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class Game {
-    private Game(int rows, int columns) {
+    public Game(int rows, int columns) {
         JFrame frame = new JFrame("Game");
 //        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setSize((rows + 2) * ChessBoard.CELL_SIZE, (columns + 3) * ChessBoard.CELL_SIZE);
@@ -22,7 +22,7 @@ public class Game {
 
     public static void main(String[] args) {
 //        SwingUtilities.invokeLater(() -> new Game(20, 20));
-        new Game(20, 20);
+        new Game(10, 10);
     }
 
     private static void placeComponents2(JPanel panel, int rows, int columns) {
