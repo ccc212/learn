@@ -1,6 +1,7 @@
 package src;
 
 import javafx.util.Pair;
+import src.UI.Game;
 
 import java.util.Scanner;
 import java.util.Stack;
@@ -15,10 +16,15 @@ public class Gobang {
         boolean winner;
         row = sc.nextInt();
         column = sc.nextInt();
+//        Game g = new Game(row, column);
         board = new int[row][column];
         winner = game(board);
         if(winner) System.out.println("玩家2获胜");
         else System.out.println("玩家1获胜");
+    }
+
+    public static void main(String[] args) {
+        new Gobang();
     }
 
     private static boolean game(int[][] board) {
@@ -82,7 +88,7 @@ public class Gobang {
         return false;
     }
 
-    private static void display(int[][] board) {
+    public static void display(int[][] board) {
         System.out.println("当前棋局:");
         for (int i = 0;i<board.length;i++){
             for(int j = 0;j<board[0].length;j++){
