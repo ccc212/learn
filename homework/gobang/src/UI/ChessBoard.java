@@ -114,7 +114,49 @@ public class ChessBoard extends JPanel {
             }
         }
 
+        //斜
+        flag3:
+        for(int i = 0;i < this.rows - 4;i++) {
+            //左上-右下
+            for (int j = 0; j < this.columns - 4; j++) {
+                int top = board[i][j];
+                if(top == 0)continue;
+                int k = 1;
+                for(;k < 5;k++){
+                    if(board[i+k][j+k]!=top)break;
+                }
+                if(k == 5){
+                    new Win(!player,this);
+                    isVectorMode = true;
+                    break flag3;
+                }
+                else{
+                    for(int m  = 1;m < k;m++){
+                        board[i+m][j+m] = 0;
+                    }
+                }
+            }
 
+            //左下-右上
+            for (int j = 4; j < this.columns; j++) {
+                int top = board[i][j];
+                if(top == 0)continue;
+                int k = 1;
+                for(;k < 5;k++){
+                    if(board[i+k][j-k]!=top)break;
+                }
+                if(k == 5){
+                    new Win(!player,this);
+                    isVectorMode = true;
+                    break flag3;
+                }
+                else{
+                    for(int m  = 1;m < k;m++){
+                        board[i+m][j-m] = 0;
+                    }
+                }
+            }
+        }
     }
 
     private static void put(int[][] board, boolean player, Stack<Pair<Integer, Integer>> stack,int row,int column) {

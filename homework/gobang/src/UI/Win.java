@@ -18,7 +18,7 @@ public class Win extends JFrame{
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosed(WindowEvent e) {
-                // 关闭Win窗口时同时关闭ChessBoard
+                // 关闭Win时同时关闭ChessBoard
                 if (chessBoard != null) {
                     chessBoard.closeBoard();
                 }

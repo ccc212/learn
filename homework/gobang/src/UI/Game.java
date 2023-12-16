@@ -31,3 +31,4 @@ public class Game {
         panel.add(chessBoard);
     }
 }
+
