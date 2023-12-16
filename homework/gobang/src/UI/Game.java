@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Game {
     public Game(int rows, int columns) {
-        JFrame frame = new JFrame("Game");
+        JFrame frame = new JFrame("五子棋(按 R 悔棋)");
 //        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setSize((rows + 2) * ChessBoard.CELL_SIZE, (columns + 3) * ChessBoard.CELL_SIZE);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -26,7 +26,9 @@ public class Game {
     }
 
     private static void placeComponents2(JPanel panel, int rows, int columns) {
+//        ChessBoardTest chessBoard = new ChessBoardTest(rows, columns);
         ChessBoard chessBoard = new ChessBoard(rows, columns);
+
 //        panel.add(chessBoard, BorderLayout.CENTER);
         panel.add(chessBoard);
     }

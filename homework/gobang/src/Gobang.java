@@ -16,7 +16,6 @@ public class Gobang {
         boolean winner;
         row = sc.nextInt();
         column = sc.nextInt();
-//        Game g = new Game(row, column);
         board = new int[row][column];
         winner = game(board);
         if(winner) System.out.println("玩家2获胜");
@@ -107,7 +106,7 @@ public class Gobang {
         board[row][column] = 0;
     }
 
-    private static void test(int row, int column) {
+    public static void test(int row, int column) {
         System.out.println("row:"+row);
         System.out.println("column:"+column);
     }

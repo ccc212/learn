@@ -1,32 +1,37 @@
 package src.UI;
 
 import javafx.util.Pair;
-import src.Gobang;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Stack;
 
 public class ChessBoard extends JPanel {
+
     private int rows;
     private int columns;
     public static int CELL_SIZE = 50;
     private static boolean player = false;//下一个下棋的玩家,false玩家1,true玩家2
-    private ArrayList<ChessPiece> chessPieces;
+
+    private HashMap<Pair<Integer,Integer>,ChessPiece> map;
+
 
     public static int row,column;
     private boolean isVectorMode = false;
 
     public ChessBoard(int rows, int columns) {
+//        setBackground(Color.CYAN);
         this.rows = rows;
         this.columns = columns;
         int[][] board = new int[rows][columns];
         Stack<Pair<Integer,Integer>>stack = new Stack<>();
-        setPreferredSize(new Dimension(columns * CELL_SIZE, rows * CELL_SIZE));
-        chessPieces = new ArrayList<>();
+//        setPreferredSize(new Dimension(columns * CELL_SIZE, rows * CELL_SIZE));
+        map = new HashMap<>();
 
         addMouseListener(new MouseAdapter() {
             @Override
@@ -44,14 +49,14 @@ public class ChessBoard extends JPanel {
 //                    System.out.println("玩家2");
                     put(board,player,stack,row - 1,column - 1);
                     ChessPiece piece = new ChessPiece(row, column, Color.WHITE);
-                    chessPieces.add(piece);
+                    map.put(new Pair<>(row - 1,column - 1),piece);
                     player = !player;
                 }
                 else if(!player){
 //                    System.out.println("玩家1");
                     put(board,player,stack,row - 1,column - 1);
                     ChessPiece piece = new ChessPiece(row, column, Color.BLACK);
-                    chessPieces.add(piece);
+                    map.put(new Pair<>(row - 1,column - 1),piece);
                     player = !player;
                 }
                 victory(board,row,column);
@@ -60,7 +65,31 @@ public class ChessBoard extends JPanel {
 //                System.out.println(player ? "玩家2" : "玩家1");
             }
         });
+        setFocusable(true);
 
+        addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                int key = e.getKeyCode();
+                if(key == KeyEvent.VK_R){
+                    System.out.printf("R");
+                    isVectorMode = false;
+                    back(board,stack);
+                    player = !player;
+                    updateUI();
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
+            }
+        });
     }
 
     private boolean judge(int[][] board, int row, int column) {
@@ -81,14 +110,12 @@ public class ChessBoard extends JPanel {
             }
             while (r < this.columns) {
                 if(r + 1 == this.columns)break;
+                temp -= board[i][l++];
+                temp += board[i][(r++) + 1];
                 if (Math.abs(temp) == 5) {
                     new Win(!player,this);
                     isVectorMode = true;
                     break flag1;
-                }
-                else{
-                    temp -= board[i][l++];
-                    temp += board[i][(r++) + 1];
                 }
             }
         }
@@ -102,14 +129,12 @@ public class ChessBoard extends JPanel {
             }
             while (r < this.rows) {
                 if(r + 1 == this.rows)break;
+                temp -= board[l++][i];
+                temp += board[(r++) + 1][i];
                 if (Math.abs(temp) == 5) {
                     new Win(!player,this);
                     isVectorMode = true;
                     break flag2;
-                }
-                else{
-                    temp -= board[l++][i];
-                    temp += board[(r++) + 1][i];
                 }
             }
         }
@@ -130,11 +155,6 @@ public class ChessBoard extends JPanel {
                     isVectorMode = true;
                     break flag3;
                 }
-                else{
-                    for(int m  = 1;m < k;m++){
-                        board[i+m][j+m] = 0;
-                    }
-                }
             }
 
             //左下-右上
@@ -150,11 +170,6 @@ public class ChessBoard extends JPanel {
                     isVectorMode = true;
                     break flag3;
                 }
-                else{
-                    for(int m  = 1;m < k;m++){
-                        board[i+m][j-m] = 0;
-                    }
-                }
             }
         }
     }
@@ -166,6 +181,15 @@ public class ChessBoard extends JPanel {
         else board[row][column] = 1;
     }
 
+    private void back(int[][] board, Stack<Pair<Integer, Integer>> stack) {
+        if(stack.empty())return;
+        Pair<Integer,Integer>back = stack.pop();
+        row = (int)back.getKey();
+        column = (int)back.getValue();
+        board[row][column] = 0;
+        map.remove(back);
+    }
+
     public void updateUI() {
         repaint();
     }
@@ -174,17 +198,19 @@ public class ChessBoard extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-//        setBackground(Color.CYAN);
+        g.setColor(getBackground());
+        g.fillRect(0, 0, getWidth(), getHeight());
 
+        g.setColor(Color.BLACK);
         for (int i = 1; i <= rows; i++) {
             int coordinate = i * CELL_SIZE;
             g.drawLine(CELL_SIZE, coordinate, rows * CELL_SIZE , coordinate);
             g.drawLine(coordinate, CELL_SIZE, coordinate, columns * CELL_SIZE);
         }
 
-        for (ChessPiece piece : chessPieces) {
-            piece.draw(g, CELL_SIZE);
-        }
+        map.forEach((k,v)->{
+            v.draw(g,CELL_SIZE);
+        });
     }
 
     public void closeBoard() {
