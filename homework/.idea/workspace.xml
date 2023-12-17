@@ -4,16 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10121b1c-405d-463f-8f67-99280b2a7e09" name="更改" comment="五子棋斜线判断">
-      <change afterPath="$PROJECT_DIR$/gobang/src/UI/ChessBoardTest.java" afterDir="false" />
+    <list default="true" id="10121b1c-405d-463f-8f67-99280b2a7e09" name="更改" comment="悔棋">
+      <change afterPath="$PROJECT_DIR$/gobang/src/Logic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gobang/src/UI/Creat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gobang/src/UI/Join.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Creat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gobang/src/Gobang.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Gobang.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/UI/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/ChessBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/UI/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/Gobang.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/Gobang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Win.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Result.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Win$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Win$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Win.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Win.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,9 +73,9 @@
       <recent name="ui" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.Game">
-    <configuration name="Game (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.UI.Game" />
+  <component name="RunManager" selected="应用程序.Menu">
+    <configuration name="Creat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.UI.Creat" />
       <module name="practice" />
       <extension name="coverage">
         <pattern>
@@ -80,7 +87,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Game (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.UI.Game" />
       <module name="practice" />
       <extension name="coverage">
@@ -134,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.Game" />
         <item itemvalue="应用程序.Menu" />
+        <item itemvalue="应用程序.Creat" />
+        <item itemvalue="应用程序.Game" />
         <item itemvalue="应用程序.Gobang" />
         <item itemvalue="应用程序.Game (5)" />
-        <item itemvalue="应用程序.Game (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -151,7 +158,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702442436891</updated>
       <workItem from="1702442437902" duration="13915000" />
-      <workItem from="1702555597077" duration="40600000" />
+      <workItem from="1702555597077" duration="58394000" />
     </task>
     <task id="LOCAL-00001" summary="五子棋斜线判断">
       <option name="closed" value="true" />
@@ -161,7 +168,31 @@
       <option name="project" value="LOCAL" />
       <updated>1702718633211</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="悔棋">
+      <option name="closed" value="true" />
+      <created>1702735998646</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702735998646</updated>
+    </task>
+    <task id="LOCAL-00003" summary="悔棋">
+      <option name="closed" value="true" />
+      <created>1702788396116</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702788396116</updated>
+    </task>
+    <task id="LOCAL-00004" summary="悔棋">
+      <option name="closed" value="true" />
+      <created>1702788443790</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702788443790</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +203,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -180,6 +223,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="五子棋斜线判断" />
-    <option name="LAST_COMMIT_MESSAGE" value="五子棋斜线判断" />
+    <MESSAGE value="悔棋" />
+    <option name="LAST_COMMIT_MESSAGE" value="悔棋" />
   </component>
 </project>

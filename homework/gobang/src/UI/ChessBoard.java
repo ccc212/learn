@@ -1,6 +1,8 @@
 package src.UI;
 
 import javafx.util.Pair;
+import src.Logic;
+import sun.rmi.runtime.Log;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,21 +19,23 @@ public class ChessBoard extends JPanel {
     private int columns;
     public static int CELL_SIZE = 50;
     private static boolean player = false;//下一个下棋的玩家,false玩家1,true玩家2
-
     private HashMap<Pair<Integer,Integer>,ChessPiece> map;
 
-
-    public static int row,column;
-    private boolean isVectorMode = false;
-
+    private int row,column;
+    public static boolean isVectorMode = false;
     public ChessBoard(int rows, int columns) {
-//        setBackground(Color.CYAN);
+        setBackground(Color.getHSBColor(
+                Color.RGBtoHSB(210, 132, 0,null)[0],
+                Color.RGBtoHSB(210, 132, 0,null)[1],
+                Color.RGBtoHSB(210, 132, 0,null)[2]));
         this.rows = rows;
         this.columns = columns;
         int[][] board = new int[rows][columns];
         Stack<Pair<Integer,Integer>>stack = new Stack<>();
 //        setPreferredSize(new Dimension(columns * CELL_SIZE, rows * CELL_SIZE));
         map = new HashMap<>();
+
+
 
         addMouseListener(new MouseAdapter() {
             @Override
@@ -42,31 +46,31 @@ public class ChessBoard extends JPanel {
                 float xt = x / CELL_SIZE,yt = y / CELL_SIZE;
                 row = ((yt - (int)yt) > 0.5) ? (int)yt + 1 : (int)yt;
                 column = ((xt - (int)xt) > 0.5) ? (int)xt + 1 : (int)xt;
-                if(row < 1 || column < 1 || row > rows || column > columns || judge(board, row - 1, column - 1)){
+                if(row < 1 || column < 1 || row > rows || column > columns || Logic.judge(board, row - 1, column - 1)){
                     System.out.println("点击无效");
                 }
                 else if(player){
 //                    System.out.println("玩家2");
-                    put(board,player,stack,row - 1,column - 1);
+                    Logic.put(board,player,stack,row - 1,column - 1);
                     ChessPiece piece = new ChessPiece(row, column, Color.WHITE);
                     map.put(new Pair<>(row - 1,column - 1),piece);
                     player = !player;
                 }
                 else if(!player){
 //                    System.out.println("玩家1");
-                    put(board,player,stack,row - 1,column - 1);
+                    Logic.put(board,player,stack,row - 1,column - 1);
                     ChessPiece piece = new ChessPiece(row, column, Color.BLACK);
                     map.put(new Pair<>(row - 1,column - 1),piece);
                     player = !player;
                 }
-                victory(board,row,column);
+                Logic.victory(board,rows,columns,player,new ChessBoard(rows,columns));
                 updateUI();
 //                Gobang.display(board);
 //                System.out.println(player ? "玩家2" : "玩家1");
             }
         });
-        setFocusable(true);
 
+        setFocusable(true);
         addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -79,7 +83,7 @@ public class ChessBoard extends JPanel {
                 if(key == KeyEvent.VK_R){
                     System.out.printf("R");
                     isVectorMode = false;
-                    back(board,stack);
+                    Logic.back(board,stack,map,row,column);
                     player = !player;
                     updateUI();
                 }
@@ -91,105 +95,6 @@ public class ChessBoard extends JPanel {
             }
         });
     }
-
-    private boolean judge(int[][] board, int row, int column) {
-        if(board[row][column] != 0){
-            System.out.println("该位置已下过,请重新输入:");
-            return true;
-        }
-        return false;
-    }
-
-    public void victory(int[][] board,int row,int column) {
-        //横
-        flag1:
-        for(int i=0;i<this.rows;i++) {
-            int l = 0, r = l + 4, temp = 0;
-            for (int j = l; j <= r; j++) {
-                temp += board[i][j];
-            }
-            while (r < this.columns) {
-                if(r + 1 == this.columns)break;
-                temp -= board[i][l++];
-                temp += board[i][(r++) + 1];
-                if (Math.abs(temp) == 5) {
-                    new Win(!player,this);
-                    isVectorMode = true;
-                    break flag1;
-                }
-            }
-        }
-
-        //竖
-        flag2:
-        for(int i=0;i<this.columns;i++) {
-            int l = 0, r = l + 4, temp = 0;
-            for (int j = l; j <= r; j++) {
-                temp += board[j][i];
-            }
-            while (r < this.rows) {
-                if(r + 1 == this.rows)break;
-                temp -= board[l++][i];
-                temp += board[(r++) + 1][i];
-                if (Math.abs(temp) == 5) {
-                    new Win(!player,this);
-                    isVectorMode = true;
-                    break flag2;
-                }
-            }
-        }
-
-        //斜
-        flag3:
-        for(int i = 0;i < this.rows - 4;i++) {
-            //左上-右下
-            for (int j = 0; j < this.columns - 4; j++) {
-                int top = board[i][j];
-                if(top == 0)continue;
-                int k = 1;
-                for(;k < 5;k++){
-                    if(board[i+k][j+k]!=top)break;
-                }
-                if(k == 5){
-                    new Win(!player,this);
-                    isVectorMode = true;
-                    break flag3;
-                }
-            }
-
-            //左下-右上
-            for (int j = 4; j < this.columns; j++) {
-                int top = board[i][j];
-                if(top == 0)continue;
-                int k = 1;
-                for(;k < 5;k++){
-                    if(board[i+k][j-k]!=top)break;
-                }
-                if(k == 5){
-                    new Win(!player,this);
-                    isVectorMode = true;
-                    break flag3;
-                }
-            }
-        }
-    }
-
-    private static void put(int[][] board, boolean player, Stack<Pair<Integer, Integer>> stack,int row,int column) {
-        stack.push(new Pair<>(row,column));
-        //玩家1:1     玩家2:-1
-        if(player)board[row][column] = -1;
-        else board[row][column] = 1;
-    }
-
-    private void back(int[][] board, Stack<Pair<Integer, Integer>> stack) {
-        if(stack.empty())return;
-        Pair<Integer,Integer>back = stack.pop();
-        row = (int)back.getKey();
-        column = (int)back.getValue();
-        board[row][column] = 0;
-        map.remove(back);
-    }
-
     public void updateUI() {
         repaint();
     }
@@ -202,10 +107,13 @@ public class ChessBoard extends JPanel {
         g.fillRect(0, 0, getWidth(), getHeight());
 
         g.setColor(Color.BLACK);
-        for (int i = 1; i <= rows; i++) {
+        for(int i=1;i<=rows;i++){
             int coordinate = i * CELL_SIZE;
-            g.drawLine(CELL_SIZE, coordinate, rows * CELL_SIZE , coordinate);
-            g.drawLine(coordinate, CELL_SIZE, coordinate, columns * CELL_SIZE);
+            g.drawLine(CELL_SIZE, coordinate, columns * CELL_SIZE , coordinate);
+        }
+        for(int j=1;j<=columns;j++){
+            int coordinate = j * CELL_SIZE;
+            g.drawLine(coordinate, CELL_SIZE, coordinate, rows * CELL_SIZE);
         }
 
         map.forEach((k,v)->{
@@ -213,10 +121,8 @@ public class ChessBoard extends JPanel {
         });
     }
 
-    public void closeBoard() {
+    public void close() {
         JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
-        if (frame != null) {
-            frame.dispose();
-        }
+        frame.dispose();
     }
 }

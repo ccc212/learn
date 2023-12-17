@@ -1,12 +1,13 @@
 package src.UI;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Menu {
+public class Menu extends JFrame{
     public Menu(){
-        JFrame frame = new JFrame("Menu");
+        JFrame frame = new JFrame("菜单");
         frame.setSize(400,300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -14,6 +15,7 @@ public class Menu {
         frame.add(panel);
         placeComponents1(panel);
 
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
     public static void main(String[] args) {
@@ -40,8 +42,18 @@ public class Menu {
         userText.setBounds(150,163,100,25);
         panel.add(userText);
 
-        btn1.addActionListener(e -> System.out.println("创建"));
-        btn2.addActionListener(e -> System.out.println("加入"));
+        btn1.addActionListener(e -> {
+            System.out.println("创建");
+            new Creat();
+        });
+        btn2.addActionListener(e -> {
+            System.out.println("加入");
 
+        });
+    }
+
+    public static void close() {
+        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(new Menu());
+        frame.dispose();
     }
 }
