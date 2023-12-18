@@ -1,33 +1,36 @@
 package src.UI;
-
-import src.Gobang;
-
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
 
-public class Game {
-    public Game(int rows, int columns) {
-        JFrame frame = new JFrame("Game");
-//        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        frame.setSize((rows + 2) * ChessBoard.CELL_SIZE, (columns + 3) * ChessBoard.CELL_SIZE);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+public class Game extends JFrame{
+    public Game(){
+        super("五子棋(按 R 悔棋)");
         JPanel panel = new JPanel(new BorderLayout());
-        frame.add(panel);
-        placeComponents2(panel, rows, columns);
-
-        frame.setVisible(true);
+        add(panel);
+        placeComponents(panel, 15, 15);
+    }
+    public Game(int rows, int columns) {
+        super("五子棋(按 R 悔棋)");
+        JPanel panel = new JPanel(new BorderLayout());
+        add(panel);
+        placeComponents(panel, rows, columns);
     }
 
-    public static void main(String[] args) {
-//        SwingUtilities.invokeLater(() -> new Game(20, 20));
-        new Game(10, 10);
-    }
+    private void placeComponents(JPanel panel, int rows, int columns) {
+        panel.setLayout(null);
 
-    private static void placeComponents2(JPanel panel, int rows, int columns) {
+        //        setExtendedState(JFrame.MAXIMIZED_BOTH);//设置全屏
+        setSize( (columns + 2) * ChessBoard.CELL_SIZE,(rows + 2) * ChessBoard.CELL_SIZE);
+        setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+
+//        ChessBoardTest chessBoard = new ChessBoardTest(rows, columns);
         ChessBoard chessBoard = new ChessBoard(rows, columns);
-//        panel.add(chessBoard, BorderLayout.CENTER);
+        chessBoard.setBounds(0,0,(rows + 2)*ChessBoard.CELL_SIZE,(columns + 2)*ChessBoard.CELL_SIZE);
+
         panel.add(chessBoard);
+
+        setLocationRelativeTo(null);
+        setVisible(true);
     }
 }
+

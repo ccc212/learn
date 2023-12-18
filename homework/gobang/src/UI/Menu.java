@@ -1,26 +1,25 @@
 package src.UI;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-public class Menu {
+public class Menu extends JFrame{
     public Menu(){
-        JFrame frame = new JFrame("Menu");
+        JFrame frame = new JFrame("菜单");
         frame.setSize(400,300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panel = new JPanel();
         frame.add(panel);
-        placeComponents1(panel);
+        placeComponents(panel);
 
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
     public static void main(String[] args) {
         Menu menu = new Menu();
     }
 
-    private static void placeComponents1(JPanel panel) {
+    private void placeComponents(JPanel panel) {
         panel.setLayout(null);
 
         JLabel userLabel = new JLabel("五子棋");
@@ -40,8 +39,22 @@ public class Menu {
         userText.setBounds(150,163,100,25);
         panel.add(userText);
 
-        btn1.addActionListener(e -> System.out.println("创建"));
-        btn2.addActionListener(e -> System.out.println("加入"));
+        btn1.addActionListener(e -> {
+            new Creat();
+        });
+        btn2.addActionListener(e -> {
+            String port = userText.getText();
+            System.out.println("加入端口" + port);
 
+        });
+    }
+
+    public static void close() {
+        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(new Menu());
+        try {
+            frame.dispose();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

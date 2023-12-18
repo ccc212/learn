@@ -4,17 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10121b1c-405d-463f-8f67-99280b2a7e09" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gobang/src/Start.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gobang/src/UI/Win.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="10121b1c-405d-463f-8f67-99280b2a7e09" name="更改" comment="实现菜单,平局,创建游戏,游戏逻辑提取,游戏获胜判断修正,棋盘创建修正,各窗口居中,实现各窗口相互关联">
+      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d1_create_thread/MyCallable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d1_create_thread/MyRunnable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d1_create_thread/MyThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d1_create_thread/ThreadTest1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d1_create_thread/ThreadTest2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d1_create_thread/ThreadTest2_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d1_create_thread/ThreadTest3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d2_thread_api/MyThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d2_thread_api/ThreadTest1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d2_thread_api/ThreadTest2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d3_thread_safe/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d3_thread_safe/DrawThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d3_thread_safe/ThreadTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d4_synchronized_code/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d4_synchronized_code/DrawThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d4_synchronized_code/ThreadTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/annotation/Test01.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_annotation/Test01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/annotation/Test02.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_annotation/Test02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/annotation/Test03.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_annotation/Test03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test02.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test03.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test04.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test04.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test05.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test05.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test06.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test06.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test07.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test07.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test08.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test08.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test09.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test09.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test10.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test11.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test11.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test12.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test12.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/test01.js" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/test01.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gobang/src/Gobang.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Gobang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gobang/src/UI/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/ChessBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Creat.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Creat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/UI/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Join.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/UI/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Creat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Creat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Menu.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +79,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "21",
-    "last_opened_file_path": "E:/gitProject/learn/homework",
+    "last_opened_file_path": "E:/gitProject/learn/JAVA",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,7 +87,7 @@
     "project.structure.last.edited": "项目",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "configurable.group.editor",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -67,9 +96,9 @@
       <recent name="ui" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.Game">
-    <configuration name="Game (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.UI.Game" />
+  <component name="RunManager" selected="应用程序.Menu">
+    <configuration name="Creat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.UI.Creat" />
       <module name="practice" />
       <extension name="coverage">
         <pattern>
@@ -81,7 +110,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Game (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.UI.Game" />
       <module name="practice" />
       <extension name="coverage">
@@ -135,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.Game" />
         <item itemvalue="应用程序.Menu" />
+        <item itemvalue="应用程序.Game" />
         <item itemvalue="应用程序.Gobang" />
+        <item itemvalue="应用程序.Creat" />
         <item itemvalue="应用程序.Game (5)" />
-        <item itemvalue="应用程序.Game (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -152,11 +181,91 @@
       <option name="presentableId" value="Default" />
       <updated>1702442436891</updated>
       <workItem from="1702442437902" duration="13915000" />
-      <workItem from="1702555597077" duration="23484000" />
+      <workItem from="1702555597077" duration="67165000" />
     </task>
+    <task id="LOCAL-00001" summary="五子棋斜线判断">
+      <option name="closed" value="true" />
+      <created>1702718633211</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702718633211</updated>
+    </task>
+    <task id="LOCAL-00002" summary="悔棋">
+      <option name="closed" value="true" />
+      <created>1702735998646</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702735998646</updated>
+    </task>
+    <task id="LOCAL-00003" summary="悔棋">
+      <option name="closed" value="true" />
+      <created>1702788396116</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702788396116</updated>
+    </task>
+    <task id="LOCAL-00004" summary="悔棋">
+      <option name="closed" value="true" />
+      <created>1702788443790</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702788443790</updated>
+    </task>
+    <task id="LOCAL-00005" summary="实现菜单,平局,创建游戏,游戏逻辑提取">
+      <option name="closed" value="true" />
+      <created>1702797499615</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702797499615</updated>
+    </task>
+    <task id="LOCAL-00006" summary="实现菜单,平局,创建游戏,游戏逻辑提取,游戏获胜判断修正,棋盘创建修正,各窗口居中,实现各窗口相互关联">
+      <option name="closed" value="true" />
+      <created>1702797736440</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702797736440</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="五子棋斜线判断" />
+    <MESSAGE value="悔棋" />
+    <MESSAGE value="实现菜单,平局,创建游戏,游戏逻辑提取,获胜判断修正" />
+    <MESSAGE value="实现菜单,平局,创建游戏,游戏逻辑提取" />
+    <MESSAGE value="实现菜单,平局,创建游戏,游戏逻辑提取,游戏获胜判断修正,棋盘创建修正,各窗口居中,实现各窗口相互关联" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现菜单,平局,创建游戏,游戏逻辑提取,游戏获胜判断修正,棋盘创建修正,各窗口居中,实现各窗口相互关联" />
   </component>
 </project>
