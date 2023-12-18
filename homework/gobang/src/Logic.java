@@ -4,6 +4,7 @@ import javafx.util.Pair;
 import src.UI.ChessBoard;
 import src.UI.ChessPiece;
 import src.UI.Result;
+import src.UI.Status;
 
 import javax.swing.*;
 import java.util.HashMap;
@@ -43,14 +44,14 @@ public class Logic extends JPanel {
             while (r < columns) {
                 if(r + 1 == columns)break;
                 if (Math.abs(temp) == 5) {
-                    new Result(!player,chessBoard,true);
+                    new Result(!player,chessBoard, Status.WIN);
                     ChessBoard.isVectorMode = true;
                     break flag1;
                 }
                 temp -= board[i][l++];
                 temp += board[i][(r++) + 1];
                 if (Math.abs(temp) == 5) {
-                    new Result(!player,chessBoard,true);
+                    new Result(!player,chessBoard,Status.WIN);
                     ChessBoard.isVectorMode = true;
                     break flag1;
                 }
@@ -67,14 +68,14 @@ public class Logic extends JPanel {
             while (r < rows) {
                 if(r + 1 == rows)break;
                 if (Math.abs(temp) == 5) {
-                    new Result(!player,chessBoard,true);
+                    new Result(!player,chessBoard,Status.WIN);
                     ChessBoard.isVectorMode = true;
                     break flag2;
                 }
                 temp -= board[l++][i];
                 temp += board[(r++) + 1][i];
                 if (Math.abs(temp) == 5) {
-                    new Result(!player,chessBoard,true);
+                    new Result(!player,chessBoard,Status.WIN);
                     ChessBoard.isVectorMode = true;
                     break flag2;
                 }
@@ -93,7 +94,7 @@ public class Logic extends JPanel {
                     if(board[i+k][j+k]!=top)break;
                 }
                 if(k == 5){
-                    new Result(!player,chessBoard,true);
+                    new Result(!player,chessBoard,Status.WIN);
                     ChessBoard.isVectorMode = true;
                     break flag3;
                 }
@@ -108,18 +109,18 @@ public class Logic extends JPanel {
                     if(board[i+k][j-k]!=top)break;
                 }
                 if(k == 5){
-                    new Result(!player,chessBoard,true);
+                    new Result(!player,chessBoard,Status.WIN);
                     ChessBoard.isVectorMode = true;
                     break flag3;
                 }
             }
         }
-        draw(board,rows,columns,player,chessBoard);
+        draw(board,rows,columns,chessBoard);
     }
 
     //平局
     public static void draw(int[][] board,int rows,
-                               int columns,boolean player,
+                               int columns,
                                ChessBoard chessBoard){
         
         for(int i = 0;i < rows;i++){
@@ -127,7 +128,7 @@ public class Logic extends JPanel {
                 if(board[i][j] == 0)return;
             }
         }
-        new Result(false,chessBoard,false);
+        new Result(false,chessBoard,Status.DRAW);
     }
 
     public static boolean judge(int[][] board, int row, int column) {

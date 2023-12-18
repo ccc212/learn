@@ -7,15 +7,19 @@ import java.awt.event.WindowEvent;
 
 public class Result extends JFrame{
     private JLabel label;
-    public Result(boolean player, ChessBoard chessBoard,boolean win) {
+    public Result(boolean player, ChessBoard chessBoard,int status) {
         super("获胜");
         setSize(300, 150);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        if(win) {
+        if(status == 1) {
             label = new JLabel("玩家" + (player ? "2" : "1") + "获胜", JLabel.CENTER);
-        }else{
+        }
+        else if(status == 2){
             label = new JLabel("平局", JLabel.CENTER);
+        }
+        else if(status == 3){
+            label = new JLabel("对手已离开");
         }
         label.setFont(new Font("SimSun", Font.BOLD, 20));
         add(label, BorderLayout.CENTER);

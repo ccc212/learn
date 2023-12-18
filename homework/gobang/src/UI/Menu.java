@@ -1,9 +1,6 @@
 package src.UI;
 
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Menu extends JFrame{
     public Menu(){
@@ -13,7 +10,7 @@ public class Menu extends JFrame{
 
         JPanel panel = new JPanel();
         frame.add(panel);
-        placeComponents1(panel);
+        placeComponents(panel);
 
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
@@ -22,7 +19,7 @@ public class Menu extends JFrame{
         Menu menu = new Menu();
     }
 
-    private static void placeComponents1(JPanel panel) {
+    private void placeComponents(JPanel panel) {
         panel.setLayout(null);
 
         JLabel userLabel = new JLabel("五子棋");
@@ -43,17 +40,21 @@ public class Menu extends JFrame{
         panel.add(userText);
 
         btn1.addActionListener(e -> {
-            System.out.println("创建");
             new Creat();
         });
         btn2.addActionListener(e -> {
-            System.out.println("加入");
+            String port = userText.getText();
+            System.out.println("加入端口" + port);
 
         });
     }
 
     public static void close() {
         JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(new Menu());
-        frame.dispose();
+        try {
+            frame.dispose();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
