@@ -7,26 +7,41 @@ import src.UI.Result;
 import src.UI.Status;
 
 import javax.swing.*;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.Stack;
 
 public class Logic extends JPanel {
     public static void put(int[][] board, boolean player,
-                           Stack<Pair<Integer, Integer>> stack,
+//                           Stack<Pair<Integer, Integer>> stack,
+                           Stack<ArrayList<Integer>> stack,
                            int row, int column) {
-        stack.push(new Pair<>(row,column));
+
+//        stack.push(new Pair<>(row,column));
+        stack.push(new ArrayList<>(Arrays.asList(row, column)));
+
         //玩家1:1     玩家2:-1
         if(player)board[row][column] = -1;
         else board[row][column] = 1;
     }
 
-    public static void back(int[][] board, Stack<Pair<Integer, Integer>> stack,
-                      HashMap<Pair<Integer,Integer>, ChessPiece>map,
-                      int row, int column) {
+    public static void back(int[][] board,
+//                            Stack<Pair<Integer, Integer>> stack,
+                            Stack<ArrayList<Integer>> stack,
+//                            HashMap<Pair<Integer,Integer>, ChessPiece>map,
+                            HashMap<ArrayList<Integer>, ChessPiece>map,
+                            int row, int column) {
         if(stack.empty())return;
-        Pair<Integer,Integer>back = stack.pop();
-        row = (int)back.getKey();
-        column = (int)back.getValue();
+
+//        Pair<Integer,Integer>back = stack.pop();
+        ArrayList<Integer>back = stack.pop();
+
+//        row = (int)back.getKey();
+//        column = (int)back.getValue();
+        row = back.get(0);
+        column = back.get(1);
+
         board[row][column] = 0;
         map.remove(back);
     }
@@ -45,14 +60,14 @@ public class Logic extends JPanel {
                 if(r + 1 == columns)break;
                 if (Math.abs(temp) == 5) {
                     new Result(!player,chessBoard, Status.WIN);
-                    ChessBoard.isVectorMode = true;
+                    ChessBoard.isWinMode = true;
                     break flag1;
                 }
                 temp -= board[i][l++];
                 temp += board[i][(r++) + 1];
                 if (Math.abs(temp) == 5) {
                     new Result(!player,chessBoard,Status.WIN);
-                    ChessBoard.isVectorMode = true;
+                    ChessBoard.isWinMode = true;
                     break flag1;
                 }
             }
@@ -69,14 +84,14 @@ public class Logic extends JPanel {
                 if(r + 1 == rows)break;
                 if (Math.abs(temp) == 5) {
                     new Result(!player,chessBoard,Status.WIN);
-                    ChessBoard.isVectorMode = true;
+                    ChessBoard.isWinMode = true;
                     break flag2;
                 }
                 temp -= board[l++][i];
                 temp += board[(r++) + 1][i];
                 if (Math.abs(temp) == 5) {
                     new Result(!player,chessBoard,Status.WIN);
-                    ChessBoard.isVectorMode = true;
+                    ChessBoard.isWinMode = true;
                     break flag2;
                 }
             }
@@ -95,7 +110,7 @@ public class Logic extends JPanel {
                 }
                 if(k == 5){
                     new Result(!player,chessBoard,Status.WIN);
-                    ChessBoard.isVectorMode = true;
+                    ChessBoard.isWinMode = true;
                     break flag3;
                 }
             }
@@ -110,7 +125,7 @@ public class Logic extends JPanel {
                 }
                 if(k == 5){
                     new Result(!player,chessBoard,Status.WIN);
-                    ChessBoard.isVectorMode = true;
+                    ChessBoard.isWinMode = true;
                     break flag3;
                 }
             }

@@ -21,6 +21,7 @@ public class Creat extends JFrame{
 
     private void isValid(String row,String column) {
         if(row.equals("") && column.equals("")){
+            ChessBoard.init();
             new Game();
             dispose();
         }
@@ -42,6 +43,7 @@ public class Creat extends JFrame{
                 clearText();
                 return;
             }
+            ChessBoard.init();
             new Game(Row, Column);
             dispose();
         } catch (NumberFormatException e) {

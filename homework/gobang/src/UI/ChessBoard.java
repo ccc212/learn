@@ -1,6 +1,7 @@
 package src.UI;
 
 import javafx.util.Pair;
+import src.Gobang;
 import src.Logic;
 import sun.rmi.runtime.Log;
 
@@ -10,7 +11,9 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.Stack;
 
 public class ChessBoard extends JPanel {
@@ -19,10 +22,12 @@ public class ChessBoard extends JPanel {
     private int columns;
     public static int CELL_SIZE = 50;
     private static boolean player = false;//下一个下棋的玩家,false玩家1,true玩家2
-    private HashMap<Pair<Integer,Integer>,ChessPiece> map;
+
+//    private HashMap<Pair<Integer,Integer>,ChessPiece> map;
+    private HashMap<ArrayList<Integer>,ChessPiece> map;
 
     private int row,column;
-    public static boolean isVectorMode = false;
+    public static boolean isWinMode = false;
     public ChessBoard(int rows, int columns) {
         setBackground(Color.getHSBColor(
                 Color.RGBtoHSB(210, 132, 0,null)[0],
@@ -31,16 +36,15 @@ public class ChessBoard extends JPanel {
         this.rows = rows;
         this.columns = columns;
         int[][] board = new int[rows][columns];
-        Stack<Pair<Integer,Integer>>stack = new Stack<>();
-//        setPreferredSize(new Dimension(columns * CELL_SIZE, rows * CELL_SIZE));
+
+//        Stack<Pair<Integer,Integer>>stack = new Stack<>();
+        Stack<ArrayList<Integer>>stack = new Stack<>();
+
         map = new HashMap<>();
-
-
-
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                if (isVectorMode)return;
+                if (isWinMode)return;
                 float x = e.getX();
                 float y = e.getY();
                 float xt = x / CELL_SIZE,yt = y / CELL_SIZE;
@@ -53,17 +57,23 @@ public class ChessBoard extends JPanel {
 //                    System.out.println("玩家2");
                     Logic.put(board,player,stack,row - 1,column - 1);
                     ChessPiece piece = new ChessPiece(row, column, Color.WHITE);
-                    map.put(new Pair<>(row - 1,column - 1),piece);
+
+//                    map.put(new Pair<>(row - 1,column - 1),piece);
+                    map.put(new ArrayList<>(Arrays.asList(row - 1,column - 1)),piece);
+
                     player = !player;
                 }
                 else if(!player){
 //                    System.out.println("玩家1");
                     Logic.put(board,player,stack,row - 1,column - 1);
                     ChessPiece piece = new ChessPiece(row, column, Color.BLACK);
-                    map.put(new Pair<>(row - 1,column - 1),piece);
+
+//                    map.put(new Pair<>(row - 1,column - 1),piece);
+                    map.put(new ArrayList<>(Arrays.asList(row - 1,column - 1)),piece);
+
                     player = !player;
                 }
-                Logic.victory(board,rows,columns,player,new ChessBoard(rows,columns));
+                Logic.victory(board,rows,columns,player,ChessBoard.this);
                 updateUI();
 //                Gobang.display(board);
 //                System.out.println(player ? "玩家2" : "玩家1");
@@ -82,7 +92,7 @@ public class ChessBoard extends JPanel {
                 int key = e.getKeyCode();
                 if(key == KeyEvent.VK_R){
                     System.out.printf("R");
-                    isVectorMode = false;
+                    isWinMode = false;
                     Logic.back(board,stack,map,row,column);
                     player = !player;
                     updateUI();
@@ -122,7 +132,12 @@ public class ChessBoard extends JPanel {
     }
 
     public void close() {
-        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
-        frame.dispose();
+        SwingUtilities.getWindowAncestor(this).dispose();
     }
+    
+    public static void init(){
+        player = false;
+        isWinMode = false;
+    }
+
 }
