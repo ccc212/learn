@@ -10,7 +10,7 @@ public class Result extends JFrame{
     public Result(boolean player, ChessBoard chessBoard,int status) {
         super("获胜");
         setSize(300, 150);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         if(status == 1) {
             label = new JLabel("玩家" + (player ? "2" : "1") + "获胜", JLabel.CENTER);
@@ -27,7 +27,7 @@ public class Result extends JFrame{
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosed(WindowEvent e) {
-                // 关闭Win时同时关闭ChessBoard
+                // 关闭Result时同时关闭ChessBoard
                 chessBoard.close();
             }
         });
