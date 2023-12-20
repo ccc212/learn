@@ -40,7 +40,7 @@ public class Creat extends JFrame{
                 clearText();
                 return;
             }
-            if (Row < 5 || Column < 5 /*|| Row == 1 || Column == 1*/) {
+            if (Row <= 5 || Column <= 5 /*Row < 5 && Column < 5 || Row == 1 || Column == 1*/) {
                 resultField.setText("无法创建棋盘");
                 clearText();
                 return;

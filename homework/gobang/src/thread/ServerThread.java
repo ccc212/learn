@@ -3,6 +3,7 @@ package src.thread;
 import src.Server;
 import src.UI.Game;
 
+import java.awt.*;
 import java.io.*;
 import java.net.Socket;
 
@@ -15,16 +16,19 @@ public class ServerThread extends Thread{
     public void run() {
         try {
             InputStream is = socket.getInputStream();
-            DataInputStream dis = new DataInputStream(is);
+            ObjectInputStream ois = new ObjectInputStream(is);
             while (true){
                 try {
-                    String msg = dis.readUTF();
-                    System.out.println(msg);
-                    sendMsgToAll(msg);
-                } catch (Exception e) {
+                    Point point = (Point) ois.readObject();
+                    if(point != null) {
+                        String msg = point.x + "," + point.y;
+                        System.out.println(msg);
+                        sendMsgToAll(point);
+                    }
+                } catch (IOException e) {
                     System.out.println("有人下线了：" + socket.getRemoteSocketAddress());
                     Server.onLineSockets.remove(socket);
-                    dis.close();
+                    ois.close();
                     socket.close();
                     break;
                 }
@@ -34,13 +38,12 @@ public class ServerThread extends Thread{
         }
     }
 
-    private void sendMsgToAll(String msg) throws IOException {
-        // 发送给全部在线的socket管道接收。
+    private void sendMsgToAll(Point point) throws IOException {
         for (Socket onLineSocket : Server.onLineSockets) {
             OutputStream os = onLineSocket.getOutputStream();
-            DataOutputStream dos = new DataOutputStream(os);
-            dos.writeUTF(msg);
-            dos.flush();
+            ObjectOutputStream oos = new ObjectOutputStream(os);
+            oos.writeObject(point);
+            oos.flush();
         }
     }
 }

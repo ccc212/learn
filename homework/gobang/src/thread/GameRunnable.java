@@ -4,29 +4,39 @@ import src.UI.ChessBoard;
 import src.UI.Game;
 
 import java.awt.*;
-import java.io.DataInputStream;
-import java.io.InputStream;
+import java.io.*;
 import java.net.Socket;
 
 public class GameRunnable implements Runnable{
     private Socket socket;
-    private ChessBoard chessBoard;
-    public GameRunnable(Socket socket){
+    private Game game;
+    public GameRunnable(Socket socket,Game game){
         this.socket = socket;
+        this.game = game;
     }
     @Override
     public void run() {
-        // 获取上一次点击的坐标
-//        Point lastClickPoint = chessBoard.getLastClickPoint();
-
-        // 在这里执行你的逻辑，例如打印坐标
-//        System.out.println("Last Click Point: " + lastClickPoint);
-
-        // 休眠一段时间，避免无限循环过快
+        OutputStream os;
+        ObjectOutputStream oos = null;
         try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            os = socket.getOutputStream();
+            oos = new ObjectOutputStream(os);
+        } catch (Exception e) {
+
+        }
+        while(true) {
+            // 获取上一次点击的坐标
+            Point lastClickPoint = game.getChessBoard().getLastClickPoint();
+            System.out.println("上一次点击坐标: " + lastClickPoint);
+
+            try {
+                oos.writeObject(lastClickPoint);
+                oos.flush();
+                Thread.sleep(3000);
+            } catch (Exception e) {
+                e.printStackTrace();
+                break;
+            }
         }
     }
 }

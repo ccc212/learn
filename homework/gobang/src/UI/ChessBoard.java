@@ -28,7 +28,9 @@ public class ChessBoard extends JPanel {
 
     private int row,column;
     public static boolean isWinMode = false;
+    private Stack<Point>stack;
     public int[][] board;
+    private Point lastClickPoint;
     public ChessBoard(int rows, int columns) {
         setBackground(Color.getHSBColor(
                 Color.RGBtoHSB(210, 132, 0,null)[0],
@@ -39,45 +41,15 @@ public class ChessBoard extends JPanel {
         board = new int[rows][columns];
 
 //        Stack<Pair<Integer,Integer>>stack = new Stack<>();
-        Stack<Point>stack = new Stack<>();
+        stack = new Stack<>();
 
         map = new HashMap<>();
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if (isWinMode)return;
-                float x = e.getX();
-                float y = e.getY();
-                float xt = x / CELL_SIZE,yt = y / CELL_SIZE;
-                row = ((yt - (int)yt) > 0.5) ? (int)yt + 1 : (int)yt;
-                column = ((xt - (int)xt) > 0.5) ? (int)xt + 1 : (int)xt;
-                if(row < 1 || column < 1 || row > rows || column > columns || Logic.judge(board, row - 1, column - 1)){
-                    System.out.println("点击无效");
-                }
-                else if(player){
-//                    System.out.println("玩家2");
-                    Logic.put(board,player,stack,row - 1,column - 1);
-                    ChessPiece piece = new ChessPiece(row, column, Color.WHITE);
-
-//                    map.put(new Pair<>(row - 1,column - 1),piece);
-                    map.put(new Point(row - 1,column - 1),piece);
-
-                    player = !player;
-                }
-                else if(!player){
-//                    System.out.println("玩家1");
-                    Logic.put(board,player,stack,row - 1,column - 1);
-                    ChessPiece piece = new ChessPiece(row, column, Color.BLACK);
-
-//                    map.put(new Pair<>(row - 1,column - 1),piece);
-                    map.put(new Point(row - 1,column - 1),piece);
-
-                    player = !player;
-                }
-                Logic.victory(board,rows,columns,player,ChessBoard.this);
-                updateUI();
-//                Gobang.display(board);
-//                System.out.println(player ? "玩家2" : "玩家1");
+                click(e.getX(),e.getY());
+                lastClickPoint = e.getPoint();
             }
         });
 
@@ -106,6 +78,45 @@ public class ChessBoard extends JPanel {
             }
         });
     }
+    private void click(int x,int y) {
+        float xt = (float)x / CELL_SIZE,yt = (float)y / CELL_SIZE;
+        row = ((yt - (int)yt) > 0.5) ? (int)yt + 1 : (int)yt;
+        column = ((xt - (int)xt) > 0.5) ? (int)xt + 1 : (int)xt;
+        if(row < 1 || column < 1 || row > rows || column > columns || Logic.judge(board, row - 1, column - 1)){
+            System.out.println("点击无效");
+        }
+        else if(player){
+//                    System.out.println("玩家2");
+            Logic.put(board,player,stack,row - 1,column - 1);
+            ChessPiece piece = new ChessPiece(row, column, Color.WHITE);
+
+//                    map.put(new Pair<>(row - 1,column - 1),piece);
+            map.put(new Point(row - 1,column - 1),piece);
+
+            player = !player;
+        }
+        else if(!player){
+//                    System.out.println("玩家1");
+            Logic.put(board,player,stack,row - 1,column - 1);
+            ChessPiece piece = new ChessPiece(row, column, Color.BLACK);
+
+//                    map.put(new Pair<>(row - 1,column - 1),piece);
+            map.put(new Point(row - 1,column - 1),piece);
+
+            player = !player;
+        }
+
+        Logic.victory(board,rows,columns,player,this);
+        updateUI();
+
+//                Gobang.display(board);
+//                System.out.println(player ? "玩家2" : "玩家1");
+    }
+
+    public Point getLastClickPoint() {
+        return lastClickPoint;
+    }
+
     public void updateUI() {
         repaint();
     }

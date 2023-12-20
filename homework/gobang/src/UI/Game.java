@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Game extends JFrame{
+    private ChessBoard chessBoard;
     public Game(){
         super("五子棋(按 R 悔棋)");
         JPanel panel = new JPanel(new BorderLayout());
@@ -24,13 +25,17 @@ public class Game extends JFrame{
         setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 
 //        ChessBoardTest chessBoard = new ChessBoardTest(rows, columns);
-        ChessBoard chessBoard = new ChessBoard(rows, columns);
+        chessBoard = new ChessBoard(rows, columns);
         chessBoard.setBounds(0,0,(rows + 2)*ChessBoard.CELL_SIZE,(columns + 2)*ChessBoard.CELL_SIZE);
 
         panel.add(chessBoard);
 
         setLocationRelativeTo(null);
         setVisible(true);
+    }
+
+    public ChessBoard getChessBoard() {
+        return chessBoard;
     }
 }
 
