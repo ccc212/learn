@@ -1,9 +1,9 @@
 package src.UI;
 
+import src.thread.ServerThread;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
 public class Creat extends JFrame{
     private int rowMax=30;
@@ -13,13 +13,15 @@ public class Creat extends JFrame{
     private JTextField textRow;
     private JTextField textColumn;
     private JTextField resultField;
+    private int port;
 
-    public Creat(){
+    public Creat(int port){
         super("创建");
+        this.port = port;
         placeComponents();
     }
 
-    private void isValid(String row,String column) {
+    private void isValid(String row,String column) throws Exception {
         if(row.equals("") && column.equals("")){
             ChessBoard.init();
             new Game();
@@ -95,7 +97,11 @@ public class Creat extends JFrame{
         submitButton.addActionListener(e -> {
             String row = textRow.getText();
             String column = textColumn.getText();
-            isValid(row,column);
+            try {
+                isValid(row,column);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
         });
 
         setLocationRelativeTo(null);

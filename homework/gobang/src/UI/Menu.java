@@ -3,6 +3,8 @@ package src.UI;
 import javax.swing.*;
 
 public class Menu extends JFrame{
+    JTextField userText;
+    JTextField resultField;
     public Menu(){
         JFrame frame = new JFrame("菜单");
         frame.setSize(400,300);
@@ -35,18 +37,47 @@ public class Menu extends JFrame{
         panel.add(btn1);
         panel.add(btn2);
 
-        JTextField userText = new JTextField(20);
+        userText = new JTextField(20);
         userText.setBounds(150,163,100,25);
         panel.add(userText);
 
+        resultField = new JTextField(20);
+        resultField.setBounds(150,220,100,25);
+        resultField.setEditable(false);
+        panel.add(resultField);
+
         btn1.addActionListener(e -> {
-            new Creat();
+            if(isValid(userText.getText())) {
+                new Creat(Integer.parseInt(userText.getText()));
+            }
         });
         btn2.addActionListener(e -> {
-            String port = userText.getText();
-            System.out.println("加入端口" + port);
-
+            if(isValid(userText.getText())) {
+                String port = userText.getText();
+                System.out.println("加入端口" + port);
+            }
+//            try {
+//                new Other(Integer.parseInt(port));
+//            } catch (Exception ex) {
+//                ex.printStackTrace();
+//            }
         });
+    }
+
+    private boolean isValid(String port){
+        try {
+            int Port = Integer.parseInt(port);
+            if(Port < 0 || Port > 65535){
+                userText.setText("");
+                resultField.setText("端口范围应在0~65535中");
+                return false;
+            }
+            return true;
+        } catch (NumberFormatException e) {
+            userText.setText("");
+            resultField.setText("输入不合法");
+            return false;
+        }
     }
 
     public static void close() {

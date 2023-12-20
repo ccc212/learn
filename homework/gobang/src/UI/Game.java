@@ -17,7 +17,7 @@ public class Game extends JFrame{
     }
 
     private void placeComponents(JPanel panel, int rows, int columns) {
-        panel.setLayout(null);
+//        panel.setLayout(null);
 
         //        setExtendedState(JFrame.MAXIMIZED_BOTH);//设置全屏
         setSize( (columns + 2) * ChessBoard.CELL_SIZE,(rows + 2) * ChessBoard.CELL_SIZE);
