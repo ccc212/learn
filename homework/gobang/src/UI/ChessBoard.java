@@ -24,10 +24,11 @@ public class ChessBoard extends JPanel {
     private static boolean player = false;//下一个下棋的玩家,false玩家1,true玩家2
 
 //    private HashMap<Pair<Integer,Integer>,ChessPiece> map;
-    private HashMap<ArrayList<Integer>,ChessPiece> map;
+    private HashMap<Point,ChessPiece> map;
 
     private int row,column;
     public static boolean isWinMode = false;
+    public int[][] board;
     public ChessBoard(int rows, int columns) {
         setBackground(Color.getHSBColor(
                 Color.RGBtoHSB(210, 132, 0,null)[0],
@@ -35,10 +36,10 @@ public class ChessBoard extends JPanel {
                 Color.RGBtoHSB(210, 132, 0,null)[2]));
         this.rows = rows;
         this.columns = columns;
-        int[][] board = new int[rows][columns];
+        board = new int[rows][columns];
 
 //        Stack<Pair<Integer,Integer>>stack = new Stack<>();
-        Stack<ArrayList<Integer>>stack = new Stack<>();
+        Stack<Point>stack = new Stack<>();
 
         map = new HashMap<>();
         addMouseListener(new MouseAdapter() {
@@ -59,7 +60,7 @@ public class ChessBoard extends JPanel {
                     ChessPiece piece = new ChessPiece(row, column, Color.WHITE);
 
 //                    map.put(new Pair<>(row - 1,column - 1),piece);
-                    map.put(new ArrayList<>(Arrays.asList(row - 1,column - 1)),piece);
+                    map.put(new Point(row - 1,column - 1),piece);
 
                     player = !player;
                 }
@@ -69,7 +70,7 @@ public class ChessBoard extends JPanel {
                     ChessPiece piece = new ChessPiece(row, column, Color.BLACK);
 
 //                    map.put(new Pair<>(row - 1,column - 1),piece);
-                    map.put(new ArrayList<>(Arrays.asList(row - 1,column - 1)),piece);
+                    map.put(new Point(row - 1,column - 1),piece);
 
                     player = !player;
                 }

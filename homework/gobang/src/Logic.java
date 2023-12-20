@@ -7,6 +7,7 @@ import src.UI.Result;
 import src.UI.Status;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.ArrayList;
@@ -15,11 +16,11 @@ import java.util.Stack;
 public class Logic extends JPanel {
     public static void put(int[][] board, boolean player,
 //                           Stack<Pair<Integer, Integer>> stack,
-                           Stack<ArrayList<Integer>> stack,
+                           Stack<Point> stack,
                            int row, int column) {
 
 //        stack.push(new Pair<>(row,column));
-        stack.push(new ArrayList<>(Arrays.asList(row, column)));
+        stack.push(new Point(row, column));
 
         //玩家1:1     玩家2:-1
         if(player)board[row][column] = -1;
@@ -28,19 +29,19 @@ public class Logic extends JPanel {
 
     public static void back(int[][] board,
 //                            Stack<Pair<Integer, Integer>> stack,
-                            Stack<ArrayList<Integer>> stack,
+                            Stack<Point> stack,
 //                            HashMap<Pair<Integer,Integer>, ChessPiece>map,
-                            HashMap<ArrayList<Integer>, ChessPiece>map,
+                            HashMap<Point, ChessPiece>map,
                             int row, int column) {
         if(stack.empty())return;
 
 //        Pair<Integer,Integer>back = stack.pop();
-        ArrayList<Integer>back = stack.pop();
+        Point back = stack.pop();
 
 //        row = (int)back.getKey();
 //        column = (int)back.getValue();
-        row = back.get(0);
-        column = back.get(1);
+        row = back.x;
+        column = back.y;
 
         board[row][column] = 0;
         map.remove(back);
