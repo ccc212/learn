@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10121b1c-405d-463f-8f67-99280b2a7e09" name="更改" comment="实现菜单,平局,创建游戏,游戏逻辑提取,游戏获胜判断修正,棋盘创建修正,各窗口居中,实现各窗口相互关联">
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d9_tz/MyRunnable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d9_tz/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gobang/src/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/annotation/MyAnnotation.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/annotation/Test01.class" beforeDir="false" />
@@ -53,11 +52,42 @@
       <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test12.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/test01.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/src/homework/shiyan6_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/homework/shiyan6_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Logic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/UI/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/ChessBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Creat.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Creat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/thread/GameRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/thread/GameRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/thread/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/thread/ServerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/Logic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/Logic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Creat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Creat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Result$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Result$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/thread/GameRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/thread/GameRunnable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/thread/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/thread/ServerThread.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -69,37 +99,56 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;state&quot;: &quot;OPEN&quot;
+    }
+  ],
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="3f7c0e1c-e48d-42c6-89bd-3406939b68e1" />
+        <option name="url" value="https://github.com/ccc212/learn.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
     &quot;associatedIndex&quot;: 6
     }</component>
   <component name="ProjectId" id="2ZTO7fhfToQC9noa704iem00gyM" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/gitProject/learn/JAVA&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "21",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/新建文件夹/h",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ui" />
@@ -111,7 +160,7 @@
       <module name="practice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.UI.*" />
+          <option name="PATTERN" value="src.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -145,20 +194,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Menu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Menu" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.UI.Menu" />
       <module name="practice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.UI.*" />
+          <option name="PATTERN" value="src.*" />
           <option name="ENABLED" value="true" />
         </pattern>
+      </extension>
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Player" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Player" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.Player" />
       <module name="practice" />
       <extension name="coverage">
@@ -166,6 +220,11 @@
           <option name="PATTERN" value="src.*" />
           <option name="ENABLED" value="true" />
         </pattern>
+      </extension>
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -184,6 +243,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="应用程序.Game" />
+      <item itemvalue="应用程序.Gobang" />
+      <item itemvalue="应用程序.Menu" />
+      <item itemvalue="应用程序.Player" />
+      <item itemvalue="应用程序.Server" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="应用程序.Menu" />
@@ -204,6 +270,8 @@
       <updated>1702442436891</updated>
       <workItem from="1702442437902" duration="13915000" />
       <workItem from="1702555597077" duration="67165000" />
+      <workItem from="1703052687153" duration="8655000" />
+      <workItem from="1703061411391" duration="16001000" />
     </task>
     <task id="LOCAL-00001" summary="五子棋斜线判断">
       <option name="closed" value="true" />
@@ -260,6 +328,37 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -270,7 +369,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
@@ -283,11 +382,25 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
     <MESSAGE value="五子棋斜线判断" />
     <MESSAGE value="悔棋" />
     <MESSAGE value="实现菜单,平局,创建游戏,游戏逻辑提取,获胜判断修正" />
     <MESSAGE value="实现菜单,平局,创建游戏,游戏逻辑提取" />
+    <MESSAGE value="合并远端追踪分支 'ccc049/master'" />
     <MESSAGE value="实现菜单,平局,创建游戏,游戏逻辑提取,游戏获胜判断修正,棋盘创建修正,各窗口居中,实现各窗口相互关联" />
     <option name="LAST_COMMIT_MESSAGE" value="实现菜单,平局,创建游戏,游戏逻辑提取,游戏获胜判断修正,棋盘创建修正,各窗口居中,实现各窗口相互关联" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.io.StreamCorruptedException" package="java.io" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

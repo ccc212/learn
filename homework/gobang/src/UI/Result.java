@@ -26,9 +26,9 @@ public class Result extends JFrame{
 
         addWindowListener(new WindowAdapter() {
             @Override
-            public void windowClosed(WindowEvent e) {
-                // 关闭Result时同时关闭ChessBoard
+            public void windowClosing(WindowEvent e) {
                 chessBoard.close();
+                Menu.unlock();
             }
         });
 

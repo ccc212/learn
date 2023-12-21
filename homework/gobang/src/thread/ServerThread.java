@@ -1,5 +1,6 @@
 package src.thread;
 
+import src.Room;
 import src.Server;
 import src.UI.Game;
 
@@ -15,14 +16,12 @@ public class ServerThread extends Thread{
     @Override
     public void run() {
         try {
-            InputStream is = socket.getInputStream();
-            ObjectInputStream ois = new ObjectInputStream(is);
+            ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
             while (true){
                 try {
                     Point point = (Point) ois.readObject();
+                    Server.rooms.put(Server.port,new Room(point.x,point.y));
                     if(point != null) {
-                        String msg = point.x + "," + point.y;
-                        System.out.println(msg);
                         sendMsgToAll(point);
                     }
                 } catch (IOException e) {
@@ -40,8 +39,7 @@ public class ServerThread extends Thread{
 
     private void sendMsgToAll(Point point) throws IOException {
         for (Socket onLineSocket : Server.onLineSockets) {
-            OutputStream os = onLineSocket.getOutputStream();
-            ObjectOutputStream oos = new ObjectOutputStream(os);
+            ObjectOutputStream oos = new ObjectOutputStream(onLineSocket.getOutputStream());
             oos.writeObject(point);
             oos.flush();
         }

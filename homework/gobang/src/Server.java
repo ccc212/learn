@@ -8,11 +8,16 @@ import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Server {
+    public static Map<Integer, Room> rooms = new HashMap<>();
     public static List<Socket> onLineSockets = new ArrayList<>();
+    public static int port;
     public Server(int port) throws Exception {
+        this.port = port;
         System.out.println("-----服务端启动成功-------");
         ServerSocket serverSocket = new ServerSocket(port);
         while (true) {

@@ -1,9 +1,14 @@
 package src.UI;
 
+import src.Player;
+import src.Room;
+import src.Server;
 import src.thread.ServerThread;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class Creat extends JFrame{
     private int rowMax=30;
@@ -15,17 +20,38 @@ public class Creat extends JFrame{
     private JTextField resultField;
     private int port;
 
-    public Creat(int port){
+    public Creat(int port) throws Exception {
         super("创建");
         this.port = port;
         placeComponents();
     }
 
+    private void startGame(int row,int column) throws Exception {
+        Room room = new Room(row,column);
+        Server.rooms.put(port,room);
+        ChessBoard.init();
+        new Thread(()->{
+            try {
+                new Server(port);
+            }catch (Exception ex){
+                ex.printStackTrace();
+            }
+        }).start();
+
+        new Thread(()->{
+            try {
+                new Game(row,column);
+            }catch (Exception ex){
+                ex.printStackTrace();
+            }
+        }).start();
+
+        dispose();
+    }
+
     private void isValid(String row,String column) throws Exception {
         if(row.equals("") && column.equals("")){
-            ChessBoard.init();
-            new Game();
-            dispose();
+            startGame(15,15);
         }
         try {
             int Row = Integer.parseInt(row);
@@ -45,9 +71,7 @@ public class Creat extends JFrame{
                 clearText();
                 return;
             }
-            ChessBoard.init();
-            new Game(Row, Column);
-            dispose();
+            startGame(Row,Column);
         } catch (NumberFormatException e) {
             resultField.setText("输入不合法");
             clearText();
@@ -101,6 +125,17 @@ public class Creat extends JFrame{
                 isValid(row,column);
             } catch (Exception ex) {
                 ex.printStackTrace();
+            }
+        });
+
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                try {
+                    Menu.unlock();
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
             }
         });
 

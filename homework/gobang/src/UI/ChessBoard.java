@@ -78,7 +78,20 @@ public class ChessBoard extends JPanel {
             }
         });
     }
-    private void click(int x,int y) {
+
+    public boolean judge(int x,int y){
+        float xt = (float)x / CELL_SIZE,yt = (float)y / CELL_SIZE;
+        row = ((yt - (int)yt) > 0.5) ? (int)yt + 1 : (int)yt;
+        column = ((xt - (int)xt) > 0.5) ? (int)xt + 1 : (int)xt;
+        if(row < 1 || column < 1 ||
+                row > rows || column > columns ||
+                Logic.judge(board, row - 1, column - 1)){
+            return false;
+        }
+        return true;
+    }
+
+    public void click(int x,int y) {
         float xt = (float)x / CELL_SIZE,yt = (float)y / CELL_SIZE;
         row = ((yt - (int)yt) > 0.5) ? (int)yt + 1 : (int)yt;
         column = ((xt - (int)xt) > 0.5) ? (int)xt + 1 : (int)xt;

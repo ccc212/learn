@@ -149,7 +149,7 @@ public class Logic extends JPanel {
 
     public static boolean judge(int[][] board, int row, int column) {
         if(board[row][column] != 0){
-            System.out.println("该位置已下过,请重新输入:");
+//            System.out.println("该位置已下过,请重新输入:");
             return true;
         }
         return false;
