@@ -10,9 +10,12 @@ import java.util.concurrent.*;
 
 public class Player {
     private Game game;
-    private Point point;
-    public Player(int port,int row,int column) throws Exception {
-        Socket socket = new Socket("127.0.0.1", port);
+
+    private Socket socket;
+    private static boolean isRoomOwner;
+    public Player(int port,int row,int column,boolean isRoomOwner) throws Exception {
+        this.isRoomOwner = isRoomOwner;
+        socket = new Socket("127.0.0.1", port);
         game = new Game(row,column);
 
         ExecutorService pool = new ThreadPoolExecutor(12 * 2, 12 * 2, 0, TimeUnit.SECONDS,
@@ -27,6 +30,16 @@ public class Player {
     }
 
     public static void main(String[] args) throws Exception {
-        new Player(8080,15,15);
+        new Player(8080,15,15,false);
+    }
+
+
+    public Socket getSocket() {
+        return socket;
+    }
+
+    public static boolean isRoomOwner() {
+        return isRoomOwner;
     }
 }
+

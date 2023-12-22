@@ -2,6 +2,7 @@ package src.thread;
 
 import src.Room;
 import src.Server;
+import src.UI.Creat;
 import src.UI.Game;
 
 import java.awt.*;
@@ -24,7 +25,7 @@ public class ServerThread extends Thread{
                 try {
                     Point point = (Point) ois.readObject();
                     if(point != null) {
-                        sendMsgToAll(point);
+                        sendToOther(point);
                     }
                 } catch (IOException e) {
                     System.out.println("有人下线了：" + socket.getRemoteSocketAddress());
@@ -35,21 +36,22 @@ public class ServerThread extends Thread{
                 }
             }
         } catch (Exception e) {
+            e.printStackTrace();
             Socket socket = Server.onLineSockets.get(0);
             try {
                 ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
                 oos.writeObject("对方已离开");
                 oos.flush();
-                oos.close();
+//                oos.close();
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
-//            e.printStackTrace();
         }
     }
 
-    public static void broadcastRoomInfo(int port, int row, int column, Socket newSocket) {
-        Room room = new Room(row,column);
+    public static void broadcastRoomInfo(int port,Socket newSocket) {
+        Room room = Creat.getRoom();
+        if(room == null)return;
         portToRoomMap.put(port,room);
         try {
             ObjectOutputStream oos = new ObjectOutputStream(newSocket.getOutputStream());
@@ -64,7 +66,7 @@ public class ServerThread extends Thread{
         return portToRoomMap.get(port);
     }
 
-    private void sendMsgToAll(Point point) throws IOException {
+    private void sendToOther(Point point) throws IOException {
         for (Socket onLineSocket : Server.onLineSockets) {
             if(onLineSocket != socket) {
                 ObjectOutputStream oos = new ObjectOutputStream(onLineSocket.getOutputStream());

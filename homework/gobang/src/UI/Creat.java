@@ -14,14 +14,15 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 
 public class Creat extends JFrame{
-    private int rowMax=30;
-    private int columnMax=30;
+    private static int rowMax=30;
+    private static int columnMax=30;
 
     private int fontSize=20;
-    private JTextField textRow;
-    private JTextField textColumn;
-    private JTextField resultField;
+    private static JTextField textRow;
+    private static JTextField textColumn;
+    private static JTextField resultField;
     private int port;
+    private static Room room;
 
     public Creat(int port) throws Exception {
         super("创建");
@@ -41,57 +42,45 @@ public class Creat extends JFrame{
 
         new Thread(()->{
             try {
-                new Player(port,row,column);
+                new Player(port,row,column,true);
             }catch (Exception ex){
                 ex.printStackTrace();
-            }
-        }).start();
-
-        new Thread(()->{
-            while (true) {
-                try {
-                    Thread.sleep(100);
-                    Socket newSocket = Server.onLineSockets.get(Server.onLineSockets.size() - 1);
-                    if(newSocket != Server.onLineSockets.get(0)) {
-                        ServerThread.broadcastRoomInfo(port, row, column, newSocket);
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    break;
-                }
             }
         }).start();
 
         dispose();
     }
 
-    private void isValid(String row,String column) throws Exception {
+
+    private static Room isValid(String row,String column) throws Exception {
         if(row.equals("") && column.equals("")){
-            startGame(15,15);
+//            return new Room(15,15);
+            return new Room(6,6);
         }
         try {
             int Row = Integer.parseInt(row);
             int Column = Integer.parseInt(column);
             if (Row > rowMax) {
                 resultField.setText("行数超范围了");
-                clearText();
-                return;
+                return null;
             }
             if (Column > columnMax) {
                 resultField.setText("列数超范围了");
-                clearText();
-                return;
+                return null;
             }
             if (Row <= 5 || Column <= 5 /*Row < 5 && Column < 5 || Row == 1 || Column == 1*/) {
                 resultField.setText("无法创建棋盘");
-                clearText();
-                return;
+                return null;
             }
-            startGame(Row,Column);
+            return new Room(Row,Column);
         } catch (NumberFormatException e) {
             resultField.setText("输入不合法");
-            clearText();
         }
+        return null;
+    }
+
+    public static Room getRoom(){
+        return room;
     }
 
     private void clearText(){
@@ -138,7 +127,12 @@ public class Creat extends JFrame{
             String row = textRow.getText();
             String column = textColumn.getText();
             try {
-                isValid(row,column);
+                room = isValid(row,column);
+                if(room != null) {
+                    startGame(room.getRow(), room.getColumn());
+                }
+                else
+                    clearText();
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
@@ -155,7 +149,7 @@ public class Creat extends JFrame{
             }
         });
 
-        setLocationRelativeTo(null);
+        setLocationRelativeTo(Menu.frame);
         setVisible(true);
     }
 

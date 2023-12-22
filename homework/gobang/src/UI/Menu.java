@@ -19,8 +19,10 @@ public class Menu extends JFrame{
     public static JButton btn2;
     public static JTextField userText;
     public static JTextField resultField;
+    public static JFrame frame;
+    public static Socket roomInfoSocket = null;
     public Menu(){
-        JFrame frame = new JFrame("菜单");
+        frame = new JFrame("菜单");
         frame.setSize(400,300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -92,10 +94,12 @@ public class Menu extends JFrame{
 
                 new Thread(() -> {
                     try {
-                        Socket socket = new Socket("127.0.0.1", Integer.parseInt(port));
-                        ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
+                        roomInfoSocket = new Socket("127.0.0.1", Integer.parseInt(port));
+                        ObjectInputStream ois = new ObjectInputStream(roomInfoSocket.getInputStream());
                         Room room = (Room) ois.readObject();
-                        new Player(Integer.parseInt(port), room.getRow(), room.getColumn());
+//                        ois.close();
+                        new Player(Integer.parseInt(port), room.getRow(),
+                                room.getColumn(),false);
                     } catch (Exception ex) {
                         ex.printStackTrace();
                     }

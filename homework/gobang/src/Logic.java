@@ -134,9 +134,12 @@ public class Logic extends JPanel {
         draw(board,rows,columns,chessBoard);
     }
 
-    public static void leave(ChessBoard chessBoard){
+    public static void leave(ChessBoard chessBoard,boolean isRoomOwner){
         chessBoard.isEnabled = false;
-        new Result(false,chessBoard,Status.LEAVE);
+        if(isRoomOwner)
+            new Result(false,chessBoard,Status.LEAVE);
+        else
+            new Result(true,chessBoard,Status.CLOSE);
     }
 
     //平局

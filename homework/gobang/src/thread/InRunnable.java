@@ -1,6 +1,7 @@
 package src.thread;
 
 import src.Logic;
+import src.Player;
 import src.UI.Game;
 
 import java.awt.*;
@@ -14,21 +15,20 @@ public class InRunnable implements Runnable {
     private Point point;
     private InputStream is;
     private ObjectInputStream ois;
+
     public InRunnable(Socket socket, Game game) throws Exception {
         this.socket = socket;
         this.game = game;
-        is = socket.getInputStream();
-        ois = new ObjectInputStream(is);
     }
     @Override
     public void run() {
         try {
-            InputStream is = socket.getInputStream();
+            is = socket.getInputStream();
             while (true) {
                 try {
-                    ObjectInputStream ois = new ObjectInputStream(is);
+                    ois = new ObjectInputStream(is);
 //                    if(ois.readObject().equals("对方已离开")){
-//                        Logic.leave(game.getChessBoard());
+//                        Logic.leave(game.getChessBoard(), Player.isRoomOwner());
 //                        break;
 //                    }
                     point = (Point) ois.readObject();

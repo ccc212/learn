@@ -24,6 +24,9 @@ public class Result extends JFrame{
         else if(status == Status.CLOSE){
             label = new JLabel("房间已关闭", JLabel.CENTER);
         }
+        else if(status == Status.LOSE){
+            label = new JLabel("你输了", JLabel.CENTER);
+        }
         label.setFont(new Font("SimSun", Font.BOLD, 20));
         add(label, BorderLayout.CENTER);
 
@@ -35,7 +38,7 @@ public class Result extends JFrame{
             }
         });
 
-        setLocationRelativeTo(null);//窗口居中
+        setLocationRelativeTo(chessBoard);
         setVisible(true);
     }
 }

@@ -1,4 +1,7 @@
 package src.UI;
+import src.Player;
+import src.Server;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
@@ -36,10 +39,13 @@ public class Game extends JFrame{
             @Override
             public void windowClosing(WindowEvent e) {
                 Menu.unlock();
+                if(Player.isRoomOwner()){
+                    Server.close();
+                }
             }
         });
 
-        setLocationRelativeTo(null);
+        setLocationRelativeTo(Menu.frame);
         setVisible(true);
     }
 

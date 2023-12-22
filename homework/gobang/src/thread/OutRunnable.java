@@ -1,5 +1,7 @@
 package src.thread;
 
+import src.Logic;
+import src.Player;
 import src.UI.Game;
 
 import java.awt.*;
@@ -24,13 +26,14 @@ public class OutRunnable implements Runnable{
         while(true) {
             Point lastClickPoint = game.getChessBoard().getLastClickPoint();
 //            System.out.println("上一次点击坐标: " + lastClickPoint);
-
             try {
                 oos.writeObject(lastClickPoint);
                 oos.flush();
                 Thread.sleep(10);
             } catch (Exception e) {
                 e.printStackTrace();
+                Logic.leave(game.getChessBoard(), Player.isRoomOwner());
+                break;
             }
         }
     }
