@@ -31,6 +31,7 @@ public class ChessBoard extends JPanel {
     private Stack<Point>stack;
     public int[][] board;
     private Point lastClickPoint;
+    public static boolean isEnabled = true;
     public ChessBoard(int rows, int columns) {
         setBackground(Color.getHSBColor(
                 Color.RGBtoHSB(210, 132, 0,null)[0],
@@ -44,39 +45,42 @@ public class ChessBoard extends JPanel {
         stack = new Stack<>();
 
         map = new HashMap<>();
-        addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                if (isWinMode)return;
-                click(e.getX(),e.getY());
-                lastClickPoint = e.getPoint();
-            }
-        });
 
-        setFocusable(true);
-        addKeyListener(new KeyListener() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-
-            }
-
-            @Override
-            public void keyPressed(KeyEvent e) {
-                int key = e.getKeyCode();
-                if(key == KeyEvent.VK_R){
-                    System.out.printf("R");
-                    isWinMode = false;
-                    Logic.back(board,stack,map,row,column);
-                    player = !player;
-                    updateUI();
+        if(isEnabled()) {
+            addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    if (isWinMode) return;
+                    click(e.getX(), e.getY());
+                    lastClickPoint = e.getPoint();
                 }
-            }
+            });
 
-            @Override
-            public void keyReleased(KeyEvent e) {
+            setFocusable(true);
+            addKeyListener(new KeyListener() {
+                @Override
+                public void keyTyped(KeyEvent e) {
 
-            }
-        });
+                }
+
+                @Override
+                public void keyPressed(KeyEvent e) {
+                    int key = e.getKeyCode();
+                    if (key == KeyEvent.VK_R) {
+                        System.out.printf("R");
+                        isWinMode = false;
+                        Logic.back(board, stack, map, row, column);
+                        player = !player;
+                        updateUI();
+                    }
+                }
+
+                @Override
+                public void keyReleased(KeyEvent e) {
+
+                }
+            });
+        }
     }
 
     public boolean judge(int x,int y){

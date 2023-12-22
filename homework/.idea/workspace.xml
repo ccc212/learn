@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10121b1c-405d-463f-8f67-99280b2a7e09" name="更改" comment="实现菜单,平局,创建游戏,游戏逻辑提取,游戏获胜判断修正,棋盘创建修正,各窗口居中,实现各窗口相互关联">
-      <change afterPath="$PROJECT_DIR$/gobang/src/Room.java" afterDir="false" />
+    <list default="true" id="10121b1c-405d-463f-8f67-99280b2a7e09" name="更改" comment="新建Room类">
+      <change afterPath="$PROJECT_DIR$/gobang/src/thread/InRunnable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/annotation/MyAnnotation.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/annotation/Test01.class" beforeDir="false" />
@@ -35,6 +35,11 @@
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test12.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/User.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/test01.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/MyList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/MyList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/Stu.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/Stu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/shiyan1_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/shiyan1_2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/shiyan4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/shiyan4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/shiyan5.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/shiyan5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/shiyan6_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/shiyan6_1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/annotation/Test01.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/annotation/Test02.java" beforeDir="false" />
@@ -51,19 +56,19 @@
       <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test11.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test12.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/test01.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/homework/shiyan4.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/homework/shiyan4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/src/homework/shiyan6_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/homework/shiyan6_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Logic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/UI/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/ChessBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/UI/Creat.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Creat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/UI/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/UI/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gobang/src/thread/GameRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/thread/GameRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/thread/GameRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/thread/OutRunnable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/thread/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/thread/ServerThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/Logic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/Logic.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/Player.class" afterDir="false" />
@@ -72,10 +77,11 @@
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Creat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Creat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Menu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Result$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Result$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/thread/GameRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/thread/GameRunnable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Status.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/thread/GameRunnable.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/thread/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/thread/ServerThread.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,27 +134,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "21",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/新建文件夹/h",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "项目",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/Desktop/新建文件夹/h&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ui" />
@@ -271,7 +277,8 @@
       <workItem from="1702442437902" duration="13915000" />
       <workItem from="1702555597077" duration="67165000" />
       <workItem from="1703052687153" duration="8655000" />
-      <workItem from="1703061411391" duration="16001000" />
+      <workItem from="1703061411391" duration="40573000" />
+      <workItem from="1703226521827" duration="1478000" />
     </task>
     <task id="LOCAL-00001" summary="五子棋斜线判断">
       <option name="closed" value="true" />
@@ -321,7 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702797736440</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="新建Room类">
+      <option name="closed" value="true" />
+      <created>1703132633377</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1703132633377</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,7 +406,8 @@
     <MESSAGE value="实现菜单,平局,创建游戏,游戏逻辑提取" />
     <MESSAGE value="合并远端追踪分支 'ccc049/master'" />
     <MESSAGE value="实现菜单,平局,创建游戏,游戏逻辑提取,游戏获胜判断修正,棋盘创建修正,各窗口居中,实现各窗口相互关联" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现菜单,平局,创建游戏,游戏逻辑提取,游戏获胜判断修正,棋盘创建修正,各窗口居中,实现各窗口相互关联" />
+    <MESSAGE value="新建Room类" />
+    <option name="LAST_COMMIT_MESSAGE" value="新建Room类" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -399,6 +415,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.io.StreamCorruptedException" package="java.io" />
           <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ClassCastException" package="java.lang" />
+          <option name="timeStamp" value="2" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,16 +1,15 @@
 package src.thread;
 
-import src.UI.ChessBoard;
 import src.UI.Game;
 
 import java.awt.*;
 import java.io.*;
 import java.net.Socket;
 
-public class GameRunnable implements Runnable{
+public class OutRunnable implements Runnable{
     private Socket socket;
     private Game game;
-    public GameRunnable(Socket socket,Game game){
+    public OutRunnable(Socket socket, Game game){
         this.socket = socket;
         this.game = game;
     }
@@ -32,7 +31,6 @@ public class GameRunnable implements Runnable{
                 Thread.sleep(10);
             } catch (Exception e) {
                 e.printStackTrace();
-                break;
             }
         }
     }

@@ -9,6 +9,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
 
 public class Creat extends JFrame{
     private int rowMax=30;
@@ -27,8 +30,6 @@ public class Creat extends JFrame{
     }
 
     private void startGame(int row,int column) throws Exception {
-        Room room = new Room(row,column);
-        Server.rooms.put(port,room);
         ChessBoard.init();
         new Thread(()->{
             try {
@@ -40,9 +41,24 @@ public class Creat extends JFrame{
 
         new Thread(()->{
             try {
-                new Game(row,column);
+                new Player(port,row,column);
             }catch (Exception ex){
                 ex.printStackTrace();
+            }
+        }).start();
+
+        new Thread(()->{
+            while (true) {
+                try {
+                    Thread.sleep(100);
+                    Socket newSocket = Server.onLineSockets.get(Server.onLineSockets.size() - 1);
+                    if(newSocket != Server.onLineSockets.get(0)) {
+                        ServerThread.broadcastRoomInfo(port, row, column, newSocket);
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    break;
+                }
             }
         }).start();
 

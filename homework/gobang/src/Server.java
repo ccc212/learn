@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.Map;
 
 public class Server {
-    public static Map<Integer, Room> rooms = new HashMap<>();
     public static List<Socket> onLineSockets = new ArrayList<>();
     public static int port;
     public Server(int port) throws Exception {

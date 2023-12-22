@@ -1,6 +1,8 @@
 package src;
 
-public class Room {
+import java.io.Serializable;
+
+public class Room implements Serializable {
     private int row;
     private int column;
 

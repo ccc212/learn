@@ -3,9 +3,16 @@ package src.UI;
 import src.Player;
 import src.Room;
 import src.Server;
+import src.thread.ServerThread;
 
 import javax.swing.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.net.Socket;
 import java.util.List;
+import java.util.Scanner;
 
 public class Menu extends JFrame{
     public static JButton btn1;
@@ -24,7 +31,7 @@ public class Menu extends JFrame{
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Menu menu = new Menu();
     }
 
@@ -63,13 +70,13 @@ public class Menu extends JFrame{
         panel.add(userText);
 
         resultField = new JTextField(20);
-        resultField.setBounds(150,220,100,25);
+        resultField.setBounds(130,220,140,25);
         resultField.setEditable(false);
         panel.add(resultField);
 
         btn1.addActionListener(e -> {
+            String port = userText.getText();
             if(isValid(userText.getText())) {
-                String port = userText.getText();
                 lock("创建房间 端口:" + port);
                 try {
                     new Creat(Integer.parseInt(userText.getText()));
@@ -79,24 +86,32 @@ public class Menu extends JFrame{
             }
         });
         btn2.addActionListener(e -> {
-            Server.rooms.forEach((key, room) -> System.out.println("Key: " + key + ", Value: " + room));
-            if(isValid(userText.getText())) {
-                String port = userText.getText();
+            String port = userText.getText();
+            if(isValid(port)) {
                 lock("进入房间 端口" + port);
-                try {
-                    new Thread(() -> {
-                        Room room = Server.rooms.get(Integer.parseInt(port));
-//                        try {
-//                            new Player(Integer.parseInt(port), room.getRow(), room.getColumn());
-//                        } catch (Exception ex) {
-//                            ex.printStackTrace();
-//                        }
-                    }).start();
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
+
+                new Thread(() -> {
+                    try {
+                        Socket socket = new Socket("127.0.0.1", Integer.parseInt(port));
+                        ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
+                        Room room = (Room) ois.readObject();
+                        new Player(Integer.parseInt(port), room.getRow(), room.getColumn());
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
+                }).start();
             }
         });
+    }
+
+    private boolean isPortExit(int port) {
+        for (Socket socket : Server.onLineSockets) {
+            System.out.println(socket);
+            if (socket.getPort() == port) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private boolean isValid(String port){
