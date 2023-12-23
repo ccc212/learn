@@ -1,12 +1,28 @@
 package src.UI;
 
+import src.Player;
+import src.Room;
+import src.Server;
+import src.thread.ServerThread;
+
 import javax.swing.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.net.Socket;
+import java.util.List;
+import java.util.Scanner;
 
 public class Menu extends JFrame{
-    JTextField userText;
-    JTextField resultField;
+    public static JButton btn1;
+    public static JButton btn2;
+    public static JTextField userText;
+    public static JTextField resultField;
+    public static JFrame frame;
+    public static Socket roomInfoSocket = null;
     public Menu(){
-        JFrame frame = new JFrame("菜单");
+        frame = new JFrame("菜单");
         frame.setSize(400,300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -17,8 +33,22 @@ public class Menu extends JFrame{
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Menu menu = new Menu();
+    }
+
+    public static void lock(String str){
+        btn1.setEnabled(false);
+        btn2.setEnabled(false);
+        userText.setEnabled(false);
+        resultField.setText(str);
+    }
+
+    public static void unlock(){
+        btn1.setEnabled(true);
+        btn2.setEnabled(true);
+        userText.setEnabled(true);
+        resultField.setText("");
     }
 
     private void placeComponents(JPanel panel) {
@@ -30,8 +60,8 @@ public class Menu extends JFrame{
         userLabel.setFont(userLabel.getFont().deriveFont(30.0f));
         panel.add(userLabel);
 
-        JButton btn1 = new JButton("创建");
-        JButton btn2 = new JButton("加入");
+        btn1 = new JButton("创建");
+        btn2 = new JButton("加入");
         btn1.setBounds(50,150,100,50);
         btn2.setBounds(250,150,100,50);
         panel.add(btn1);
@@ -42,26 +72,50 @@ public class Menu extends JFrame{
         panel.add(userText);
 
         resultField = new JTextField(20);
-        resultField.setBounds(150,220,100,25);
+        resultField.setBounds(130,220,140,25);
         resultField.setEditable(false);
         panel.add(resultField);
 
         btn1.addActionListener(e -> {
+            String port = userText.getText();
             if(isValid(userText.getText())) {
-                new Creat(Integer.parseInt(userText.getText()));
+                lock("创建房间 端口:" + port);
+                try {
+                    new Creat(Integer.parseInt(userText.getText()));
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
             }
         });
         btn2.addActionListener(e -> {
-            if(isValid(userText.getText())) {
-                String port = userText.getText();
-                System.out.println("加入端口" + port);
+            String port = userText.getText();
+            if(isValid(port)) {
+                lock("进入房间 端口" + port);
+
+                new Thread(() -> {
+                    try {
+                        roomInfoSocket = new Socket("127.0.0.1", Integer.parseInt(port));
+                        ObjectInputStream ois = new ObjectInputStream(roomInfoSocket.getInputStream());
+                        Room room = (Room) ois.readObject();
+//                        ois.close();
+                        new Player(Integer.parseInt(port), room.getRow(),
+                                room.getColumn(),false);
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
+                }).start();
             }
-//            try {
-//                new Other(Integer.parseInt(port));
-//            } catch (Exception ex) {
-//                ex.printStackTrace();
-//            }
         });
+    }
+
+    private boolean isPortExit(int port) {
+        for (Socket socket : Server.onLineSockets) {
+            System.out.println(socket);
+            if (socket.getPort() == port) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private boolean isValid(String port){

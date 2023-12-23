@@ -1,57 +1,86 @@
 package src.UI;
 
+import src.Player;
+import src.Room;
+import src.Server;
 import src.thread.ServerThread;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
 
 public class Creat extends JFrame{
-    private int rowMax=30;
-    private int columnMax=30;
+    private static int rowMax=30;
+    private static int columnMax=30;
 
     private int fontSize=20;
-    private JTextField textRow;
-    private JTextField textColumn;
-    private JTextField resultField;
+    private static JTextField textRow;
+    private static JTextField textColumn;
+    private static JTextField resultField;
     private int port;
+    private static Room room;
 
-    public Creat(int port){
+    public Creat(int port) throws Exception {
         super("创建");
         this.port = port;
         placeComponents();
     }
 
-    private void isValid(String row,String column) throws Exception {
+    private void startGame(int row,int column) throws Exception {
+        ChessBoard.init();
+        new Thread(()->{
+            try {
+                new Server(port);
+            }catch (Exception ex){
+                ex.printStackTrace();
+            }
+        }).start();
+
+        new Thread(()->{
+            try {
+                new Player(port,row,column,true);
+            }catch (Exception ex){
+                ex.printStackTrace();
+            }
+        }).start();
+
+        dispose();
+    }
+
+
+    private static Room isValid(String row,String column) throws Exception {
         if(row.equals("") && column.equals("")){
-            ChessBoard.init();
-            new Game();
-            dispose();
+//            return new Room(15,15);
+            return new Room(6,6);
         }
         try {
             int Row = Integer.parseInt(row);
             int Column = Integer.parseInt(column);
             if (Row > rowMax) {
                 resultField.setText("行数超范围了");
-                clearText();
-                return;
+                return null;
             }
             if (Column > columnMax) {
                 resultField.setText("列数超范围了");
-                clearText();
-                return;
+                return null;
             }
-            if (Row < 5 || Column < 5 /*|| Row == 1 || Column == 1*/) {
+            if (Row <= 5 || Column <= 5 /*Row < 5 && Column < 5 || Row == 1 || Column == 1*/) {
                 resultField.setText("无法创建棋盘");
-                clearText();
-                return;
+                return null;
             }
-            ChessBoard.init();
-            new Game(Row, Column);
-            dispose();
+            return new Room(Row,Column);
         } catch (NumberFormatException e) {
             resultField.setText("输入不合法");
-            clearText();
         }
+        return null;
+    }
+
+    public static Room getRoom(){
+        return room;
     }
 
     private void clearText(){
@@ -98,13 +127,29 @@ public class Creat extends JFrame{
             String row = textRow.getText();
             String column = textColumn.getText();
             try {
-                isValid(row,column);
+                room = isValid(row,column);
+                if(room != null) {
+                    startGame(room.getRow(), room.getColumn());
+                }
+                else
+                    clearText();
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
         });
 
-        setLocationRelativeTo(null);
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                try {
+                    Menu.unlock();
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+        setLocationRelativeTo(Menu.frame);
         setVisible(true);
     }
 

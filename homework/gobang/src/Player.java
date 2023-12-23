@@ -1,47 +1,45 @@
 package src;
 
-import src.thread.GameRunnable;
+import src.UI.Game;
+import src.thread.InRunnable;
+import src.thread.OutRunnable;
 
-import java.io.DataOutputStream;
-import java.io.OutputStream;
+import java.awt.*;
 import java.net.Socket;
-import java.util.Scanner;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 public class Player {
-    public Player(int port) throws Exception {
-        Socket socket = new Socket("127.0.0.1", port);
+    private Game game;
 
-        ThreadPoolExecutor pool = new ThreadPoolExecutor(12 * 2, 12 * 2, 0, TimeUnit.SECONDS,
+    private Socket socket;
+    private static boolean isRoomOwner;
+    public Player(int port,int row,int column,boolean isRoomOwner) throws Exception {
+        this.isRoomOwner = isRoomOwner;
+        socket = new Socket("127.0.0.1", port);
+        game = new Game(row,column);
+
+        ExecutorService pool = new ThreadPoolExecutor(12 * 2, 12 * 2, 0, TimeUnit.SECONDS,
                 new ArrayBlockingQueue<>(8) , Executors.defaultThreadFactory(),
                 new ThreadPoolExecutor.AbortPolicy());
 
-        pool.execute(new GameRunnable(socket));
-
-//        new ChatThread(socket).start();
-//        OutputStream os = socket.getOutputStream();
-//        DataOutputStream dos = new DataOutputStream(os);
-//        Scanner sc = new Scanner(System.in);
-//        while (true) {
+        Future<?>f1=pool.submit(new OutRunnable(socket,game));
+        Future<?>f2=pool.submit(new InRunnable(socket,game));
 
 
-//            System.out.println("请说：");
-//            String msg = sc.nextLine();
-//            if("exit".equals(msg)){
-//                System.out.println("欢迎您下次光临！退出成功！");
-//                dos.close();
-//                socket.close();
-//                break;
-//            }
-//            dos.writeUTF(msg);
-//            dos.flush();
-//        }
+        pool.shutdown();
     }
 
     public static void main(String[] args) throws Exception {
-        new Player(8080);
+        new Player(8080,15,15,false);
+    }
+
+
+    public Socket getSocket() {
+        return socket;
+    }
+
+    public static boolean isRoomOwner() {
+        return isRoomOwner;
     }
 }
+

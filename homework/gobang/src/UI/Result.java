@@ -8,31 +8,37 @@ import java.awt.event.WindowEvent;
 public class Result extends JFrame{
     private JLabel label;
     public Result(boolean player, ChessBoard chessBoard,int status) {
-        super("获胜");
+        super("结果");
         setSize(300, 150);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
-        if(status == 1) {
+        if(status == Status.WIN) {
             label = new JLabel("玩家" + (player ? "2" : "1") + "获胜", JLabel.CENTER);
         }
-        else if(status == 2){
+        else if(status == Status.DRAW){
             label = new JLabel("平局", JLabel.CENTER);
         }
-        else if(status == 3){
-            label = new JLabel("对手已离开");
+        else if(status == Status.LEAVE){
+            label = new JLabel("对手已离开", JLabel.CENTER);
+        }
+        else if(status == Status.CLOSE){
+            label = new JLabel("房间已关闭", JLabel.CENTER);
+        }
+        else if(status == Status.LOSE){
+            label = new JLabel("你输了", JLabel.CENTER);
         }
         label.setFont(new Font("SimSun", Font.BOLD, 20));
         add(label, BorderLayout.CENTER);
 
         addWindowListener(new WindowAdapter() {
             @Override
-            public void windowClosed(WindowEvent e) {
-                // 关闭Result时同时关闭ChessBoard
+            public void windowClosing(WindowEvent e) {
                 chessBoard.close();
+                Menu.unlock();
             }
         });
 
-        setLocationRelativeTo(null);//窗口居中
+        setLocationRelativeTo(chessBoard);
         setVisible(true);
     }
 }

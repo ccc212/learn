@@ -134,6 +134,14 @@ public class Logic extends JPanel {
         draw(board,rows,columns,chessBoard);
     }
 
+    public static void leave(ChessBoard chessBoard,boolean isRoomOwner){
+        chessBoard.isEnabled = false;
+        if(isRoomOwner)
+            new Result(false,chessBoard,Status.LEAVE);
+        else
+            new Result(true,chessBoard,Status.CLOSE);
+    }
+
     //平局
     public static void draw(int[][] board,int rows,
                                int columns,
@@ -149,7 +157,7 @@ public class Logic extends JPanel {
 
     public static boolean judge(int[][] board, int row, int column) {
         if(board[row][column] != 0){
-            System.out.println("该位置已下过,请重新输入:");
+//            System.out.println("该位置已下过,请重新输入:");
             return true;
         }
         return false;
