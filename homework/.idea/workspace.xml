@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="10121b1c-405d-463f-8f67-99280b2a7e09" name="更改" comment="解决加入未开房的端口出现的问题">
+=======
+    <list default="true" id="10121b1c-405d-463f-8f67-99280b2a7e09" name="更改" comment="新增玩家离开提示；优化本地联机，只有玩家加入时，才发送房间信息；增加房主判断，通过判断显示玩家离开信息">
+>>>>>>> master
       <change beforePath="$PROJECT_DIR$/../JAVA/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day1/_class/Class/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day1/_class/Class/Movie.class" afterDir="false" />
@@ -295,6 +299,17 @@
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/test/_thread_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/test/_thread_1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/test/_thread_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/test/_thread_2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/gobang/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/thread/InRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/thread/InRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/thread/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/thread/ServerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/thread/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/thread/ServerThread.class" afterDir="false" />
+>>>>>>> master
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -496,8 +511,12 @@
       <workItem from="1703226521827" duration="11500000" />
       <workItem from="1703242487454" duration="12226000" />
       <workItem from="1703294161143" duration="9171000" />
+<<<<<<< HEAD
       <workItem from="1703308844245" duration="2887000" />
       <workItem from="1703383239906" duration="2461000" />
+=======
+      <workItem from="1703308844245" duration="1958000" />
+>>>>>>> master
     </task>
     <task id="LOCAL-00001" summary="五子棋斜线判断">
       <option name="closed" value="true" />
@@ -691,7 +710,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
