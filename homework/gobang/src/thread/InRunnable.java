@@ -16,7 +16,7 @@ public class InRunnable implements Runnable {
     private InputStream is;
     private ObjectInputStream ois;
 
-    public InRunnable(Socket socket, Game game) throws Exception {
+    public InRunnable(Socket socket, Game game){
         this.socket = socket;
         this.game = game;
     }

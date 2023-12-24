@@ -6,10 +6,7 @@ import src.Server;
 import src.thread.ServerThread;
 
 import javax.swing.*;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
+import java.io.*;
 import java.net.Socket;
 import java.util.List;
 import java.util.Scanner;
@@ -34,7 +31,7 @@ public class Menu extends JFrame{
         frame.setVisible(true);
     }
     public static void main(String[] args) throws Exception {
-        Menu menu = new Menu();
+        new Menu();
     }
 
     public static void lock(String str){
@@ -92,30 +89,30 @@ public class Menu extends JFrame{
             if(isValid(port)) {
                 lock("进入房间 端口" + port);
 
-                new Thread(() -> {
+                try {
                     try {
                         roomInfoSocket = new Socket("127.0.0.1", Integer.parseInt(port));
-                        ObjectInputStream ois = new ObjectInputStream(roomInfoSocket.getInputStream());
-                        Room room = (Room) ois.readObject();
-//                        ois.close();
-                        new Player(Integer.parseInt(port), room.getRow(),
-                                room.getColumn(),false);
                     } catch (Exception ex) {
-                        ex.printStackTrace();
+                        unlock();
+                        resultField.setText("该端口未开房");
+                        return;
                     }
-                }).start();
+                    ObjectInputStream ois = new ObjectInputStream(roomInfoSocket.getInputStream());
+                    Room room = (Room) ois.readObject();
+//                        ois.close();
+                    if(room != null) {
+                        new Player(Integer.parseInt(port), room.getRow(),
+                                room.getColumn(), false);
+                    }
+                    else {
+                        unlock();
+                        resultField.setText("?...房间不存在");
+                    }
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
             }
         });
-    }
-
-    private boolean isPortExit(int port) {
-        for (Socket socket : Server.onLineSockets) {
-            System.out.println(socket);
-            if (socket.getPort() == port) {
-                return true;
-            }
-        }
-        return false;
     }
 
     private boolean isValid(String port){

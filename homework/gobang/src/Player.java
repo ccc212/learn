@@ -22,8 +22,8 @@ public class Player {
                 new ArrayBlockingQueue<>(8) , Executors.defaultThreadFactory(),
                 new ThreadPoolExecutor.AbortPolicy());
 
-        Future<?>f1=pool.submit(new OutRunnable(socket,game));
-        Future<?>f2=pool.submit(new InRunnable(socket,game));
+        Future<?>f1 = pool.submit(new OutRunnable(socket,game));
+        Future<?>f2 = pool.submit(new InRunnable(socket,game));
 
 
         pool.shutdown();
