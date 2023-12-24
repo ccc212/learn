@@ -7,6 +7,7 @@ import src.thread.ServerThread;
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -38,7 +39,7 @@ public class Server {
             new ServerThread(socket).start();
             try {
                 if(socket != Server.onLineSockets.get(0)) {
-                    ServerThread.broadcastRoomInfo(port,socket);
+                    broadcastRoomInfo(port,socket);
                 }
             } catch (Exception e) {
                 System.out.println(1);
@@ -56,6 +57,17 @@ public class Server {
         }
     }
 
+    public void broadcastRoomInfo(int port,Socket newSocket) {
+        Room room = Creat.getRoom();
+        if(room == null)return;
+        try {
+            ObjectOutputStream oos = new ObjectOutputStream(newSocket.getOutputStream());
+            oos.writeObject(room);
+            oos.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     public static void main(String[] args) throws Exception {
         new Server(8080);
     }

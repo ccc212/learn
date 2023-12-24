@@ -12,20 +12,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ServerThread extends Thread{
-    private static Map<Integer, Room> portToRoomMap = new HashMap<>();
     private Socket socket;
+    private ObjectOutputStream oos;
+    private ObjectInputStream ois;
     public ServerThread(Socket socket){
         this.socket = socket;
     }
     @Override
     public void run() {
         try {
-            ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
+            ois = new ObjectInputStream(socket.getInputStream());
             while (true){
                 try {
                     Point point = (Point) ois.readObject();
                     if(point != null) {
-                        sendToOther(point);
+                        sendToAll(point);
                     }
                 } catch (IOException e) {
                     System.out.println("有人下线了：" + socket.getRemoteSocketAddress());
@@ -39,7 +40,7 @@ public class ServerThread extends Thread{
             e.printStackTrace();
             Socket socket = Server.onLineSockets.get(0);
             try {
-                ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
+                oos = new ObjectOutputStream(socket.getOutputStream());
                 oos.writeObject("对方已离开");
                 oos.flush();
 //                oos.close();
@@ -49,24 +50,7 @@ public class ServerThread extends Thread{
         }
     }
 
-    public static void broadcastRoomInfo(int port,Socket newSocket) {
-        Room room = Creat.getRoom();
-        if(room == null)return;
-        portToRoomMap.put(port,room);
-        try {
-            ObjectOutputStream oos = new ObjectOutputStream(newSocket.getOutputStream());
-            oos.writeObject(room);
-            oos.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static Room getRoomInfo(int port) {
-        return portToRoomMap.get(port);
-    }
-
-    private void sendToOther(Point point) throws IOException {
+    private void sendToAll(Point point) throws IOException {
         for (Socket onLineSocket : Server.onLineSockets) {
             if(onLineSocket != socket) {
                 ObjectOutputStream oos = new ObjectOutputStream(onLineSocket.getOutputStream());
