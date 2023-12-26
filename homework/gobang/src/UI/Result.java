@@ -1,5 +1,7 @@
 package src.UI;
 
+import src.Player;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
@@ -35,6 +37,7 @@ public class Result extends JFrame{
             public void windowClosing(WindowEvent e) {
                 chessBoard.close();
                 Menu.unlock();
+                Player.closeSocket();
             }
         });
 

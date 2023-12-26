@@ -39,7 +39,8 @@ public class Server {
             new ServerThread(socket).start();
             try {
                 if(socket != Server.onLineSockets.get(0)) {
-                    broadcastRoomInfo(port,socket);
+                    broadcastRoomInfo(socket);
+//                    broadcastSocketInfo(socket);
                 }
             } catch (Exception e) {
                 System.out.println(1);
@@ -57,17 +58,28 @@ public class Server {
         }
     }
 
-    public void broadcastRoomInfo(int port,Socket newSocket) {
-        Room room = Creat.getRoom();
-        if(room == null)return;
+    public void broadcastRoomInfo(Socket newSocket) {
+        System.out.println("发送房间信息");
+        Info info = new Info(Creat.getRoom());
+        if(info.getRoom() == null)return;
         try {
             ObjectOutputStream oos = new ObjectOutputStream(newSocket.getOutputStream());
-            oos.writeObject(room);
+            oos.writeObject(info);
             oos.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+//    public void broadcastSocketInfo(Socket newSocket) {
+//        try {
+//            ObjectOutputStream oos = new ObjectOutputStream(newSocket.getOutputStream());
+//            oos.writeObject(room);
+//            oos.flush();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
     public static void main(String[] args) throws Exception {
         new Server(8080);
     }

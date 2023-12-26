@@ -1,5 +1,7 @@
 package src.thread;
 
+import src.Info;
+import src.Player;
 import src.Room;
 import src.Server;
 import src.UI.Creat;
@@ -24,9 +26,9 @@ public class ServerThread extends Thread{
             ois = new ObjectInputStream(socket.getInputStream());
             while (true){
                 try {
-                    Point point = (Point) ois.readObject();
-                    if(point != null) {
-                        sendToAll(point);
+                    Info info = (Info) ois.readObject();
+                    if(info.getPoint() != null || info.getString() != null) {
+                        sendToAll(info);
                     }
                 } catch (IOException e) {
                     System.out.println("有人下线了：" + socket.getRemoteSocketAddress());
@@ -37,27 +39,29 @@ public class ServerThread extends Thread{
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
-            Socket socket = Server.onLineSockets.get(0);
-            try {
-                oos = new ObjectOutputStream(socket.getOutputStream());
-                oos.writeObject("对方已离开");
-                oos.flush();
+            if(socket != Server.onLineSockets.get(1)) {
+                Socket socket = Server.onLineSockets.get(0);
+                try {
+                    oos = new ObjectOutputStream(socket.getOutputStream());
+                    oos.writeObject("对方已离开");
+                    oos.flush();
 //                oos.close();
-            } catch (Exception ex) {
-                ex.printStackTrace();
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
             }
+            Server.onLineSockets.remove(socket);
         }
     }
 
-    private void sendToAll(Point point) throws IOException {
+    private void sendToAll(Info info) throws IOException, InterruptedException {
         for (Socket onLineSocket : Server.onLineSockets) {
-            if(onLineSocket != socket) {
+//            if(onLineSocket != Player.getSocket()) {
                 ObjectOutputStream oos = new ObjectOutputStream(onLineSocket.getOutputStream());
-                oos.writeObject(point);
+                oos.writeObject(info);
                 oos.flush();
-                break;
-            }
+//                break;
+//            }
         }
     }
 }

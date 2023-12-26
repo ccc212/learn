@@ -1,5 +1,6 @@
 package src.thread;
 
+import src.Info;
 import src.Logic;
 import src.Player;
 import src.UI.Game;
@@ -23,22 +24,37 @@ public class InRunnable implements Runnable {
     @Override
     public void run() {
         try {
-            is = socket.getInputStream();
             while (true) {
                 try {
-                    ois = new ObjectInputStream(is);
-//                    if(ois.readObject().equals("对方已离开")){
-//                        Logic.leave(game.getChessBoard(), Player.isRoomOwner());
-//                        break;
-//                    }
-                    point = (Point) ois.readObject();
+                    ois = new ObjectInputStream(socket.getInputStream());
+
+                    Info info = (Info) ois.readObject();
+
+                    if(info.getPoint() != null && game.getChessBoard().judge(info.getPoint().x, info.getPoint().y) == true) {
+                        game.getChessBoard().click(info.getPoint().x, info.getPoint().y);
+                    }
+
+                    if(info.getString() != null) {
+                        if(info.getString().equals("对方已离开")) {
+//                            Logic.leave(game.getChessBoard(), Player.isRoomOwner());
+//                            break;
+                        }
+                        else if(info.getString().equals("R")) {
+                            Logic.back(game.getChessBoard().board,
+                                    game.getChessBoard().stack,
+                                    game.getChessBoard().map,
+                                    game.getChessBoard().row,
+                                    game.getChessBoard().column
+                            );
+                            game.getChessBoard().updateUI();
+                        }
+                    }
+
                 } catch (Exception e) {
 //                System.out.println("有异常");
                     continue;
                 }
-                if (point != null && game.getChessBoard().judge(point.x,point.y) == true) {
-                    game.getChessBoard().click(point.x, point.y);
-                }
+
                 Thread.sleep(10);
             }
         } catch (Exception e) {
