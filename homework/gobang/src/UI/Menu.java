@@ -1,5 +1,6 @@
 package src.UI;
 
+import src.Info;
 import src.Player;
 import src.Room;
 import src.Server;
@@ -17,7 +18,8 @@ public class Menu extends JFrame{
     public static JTextField userText;
     public static JTextField resultField;
     public static JFrame frame;
-    public static Socket roomInfoSocket = null;
+    Socket roomInfoSocket = null;
+    ObjectInputStream ois = null;
     public Menu(){
         frame = new JFrame("菜单");
         frame.setSize(400,300);
@@ -90,26 +92,24 @@ public class Menu extends JFrame{
                 lock("进入房间 端口" + port);
 
                 try {
+                    roomInfoSocket = new Socket("127.0.0.1", Integer.parseInt(port));
                     try {
-                        roomInfoSocket = new Socket("127.0.0.1", Integer.parseInt(port));
-                    } catch (Exception ex) {
-                        unlock();
-                        resultField.setText("该端口未开房");
-                        return;
-                    }
-                    ObjectInputStream ois = new ObjectInputStream(roomInfoSocket.getInputStream());
-                    Room room = (Room) ois.readObject();
-//                        ois.close();
-                    if(room != null) {
-                        new Player(Integer.parseInt(port), room.getRow(),
-                                room.getColumn(), false);
-                    }
-                    else {
-                        unlock();
-                        resultField.setText("?...房间不存在");
+                        ObjectInputStream ois = new ObjectInputStream(roomInfoSocket.getInputStream());
+                        Info info = (Info) ois.readObject();
+
+                        if (info.getRoom() != null) {
+                            new Player(Integer.parseInt(port), info.getRoom().getRow(),
+                                    info.getRoom().getColumn(), false);
+                        } else {
+                            unlock();
+                            resultField.setText("?...房间不存在");
+                        }
+                    }finally {
+                            roomInfoSocket.close();
                     }
                 } catch (Exception ex) {
-                    ex.printStackTrace();
+                    unlock();
+                    resultField.setText("该端口未开房");
                 }
             }
         });

@@ -2,15 +2,21 @@ package src.UI;
 
 import javafx.util.Pair;
 import src.Gobang;
+import src.Info;
 import src.Logic;
+import src.Player;
+import src.thread.OutRunnable;
 import sun.rmi.runtime.Log;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.ArrayList;
@@ -24,11 +30,11 @@ public class ChessBoard extends JPanel {
     private static boolean player = false;//下一个下棋的玩家,false玩家1,true玩家2
 
 //    private HashMap<Pair<Integer,Integer>,ChessPiece> map;
-    private HashMap<Point,ChessPiece> map;
+    public HashMap<Point,ChessPiece> map;
 
-    private int row,column;
+    public int row,column;
     public static boolean isWinMode = false;
-    private Stack<Point>stack;
+    public Stack<Point>stack;
     public int[][] board;
     private Point lastClickPoint;
     public static boolean isEnabled = true;
@@ -69,9 +75,14 @@ public class ChessBoard extends JPanel {
                     if (key == KeyEvent.VK_R) {
                         System.out.printf("R");
                         isWinMode = false;
-                        Logic.back(board, stack, map, row, column);
+                        try {
+                            OutRunnable.oos.writeObject(new Info("R"));
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
+//                        Logic.back(board, stack, map, row, column);
                         player = !player;
-                        updateUI();
+//                        updateUI();
                     }
                 }
 
