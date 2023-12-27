@@ -6,4 +6,5 @@ public class Status {
     public static final int LEAVE = 3;
     public static final int CLOSE = 4;
     public static final int LOSE = 5;
+    public static final int WAIT = 6;
 }

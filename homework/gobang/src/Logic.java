@@ -1,6 +1,5 @@
 package src;
 
-import javafx.util.Pair;
 import src.UI.ChessBoard;
 import src.UI.ChessPiece;
 import src.UI.Result;
@@ -8,18 +7,14 @@ import src.UI.Status;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.ArrayList;
 import java.util.Stack;
 
 public class Logic extends JPanel {
     public static void put(int[][] board, boolean player,
-//                           Stack<Pair<Integer, Integer>> stack,
                            Stack<Point> stack,
                            int row, int column) {
 
-//        stack.push(new Pair<>(row,column));
         stack.push(new Point(row, column));
 
         //玩家1:1     玩家2:-1
@@ -27,24 +22,16 @@ public class Logic extends JPanel {
         else board[row][column] = 1;
     }
 
-    public static void back(int[][] board,
-//                            Stack<Pair<Integer, Integer>> stack,
+    public static boolean back(int[][] board,
                             Stack<Point> stack,
-//                            HashMap<Pair<Integer,Integer>, ChessPiece>map,
-                            HashMap<Point, ChessPiece>map,
-                            int row, int column) {
-        if(stack.empty())return;
-
-//        Pair<Integer,Integer>back = stack.pop();
+                            HashMap<Point, ChessPiece>map) {
+        if(stack.empty())return false;
         Point back = stack.pop();
-
-//        row = (int)back.getKey();
-//        column = (int)back.getValue();
-        row = back.x;
-        column = back.y;
-
+        int row = back.x;
+        int column = back.y;
         board[row][column] = 0;
         map.remove(back);
+        return true;
     }
 
     public static void victory(int[][] board,int rows,
@@ -135,7 +122,6 @@ public class Logic extends JPanel {
     }
 
     public static void leave(ChessBoard chessBoard,boolean isRoomOwner){
-        chessBoard.isEnabled = false;
         if(isRoomOwner)
             new Result(false,chessBoard,Status.LEAVE);
         else

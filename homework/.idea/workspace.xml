@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10121b1c-405d-463f-8f67-99280b2a7e09" name="更改" comment="新增玩家离开提示；优化本地联机，只有玩家加入时，才发送房间信息；增加房主判断，通过判断显示玩家离开信息">
+    <list default="true" id="10121b1c-405d-463f-8f67-99280b2a7e09" name="更改" comment="新增Info类统一数据传递；及时关闭传输房间信息的通道">
       <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d1_create_thread/MyCallable.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d1_create_thread/MyRunnable.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d1_create_thread/MyThread.class" afterDir="false" />
@@ -78,14 +78,7 @@
       <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d8_thread_pool/ThreadPoolTest3.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d9_tz/MyRunnable.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d9_tz/test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gobang/src/Info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gobang/src/image/black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gobang/src/image/white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/practice/src/Room.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Creat$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Game$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/practice/src/thread/InRunnable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/practice/src/thread/OutRunnable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gobang/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/annotation/MyAnnotation.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_annotation/MyAnnotation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/annotation/Test01.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_annotation/Test01.class" afterDir="false" />
@@ -138,23 +131,45 @@
       <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/test01.js" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/test01.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/src/homework/shiyan4.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/homework/shiyan4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/src/homework/shiyan6_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/homework/shiyan6_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Logic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/Start.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/UI/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/ChessBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/UI/ChessBoardTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Creat.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Creat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/UI/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/UI/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/image/black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/image/white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/thread/ChatThread.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/thread/InRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/thread/InRunnable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/thread/OutRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/thread/OutRunnable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/thread/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/thread/ServerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/Logic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/Logic.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/Start.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoardTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Creat$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Creat$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Creat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Creat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Game$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Game$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Menu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Result$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Result$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Status.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/thread/ChatThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/thread/InRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/thread/InRunnable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/thread/OutRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/thread/OutRunnable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/thread/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/thread/ServerThread.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,6 +227,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "258",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "21",
@@ -221,9 +239,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "项目",
+    "project.structure.last.edited": "工件",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
@@ -250,12 +268,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.UI.Game" />
+    <configuration name="Game2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.UI.Game2" />
       <module name="practice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.UI.*" />
+          <option name="PATTERN" value="src.UI.Creat" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -263,12 +281,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Gobang" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.Gobang" />
+    <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.UI.Game" />
       <module name="practice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.*" />
+          <option name="PATTERN" value="src.UI.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -326,8 +344,8 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="应用程序.Game2" />
       <item itemvalue="应用程序.Game" />
-      <item itemvalue="应用程序.Gobang" />
       <item itemvalue="应用程序.Menu" />
       <item itemvalue="应用程序.Player" />
       <item itemvalue="应用程序.Server" />
@@ -335,10 +353,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="应用程序.Menu" />
+        <item itemvalue="应用程序.Game2" />
         <item itemvalue="应用程序.Player" />
         <item itemvalue="应用程序.Server" />
         <item itemvalue="应用程序.Game" />
-        <item itemvalue="应用程序.Gobang" />
       </list>
     </recent_temporary>
   </component>
@@ -356,6 +374,8 @@
       <workItem from="1703061411391" duration="40573000" />
       <workItem from="1703226521827" duration="11500000" />
       <workItem from="1703242487454" duration="12226000" />
+      <workItem from="1703637954270" duration="10811000" />
+      <workItem from="1703673016259" duration="18846000" />
     </task>
     <task id="LOCAL-00001" summary="五子棋斜线判断">
       <option name="closed" value="true" />
@@ -437,7 +457,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703228406640</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="新增Info类统一数据传递；及时关闭传输房间信息的通道">
+      <option name="closed" value="true" />
+      <created>1703568262293</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1703568262293</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,7 +538,8 @@
     <MESSAGE value="新建Room类" />
     <MESSAGE value="初步实现本地联机，通过不断发送房间信息，使加入者能够获取并加入；" />
     <MESSAGE value="新增玩家离开提示；优化本地联机，只有玩家加入时，才发送房间信息；增加房主判断，通过判断显示玩家离开信息" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增玩家离开提示；优化本地联机，只有玩家加入时，才发送房间信息；增加房主判断，通过判断显示玩家离开信息" />
+    <MESSAGE value="新增Info类统一数据传递；及时关闭传输房间信息的通道" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增Info类统一数据传递；及时关闭传输房间信息的通道" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

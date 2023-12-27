@@ -7,6 +7,7 @@ public class Info implements Serializable {
     private Room room;
     private Point point;
     private String string;
+    private boolean currentPlayer;
 
     public Room getRoom() {
         return room;
@@ -20,19 +21,18 @@ public class Info implements Serializable {
         return string;
     }
 
-    public Info(Room room, Point point, String string) {
+    public Info(Room room, Point point, String string, boolean currentPlayer) {
         this.room = room;
         this.point = point;
         this.string = string;
+        this.currentPlayer = currentPlayer;
     }
 
-    public Info(Room room) {
-        this(room,null,null);
+    public Info(Point point,boolean currentPlayer) {
+        this(null,point,null,currentPlayer);
     }
-    public Info(Point point) {
-        this(null,point,null);
-    }
+
     public Info(String string) {
-        this(null,null,string);
+        this(null,null,string,false);
     }
 }

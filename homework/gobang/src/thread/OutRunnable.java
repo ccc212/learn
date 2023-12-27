@@ -11,11 +11,9 @@ import java.net.Socket;
 
 public class OutRunnable implements Runnable{
     private Socket socket;
-    private Game game;
     public static ObjectOutputStream oos;
-    public OutRunnable(Socket socket, Game game){
+    public OutRunnable(Socket socket){
         this.socket = socket;
-        this.game = game;
     }
     @Override
     public void run() {
@@ -25,15 +23,18 @@ public class OutRunnable implements Runnable{
             e.printStackTrace();
         }
         while(true) {
-            Point lastClickPoint = game.getChessBoard().getLastClickPoint();
-//            System.out.println("上一次点击坐标: " + lastClickPoint);
+            Point lastClickPoint = Game.instance.getChessBoard().getLastClickPoint();
             try {
-                oos.writeObject(new Info(lastClickPoint));
-                oos.flush();
+//                synchronized (Game.instance.getLock()) {
+                if(lastClickPoint != null) {
+                    oos.writeObject(new Info(lastClickPoint,false));
+                    oos.flush();
+                }
+//                    Game.instance.getLock().notify();
+//                }
                 Thread.sleep(10);
             } catch (Exception e) {
-                e.printStackTrace();
-                Logic.leave(game.getChessBoard(), Player.isRoomOwner());
+                Logic.leave(Game.instance.getChessBoard(), Player.isRoomOwner());
                 break;
             }
         }
