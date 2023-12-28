@@ -96,24 +96,28 @@ public class Menu {
                 lock("进入房间 端口" + port);
                 try {
                     roomInfoSocket = new Socket("127.0.0.1", Integer.parseInt(port));
+                    Player player = null;
                     try {
                         ObjectInputStream ois = new ObjectInputStream(roomInfoSocket.getInputStream());
                         Info info = (Info) ois.readObject();
-
-                        ObjectOutputStream oos = new ObjectOutputStream(roomInfoSocket.getOutputStream());
-                        oos.writeObject(new Info(name));
 
                         if(info.getString() != null){
                             otherName = info.getString();
                         }
 
                         if (info.getRoom() != null) {
-                            new Player(Integer.parseInt(port), info.getRoom().getRow(),
+                            player = new Player(Integer.parseInt(port), info.getRoom().getRow(),
                                     info.getRoom().getColumn(), false);
                         } else {
                             unlock();
                             resultField.setText("?...房间不存在");
                         }
+
+                        ObjectOutputStream oos = new ObjectOutputStream(roomInfoSocket.getOutputStream());
+                        Info info2 = new Info(name);
+                        info2.setAddress(player.getSocket().getLocalSocketAddress().toString());
+                        oos.writeObject(info2);
+
                         ois.close();
                         oos.close();
                     }catch (Exception exception){

@@ -4,42 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10121b1c-405d-463f-8f67-99280b2a7e09" name="更改" comment="新增玩家离开提示；优化本地联机，只有玩家加入时，才发送房间信息；增加房主判断，通过判断显示玩家离开信息">
+    <list default="true" id="10121b1c-405d-463f-8f67-99280b2a7e09" name="更改" comment="实现申请悔棋；房主离开时提醒">
       <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../.idea/learn.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/practice/src/Info.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gobang/META-INF/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gobang/src/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Logic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/UI/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/ChessBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Creat.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Create.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Create.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Create.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/UI/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/UI/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Result.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/thread/InRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/thread/InRunnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gobang/src/thread/OutRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/thread/OutRunnable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/thread/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/thread/ServerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/Logic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/Logic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Creat$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Creat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Game$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Game$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Result$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Result$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Result.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/thread/InRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/thread/InRunnable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/thread/OutRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/thread/OutRunnable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/thread/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/thread/ServerThread.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,27 +70,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "21",
-    "last_opened_file_path": "D:/gitProject/learn",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "项目",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.import",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/gitProject/learn&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\gitProject\learn\homework\gobang\src\image" />
@@ -240,7 +219,8 @@
       <workItem from="1703061411391" duration="40573000" />
       <workItem from="1703226521827" duration="11500000" />
       <workItem from="1703242487454" duration="12226000" />
-      <workItem from="1703774326281" duration="675000" />
+      <workItem from="1703774326281" duration="956000" />
+      <workItem from="1703775300047" duration="7138000" />
     </task>
     <task id="LOCAL-00001" summary="五子棋斜线判断">
       <option name="closed" value="true" />
@@ -322,7 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703228406640</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="实现申请悔棋；房主离开时提醒">
+      <option name="closed" value="true" />
+      <created>1703775233466</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1703775233466</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +358,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="ccc212/master" />
                       </list>
                     </value>
                   </entry>
@@ -395,7 +383,8 @@
     <MESSAGE value="新建Room类" />
     <MESSAGE value="初步实现本地联机，通过不断发送房间信息，使加入者能够获取并加入；" />
     <MESSAGE value="新增玩家离开提示；优化本地联机，只有玩家加入时，才发送房间信息；增加房主判断，通过判断显示玩家离开信息" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增玩家离开提示；优化本地联机，只有玩家加入时，才发送房间信息；增加房主判断，通过判断显示玩家离开信息" />
+    <MESSAGE value="实现申请悔棋；房主离开时提醒" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现申请悔棋；房主离开时提醒" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

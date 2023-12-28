@@ -8,6 +8,7 @@ public class Info implements Serializable {
     private Point point;
     private String string;
     private boolean clickEnable = false;
+    private String address;
 
     public boolean getClickEnable() {
         return clickEnable;
@@ -43,5 +44,13 @@ public class Info implements Serializable {
     }
     public Info(String string) {
         this(null,null,string);
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

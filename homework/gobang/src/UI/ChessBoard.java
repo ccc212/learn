@@ -29,6 +29,7 @@ public class ChessBoard extends JPanel {
     public int[][] board;
     private Point lastClickPoint;
     private boolean clickable = true;
+    public boolean keyEnable = true;
 
     public ChessBoard(int rows, int columns) {
         setBackground(Color.getHSBColor(
@@ -63,19 +64,22 @@ public class ChessBoard extends JPanel {
 
                 @Override
                 public void keyPressed(KeyEvent e) {
-                    int key = e.getKeyCode();
-                    if (key == KeyEvent.VK_R && !stack.empty()) {
-                        System.out.println("R");
-//                      int result = JOptionPane.showConfirmDialog(null, "确定要执行此操作吗?", "确认", JOptionPane.YES_NO_OPTION);
-//                      if(result == JOptionPane.YES_OPTION) {
-                        isWinMode = false;
-                        try {
-                            OutRunnable.oos.writeObject(new Info("R"));
-                            Game.instance.setChessBoardClickable(!Game.instance.getChessBoard().getClickable());
-                        } catch (IOException ex) {
-                            ex.printStackTrace();
+                    if(keyEnable) {
+                        int key = e.getKeyCode();
+                        if (stack.empty()) {
+                            JOptionPane.showMessageDialog(ChessBoard.this, "无法悔棋");
+                        } else if (key == KeyEvent.VK_R) {
+                            System.out.println("R");
+                            isWinMode = false;
+                            try {
+                                OutRunnable.oos.writeObject(new Info("R"));
+                                Game.instance.setChessBoardClickable(!Game.instance.getChessBoard().getClickable());
+                                keyEnable = false;
+                                Game.instance.setChessBoardClickable(false);
+                            } catch (IOException ex) {
+                                ex.printStackTrace();
+                            }
                         }
-//                      }
                     }
                 }
 
@@ -168,7 +172,6 @@ public class ChessBoard extends JPanel {
     public static void init(){
         player = false;
         isWinMode = false;
-
     }
 
     public boolean getClickable() {

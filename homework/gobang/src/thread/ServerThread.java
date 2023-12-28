@@ -10,7 +10,6 @@ import java.util.Iterator;
 
 public class ServerThread extends Thread{
     private Socket socket;
-    private ObjectOutputStream oos;
     private ObjectInputStream ois;
     public ServerThread(Socket socket){
         this.socket = socket;
@@ -25,9 +24,12 @@ public class ServerThread extends Thread{
                     if(info.getPoint() != null || info.getString() != null) {
                         sendToAll(info);
                     }
+                    if(info.getAddress() != null){
+                        Server.setJoinerAddress(info.getAddress());
+                    }
                 } catch (IOException e) {
                     System.out.println("有人下线了：" + socket.getRemoteSocketAddress());
-                    if(socket.getRemoteSocketAddress() != Create.socket.getLocalSocketAddress()) {
+                    if(socket.getRemoteSocketAddress().toString().equals(Server.getJoinerAddress())) {
                         new Result(Menu.instance.otherName, Game.instance.getChessBoard(), Status.LEAVE);
                     }
                     Server.onLineSockets.remove(socket);
@@ -37,7 +39,7 @@ public class ServerThread extends Thread{
                 }
             }
         } catch (Exception e) {
-//            e.printStackTrace();
+            System.out.println();
         }
     }
 

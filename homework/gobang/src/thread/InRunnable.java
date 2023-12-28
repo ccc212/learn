@@ -3,6 +3,7 @@ package src.thread;
 import src.Info;
 import src.Logic;
 import src.Player;
+import src.Server;
 import src.UI.ChessBoard;
 import src.UI.Game;
 import src.UI.Result;
@@ -57,6 +58,8 @@ public class InRunnable implements Runnable {
                                     if (Logic.back(Game.instance.getChessBoard().board, Game.instance.getChessBoard().stack, Game.instance.getChessBoard().map)) {
                                         ChessBoard.player = !ChessBoard.player;
                                         Game.instance.getChessBoard().updateUI();
+                                        Game.instance.getChessBoard().keyEnable = true;
+                                        Game.instance.setChessBoardClickable(true);
                                     }
                                     break;
                             }

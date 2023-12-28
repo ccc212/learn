@@ -36,8 +36,13 @@ public class Create extends JFrame{
         new Thread(()->{
             try {
                 new Server(port);
-            }catch (Exception ex){
-                ex.printStackTrace();
+            }catch (IOException ex){
+                Menu.instance.resultField.setText("端口" + port + "已有房间");
+                try {
+                    Thread.currentThread().wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }).start();
 

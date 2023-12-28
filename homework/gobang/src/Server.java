@@ -12,11 +12,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Server {
-    public static List<Socket> onLineSockets = new ArrayList<>(2);
+    public static List<Socket> onLineSockets = new ArrayList<>();
     public static int port;
     private static ServerSocket serverSocket;
+    private static String joinerAddress;
 
-    public Server(int port) throws Exception {
+    public Server(int port) throws IOException {
         this.port = port;
         System.out.println("-----房间已创建-------");
         serverSocket = new ServerSocket(port);
@@ -31,7 +32,7 @@ public class Server {
             System.out.println("有人上线了：" + socket.getRemoteSocketAddress());
             new ServerThread(socket).start();
             try {
-                if(socket != Server.onLineSockets.get(0)) {
+                if(socket != onLineSockets.get(0)) {
                     broadcastRoomInfo(socket);
                 }
             } catch (Exception e) {
@@ -48,6 +49,14 @@ public class Server {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static String getJoinerAddress() {
+        return joinerAddress;
+    }
+
+    public static void setJoinerAddress(String joinerAddress) {
+        Server.joinerAddress = joinerAddress;
     }
 
     public void broadcastRoomInfo(Socket newSocket) {

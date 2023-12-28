@@ -22,7 +22,7 @@ public class Game extends JFrame{
 //        panel.setLayout(null);
 
         JPanel player1 = new JPanel();
-        JLabel name1 = new JLabel("<html>名字<hr>" + Menu.instance.name + "</html>");
+        JLabel name1 = new JLabel("<html>你<hr>" + Menu.instance.name + "</html>");
         name1.setFont(new Font("", Font.BOLD, ChessBoard.CELL_SIZE/2));
         player1.add(name1);
         panel.add(player1, BorderLayout.WEST);
@@ -32,7 +32,7 @@ public class Game extends JFrame{
         panel.add(chessBoard,BorderLayout.CENTER);
 
         JPanel player2 = new JPanel();
-        JLabel name2 = new JLabel("<html>名字<hr>" + Menu.instance.otherName + "</html>");
+        JLabel name2 = new JLabel("<html>对方<hr>" + Menu.instance.otherName + "</html>");
         name2.setFont(new Font("", Font.BOLD, ChessBoard.CELL_SIZE/2));
         player2.add(name2);
         panel.add(player2, BorderLayout.EAST);

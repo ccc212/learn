@@ -21,7 +21,7 @@ public class Player {
         clickEnable = isRoomOwner;
 
         socket = new Socket("127.0.0.1", port);
-        System.out.println(socket);
+//        System.out.println(socket);
 
         Game.instance = new Game(row,column);
         Game.instance.setChessBoardClickable(clickEnable);
@@ -35,8 +35,6 @@ public class Player {
 
         pool.shutdown();
     }
-
-    private void test1(){}
 
     public static void closeSocket() {
         try {
