@@ -9,39 +9,47 @@ import java.awt.event.WindowEvent;
 
 public class Result extends JFrame{
     private JLabel label;
-    public Result(boolean player, ChessBoard chessBoard,int status) {
+    public Result(boolean player, Component cmp,int status) {
         super("结果");
         setSize(300, 150);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
-        if(status == Status.WIN) {
-            label = new JLabel("玩家" + (player ? "2" : "1") + "获胜", JLabel.CENTER);
-        }
-        else if(status == Status.DRAW){
-            label = new JLabel("平局", JLabel.CENTER);
-        }
-        else if(status == Status.LEAVE){
-            label = new JLabel("对手已离开", JLabel.CENTER);
-        }
-        else if(status == Status.CLOSE){
-            label = new JLabel("房间已关闭", JLabel.CENTER);
-        }
-        else if(status == Status.LOSE){
-            label = new JLabel("你输了", JLabel.CENTER);
-        }
+        label = new JLabel(getResultLabelText(player, status), JLabel.CENTER);
         label.setFont(new Font("SimSun", Font.BOLD, 20));
         add(label, BorderLayout.CENTER);
 
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-                chessBoard.close();
-                Menu.unlock();
-                Player.closeSocket();
+                if(cmp instanceof ChessBoard) {
+                    ((ChessBoard) cmp).close();
+                    Player.closeSocket();
+                }
+                Menu.instance.unlock();
             }
         });
 
-        setLocationRelativeTo(chessBoard);
+        setLocationRelativeTo(cmp);
         setVisible(true);
     }
+
+    private String getResultLabelText(boolean player, int status) {
+        switch (status) {
+            case Status.WIN:
+                return "玩家" + (player ? "2" : "1") + "获胜";
+            case Status.DRAW:
+                return "平局";
+            case Status.LEAVE:
+                return "对手已离开";
+            case Status.CLOSE:
+                return "房间已关闭";
+            case Status.LOSE:
+                return "你输了"; 
+            case Status.WAIT:
+                return "等待玩家加入";
+            default:
+                return "未知结果";
+        }
+    }
+
 }

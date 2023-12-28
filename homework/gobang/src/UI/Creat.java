@@ -1,5 +1,6 @@
 package src.UI;
 
+import src.Info;
 import src.Player;
 import src.Room;
 import src.Server;
@@ -10,6 +11,7 @@ import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
@@ -24,13 +26,13 @@ public class Creat extends JFrame{
     private int port;
     private static Room room;
 
-    public Creat(int port) throws Exception {
+    public Creat(int port){
         super("创建");
         this.port = port;
         placeComponents();
     }
 
-    private void startGame(int row,int column) throws Exception {
+    private void startGame(int row,int column){
         ChessBoard.init();
         new Thread(()->{
             try {
@@ -42,6 +44,11 @@ public class Creat extends JFrame{
 
         new Thread(()->{
             try {
+                Result result = new Result(false,this,Status.WAIT);
+                ObjectInputStream ois = new ObjectInputStream(new Socket("127.0.0.1",port).getInputStream());
+                String name = ((Info) ois.readObject()).getString();
+                result.dispose();
+                Menu.instance.otherName = name;
                 new Player(port,row,column,true);
             }catch (Exception ex){
                 ex.printStackTrace();
@@ -52,7 +59,8 @@ public class Creat extends JFrame{
     }
 
 
-    private static Room isValid(String row,String column) throws Exception {
+    private static Room isValid(String row,String column){
+
         if(row.equals("") && column.equals("")){
 //            return new Room(15,15);
             return new Room(6,6);
@@ -142,14 +150,14 @@ public class Creat extends JFrame{
             @Override
             public void windowClosing(WindowEvent e) {
                 try {
-                    Menu.unlock();
+                    Menu.instance.unlock();
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
             }
         });
 
-        setLocationRelativeTo(Menu.frame);
+        setLocationRelativeTo(Menu.instance.frame);
         setVisible(true);
     }
 

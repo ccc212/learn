@@ -12,38 +12,46 @@ import java.net.Socket;
 import java.util.List;
 import java.util.Scanner;
 
-public class Menu extends JFrame{
-    public static JButton btn1;
-    public static JButton btn2;
-    public static JTextField userText;
-    public static JTextField resultField;
-    public static JFrame frame;
-    Socket roomInfoSocket = null;
-    ObjectInputStream ois = null;
-    public Menu(){
+public class Menu {
+    public static Menu instance = new Menu();
+    public JButton btn1;
+    public JButton btn2;
+    public JTextField userText;
+    public JTextField resultField;
+    public JFrame frame;
+    public Socket roomInfoSocket;
+    public String name;
+    public String otherName;
+    private Menu(){
         frame = new JFrame("菜单");
         frame.setSize(400,300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setResizable(false);
 
         JPanel panel = new JPanel();
         frame.add(panel);
-        placeComponents(panel);
 
-        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
+
+        name = JOptionPane.showInputDialog("名字:");
+
+        placeComponents(panel);
+        frame.repaint();
+
     }
-    public static void main(String[] args) throws Exception {
-        new Menu();
+    public static void main(String[] args){
+        Menu m = Menu.instance;
     }
 
-    public static void lock(String str){
+    public void lock(String str){
         btn1.setEnabled(false);
         btn2.setEnabled(false);
         userText.setEnabled(false);
         resultField.setText(str);
     }
 
-    public static void unlock(){
+    public void unlock(){
         btn1.setEnabled(true);
         btn2.setEnabled(true);
         userText.setEnabled(true);
@@ -90,24 +98,37 @@ public class Menu extends JFrame{
             String port = userText.getText();
             if(isValid(port)) {
                 lock("进入房间 端口" + port);
-
                 try {
                     roomInfoSocket = new Socket("127.0.0.1", Integer.parseInt(port));
                     try {
                         ObjectInputStream ois = new ObjectInputStream(roomInfoSocket.getInputStream());
                         Info info = (Info) ois.readObject();
 
+                        ObjectOutputStream oos = new ObjectOutputStream(roomInfoSocket.getOutputStream());
+                        oos.writeObject(new Info(name));
+
+                        if(info.getString() != null){
+                            otherName = info.getString();
+                        }
+
                         if (info.getRoom() != null) {
+                            System.out.println("创建玩家");
                             new Player(Integer.parseInt(port), info.getRoom().getRow(),
                                     info.getRoom().getColumn(), false);
                         } else {
                             unlock();
                             resultField.setText("?...房间不存在");
                         }
-                    }finally {
-                            roomInfoSocket.close();
+                        ois.close();
+                        oos.close();
+                    }catch (Exception exception){
+                        exception.printStackTrace();
+                    }
+                    finally {
+                        roomInfoSocket.close();
                     }
                 } catch (Exception ex) {
+                    ex.printStackTrace();
                     unlock();
                     resultField.setText("该端口未开房");
                 }
@@ -131,12 +152,4 @@ public class Menu extends JFrame{
         }
     }
 
-    public static void close() {
-        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(new Menu());
-        try {
-            frame.dispose();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 }

@@ -7,6 +7,15 @@ public class Info implements Serializable {
     private Room room;
     private Point point;
     private String string;
+    private boolean player;
+
+    public boolean getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(boolean player) {
+        this.player = player;
+    }
 
     public Room getRoom() {
         return room;

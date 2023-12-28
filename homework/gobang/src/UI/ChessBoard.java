@@ -1,25 +1,18 @@
 package src.UI;
 
-import javafx.util.Pair;
 import src.Gobang;
 import src.Info;
 import src.Logic;
-import src.Player;
 import src.thread.OutRunnable;
-import sun.rmi.runtime.Log;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.ArrayList;
 import java.util.Stack;
 
 public class ChessBoard extends JPanel {
@@ -27,9 +20,8 @@ public class ChessBoard extends JPanel {
     private int rows;
     private int columns;
     public static int CELL_SIZE = 50;
-    private static boolean player = false;//下一个下棋的玩家,false玩家1,true玩家2
+    public static boolean player = false;//下一个下棋的玩家,false玩家1,true玩家2
 
-//    private HashMap<Pair<Integer,Integer>,ChessPiece> map;
     public HashMap<Point,ChessPiece> map;
 
     public int row,column;
@@ -37,7 +29,7 @@ public class ChessBoard extends JPanel {
     public Stack<Point>stack;
     public int[][] board;
     private Point lastClickPoint;
-    public static boolean isEnabled = true;
+
     public ChessBoard(int rows, int columns) {
         setBackground(Color.getHSBColor(
                 Color.RGBtoHSB(210, 132, 0,null)[0],
@@ -47,12 +39,10 @@ public class ChessBoard extends JPanel {
         this.columns = columns;
         board = new int[rows][columns];
 
-//        Stack<Pair<Integer,Integer>>stack = new Stack<>();
         stack = new Stack<>();
 
         map = new HashMap<>();
 
-        if(isEnabled()) {
             addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
@@ -75,14 +65,15 @@ public class ChessBoard extends JPanel {
                     if (key == KeyEvent.VK_R) {
                         System.out.printf("R");
                         isWinMode = false;
-                        try {
-                            OutRunnable.oos.writeObject(new Info("R"));
-                        } catch (IOException ex) {
-                            ex.printStackTrace();
+//                        try {
+//                            OutRunnable.oos.writeObject(new Info("R"));
+//                        } catch (IOException ex) {
+//                            ex.printStackTrace();
+//                        }
+                        if(Logic.back(board, stack, map)) {
+                            player = !player;
+                            updateUI();
                         }
-//                        Logic.back(board, stack, map, row, column);
-                        player = !player;
-//                        updateUI();
                     }
                 }
 
@@ -91,7 +82,7 @@ public class ChessBoard extends JPanel {
 
                 }
             });
-        }
+
     }
 
     public boolean judge(int x,int y){
@@ -114,21 +105,17 @@ public class ChessBoard extends JPanel {
             System.out.println("点击无效");
         }
         else if(player){
-//                    System.out.println("玩家2");
             Logic.put(board,player,stack,row - 1,column - 1);
             ChessPiece piece = new ChessPiece(row, column, Color.WHITE);
 
-//                    map.put(new Pair<>(row - 1,column - 1),piece);
             map.put(new Point(row - 1,column - 1),piece);
 
             player = !player;
         }
         else if(!player){
-//                    System.out.println("玩家1");
             Logic.put(board,player,stack,row - 1,column - 1);
             ChessPiece piece = new ChessPiece(row, column, Color.BLACK);
 
-//                    map.put(new Pair<>(row - 1,column - 1),piece);
             map.put(new Point(row - 1,column - 1),piece);
 
             player = !player;
@@ -138,7 +125,6 @@ public class ChessBoard extends JPanel {
         updateUI();
 
 //                Gobang.display(board);
-//                System.out.println(player ? "玩家2" : "玩家1");
     }
 
     public Point getLastClickPoint() {
@@ -174,10 +160,11 @@ public class ChessBoard extends JPanel {
     public void close() {
         SwingUtilities.getWindowAncestor(this).dispose();
     }
-    
+
     public static void init(){
         player = false;
         isWinMode = false;
+
     }
 
 }
