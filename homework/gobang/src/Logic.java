@@ -36,8 +36,9 @@ public class Logic extends JPanel {
     }
 
     public static void victory(int[][] board,int rows,
-                        int columns,String player,
+                        int columns,
                         ChessBoard chessBoard) {
+        String name = null;
         //横
         flag1:
         for(int i=0;i<rows;i++) {
@@ -48,14 +49,16 @@ public class Logic extends JPanel {
             while (r < columns) {
                 if(r + 1 == columns)break;
                 if (Math.abs(temp) == 5) {
-                    new Result(player,chessBoard, Status.WIN);
+                    name = ChessBoard.player == Player.isRoomOwner() ? Menu.instance.name : Menu.instance.otherName;
+                    new Result(name,chessBoard, Status.WIN);
                     ChessBoard.isWinMode = true;
                     break flag1;
                 }
                 temp -= board[i][l++];
                 temp += board[i][(r++) + 1];
                 if (Math.abs(temp) == 5) {
-                    new Result(player,chessBoard,Status.WIN);
+                    name = ChessBoard.player == Player.isRoomOwner() ? Menu.instance.name : Menu.instance.otherName;
+                    new Result(name,chessBoard,Status.WIN);
                     ChessBoard.isWinMode = true;
                     break flag1;
                 }
@@ -72,14 +75,16 @@ public class Logic extends JPanel {
             while (r < rows) {
                 if(r + 1 == rows)break;
                 if (Math.abs(temp) == 5) {
-                    new Result(player,chessBoard,Status.WIN);
+                    name = ChessBoard.player == Player.isRoomOwner() ? Menu.instance.name : Menu.instance.otherName;
+                    new Result(name,chessBoard,Status.WIN);
                     ChessBoard.isWinMode = true;
                     break flag2;
                 }
                 temp -= board[l++][i];
                 temp += board[(r++) + 1][i];
                 if (Math.abs(temp) == 5) {
-                    new Result(player,chessBoard,Status.WIN);
+                    name = ChessBoard.player == Player.isRoomOwner() ? Menu.instance.name : Menu.instance.otherName;
+                    new Result(name,chessBoard,Status.WIN);
                     ChessBoard.isWinMode = true;
                     break flag2;
                 }
@@ -98,7 +103,8 @@ public class Logic extends JPanel {
                     if(board[i+k][j+k]!=top)break;
                 }
                 if(k == 5){
-                    new Result(player,chessBoard,Status.WIN);
+                    name = ChessBoard.player == Player.isRoomOwner() ? Menu.instance.name : Menu.instance.otherName;
+                    new Result(name,chessBoard,Status.WIN);
                     ChessBoard.isWinMode = true;
                     break flag3;
                 }
@@ -113,7 +119,8 @@ public class Logic extends JPanel {
                     if(board[i+k][j-k]!=top)break;
                 }
                 if(k == 5){
-                    new Result(player,chessBoard,Status.WIN);
+                    name = ChessBoard.player == Player.isRoomOwner() ? Menu.instance.name : Menu.instance.otherName;
+                    new Result(name,chessBoard,Status.WIN);
                     ChessBoard.isWinMode = true;
                     break flag3;
                 }

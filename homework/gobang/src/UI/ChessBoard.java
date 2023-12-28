@@ -127,9 +127,7 @@ public class ChessBoard extends JPanel {
             player = !player;
         }
 
-        String name = player ? Menu.instance.otherName : Menu.instance.name;
-
-        Logic.victory(board,rows,columns,name,this);
+        Logic.victory(board,rows,columns,this);
         updateUI();
 
 //                Gobang.display(board);
