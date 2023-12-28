@@ -29,8 +29,8 @@ public class InRunnable implements Runnable {
 
                         Info info = (Info) ois.readObject();
 
-                        if (info.getPoint() != null && Game.instance.getChessBoard().judge(info.getPoint().x, info.getPoint().y) == true) {
-                            Game.instance.getChessBoard().click(info.getPoint().x, info.getPoint().y);
+                        if (info.getPoint() != null && Game.getChessBoard().judge(info.getPoint().x, info.getPoint().y) == true) {
+                            Game.getChessBoard().click(info.getPoint().x, info.getPoint().y);
                         }
 
                         if (info.getString() != null) {

@@ -23,7 +23,7 @@ public class Result extends JFrame{
             public void windowClosing(WindowEvent e) {
                 if(cmp instanceof ChessBoard) {
                     ((ChessBoard) cmp).close();
-                    Player.instance.closeSocket();
+                    Player.closeSocket();
                 }
                 Menu.instance.unlock();
             }
@@ -52,8 +52,4 @@ public class Result extends JFrame{
         }
     }
 
-    public void close(){
-        dispose();
-        Menu.instance.unlock();
-    }
 }

@@ -9,8 +9,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class Game extends JFrame{
-    public static Game instance = null;
-    private ChessBoard chessBoard;
+    private static ChessBoard chessBoard;
     public Game(int rows, int columns) {
         super("五子棋(按 R 悔棋)");
         JPanel panel = new JPanel(new BorderLayout());
@@ -56,7 +55,7 @@ public class Game extends JFrame{
         setResizable(false);
     }
 
-    public ChessBoard getChessBoard() {
+    public static ChessBoard getChessBoard() {
         return chessBoard;
     }
 

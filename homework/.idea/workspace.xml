@@ -4,161 +4,71 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10121b1c-405d-463f-8f67-99280b2a7e09" name="更改" comment="新增Info类统一数据传递；及时关闭传输房间信息的通道">
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d1_create_thread/MyCallable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d1_create_thread/MyRunnable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d1_create_thread/MyThread.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d1_create_thread/ThreadTest1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d1_create_thread/ThreadTest2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d1_create_thread/ThreadTest2_2$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d1_create_thread/ThreadTest2_2$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d1_create_thread/ThreadTest2_2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d1_create_thread/ThreadTest3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d2_thread_api/MyThread.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d2_thread_api/ThreadTest1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d2_thread_api/ThreadTest2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d3_thread_safe/Account.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d3_thread_safe/DrawThread.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d3_thread_safe/ThreadTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d4_synchronized_code/Account.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d4_synchronized_code/DrawThread.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d4_synchronized_code/ThreadTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d5_synchronized_method/Account.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d5_synchronized_method/DrawThread.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d5_synchronized_method/ThreadTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d6_synchronized_lock/Account.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d6_synchronized_lock/DrawThread.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d6_synchronized_lock/ThreadTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d7_thread_communication/Desk.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d7_thread_communication/ThreadTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d8_thread_pool/MyCallable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d8_thread_pool/MyRunnable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d8_thread_pool/ThreadPoolTest1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d8_thread_pool/ThreadPoolTest2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d8_thread_pool/ThreadPoolTest3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d9_tz/MyRunnable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day10/_thread/d9_tz/test.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_annotation/Test02.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_annotation/Test03$MyAnnotation2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_annotation/Test03$MyAnnotation3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_annotation/Test03.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/Father.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/Teacher.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/Test05.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/DelayThread.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d1_create_thread/MyCallable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d1_create_thread/MyRunnable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d1_create_thread/MyThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d1_create_thread/ThreadTest1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d1_create_thread/ThreadTest2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d1_create_thread/ThreadTest2_2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d1_create_thread/ThreadTest3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d2_thread_api/MyThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d2_thread_api/ThreadTest1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d2_thread_api/ThreadTest2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d3_thread_safe/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d3_thread_safe/DrawThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d3_thread_safe/ThreadTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d4_synchronized_code/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d4_synchronized_code/DrawThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d4_synchronized_code/ThreadTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d5_synchronized_method/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d5_synchronized_method/DrawThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d5_synchronized_method/ThreadTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d6_synchronized_lock/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d6_synchronized_lock/DrawThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d6_synchronized_lock/ThreadTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d7_thread_communication/Desk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d7_thread_communication/ThreadTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d8_thread_pool/MyCallable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d8_thread_pool/MyRunnable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d8_thread_pool/ThreadPoolTest1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d8_thread_pool/ThreadPoolTest2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d8_thread_pool/ThreadPoolTest3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d9_tz/MyRunnable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA/src/day10/_thread/d9_tz/test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gobang/META-INF/MANIFEST.MF" afterDir="false" />
+    <list default="true" id="10121b1c-405d-463f-8f67-99280b2a7e09" name="更改" comment="棋盘显示玩家名字；解决服务端发送信息时出现的问题；">
       <change beforePath="$PROJECT_DIR$/../JAVA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/annotation/MyAnnotation.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_annotation/MyAnnotation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/annotation/Test01.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_annotation/Test01.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/annotation/MyAnnotation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/annotation/Test01.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/annotation/Test02.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/annotation/Test03$MyAnnotation2.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/annotation/Test03$MyAnnotation3.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/annotation/Test03.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/A.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/A.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/A.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Father.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Fieldkuang.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/Fieldkuang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Son.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/Son.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Fieldkuang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Son.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Student2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/Student2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Tablekuang.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/Tablekuang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Student2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Tablekuang.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Teacher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test02.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/Test02.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test03.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/Test03.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test04.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/Test04.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test02.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test03.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test04.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test05.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test06.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/Test06.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test07.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/Test07.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test08.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/Test08.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test09.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/Test09.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test10.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/Test10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test11.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/Test11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test12.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/Test12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/test01.js" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/_reflection/test01.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test06.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test07.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test08.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test09.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/Test12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/day9/reflection/test01.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/MyList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/MyList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/Stu.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/Stu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/shiyan1_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/shiyan1_2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/shiyan4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/shiyan4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/shiyan5.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/shiyan5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/shiyan6_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/out/production/learn/homework/shiyan6_1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/annotation/Test01.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_annotation/Test01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/annotation/Test02.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_annotation/Test02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/annotation/Test03.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_annotation/Test03.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test02.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test03.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test03.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test04.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test04.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test05.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test05.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test06.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test06.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test07.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test07.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test08.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test08.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test09.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test09.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test10.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test10.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test11.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test11.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test12.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/Test12.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/test01.js" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/day9/_reflection/test01.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/annotation/Test01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/annotation/Test02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/annotation/Test03.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test03.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test04.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test05.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test06.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test07.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test08.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test09.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test10.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test11.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/Test12.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/src/day9/reflection/test01.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/src/homework/shiyan4.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/homework/shiyan4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA/src/homework/shiyan6_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/homework/shiyan6_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gobang/src/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Logic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gobang/src/Start.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gobang/src/UI/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/ChessBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gobang/src/UI/ChessBoardTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/UI/Creat.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Creat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/UI/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/UI/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/UI/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gobang/src/image/black.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gobang/src/image/white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gobang/src/thread/ChatThread.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/thread/InRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/thread/InRunnable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/thread/OutRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/thread/OutRunnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gobang/src/thread/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/thread/ServerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/Logic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/Logic.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/Start.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoardTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Creat$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Creat$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Creat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Creat.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Game$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Game$1.class" afterDir="false" />
@@ -166,11 +76,8 @@
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Menu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Result$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Result$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Result.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Status.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/thread/ChatThread.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/thread/InRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/thread/InRunnable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/thread/OutRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/thread/OutRunnable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/thread/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/thread/ServerThread.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -375,7 +282,7 @@
       <workItem from="1703226521827" duration="11500000" />
       <workItem from="1703242487454" duration="12226000" />
       <workItem from="1703637954270" duration="10811000" />
-      <workItem from="1703673016259" duration="18846000" />
+      <workItem from="1703673016259" duration="25121000" />
     </task>
     <task id="LOCAL-00001" summary="五子棋斜线判断">
       <option name="closed" value="true" />
@@ -465,7 +372,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703568262293</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="棋盘显示玩家名字；解决服务端发送信息时出现的问题；">
+      <option name="closed" value="true" />
+      <created>1703692026783</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1703692026783</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +454,8 @@
     <MESSAGE value="初步实现本地联机，通过不断发送房间信息，使加入者能够获取并加入；" />
     <MESSAGE value="新增玩家离开提示；优化本地联机，只有玩家加入时，才发送房间信息；增加房主判断，通过判断显示玩家离开信息" />
     <MESSAGE value="新增Info类统一数据传递；及时关闭传输房间信息的通道" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增Info类统一数据传递；及时关闭传输房间信息的通道" />
+    <MESSAGE value="棋盘显示玩家名字；解决服务端发送信息时出现的问题；" />
+    <option name="LAST_COMMIT_MESSAGE" value="棋盘显示玩家名字；解决服务端发送信息时出现的问题；" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

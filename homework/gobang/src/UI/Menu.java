@@ -22,7 +22,7 @@ public class Menu {
     public Socket roomInfoSocket;
     public String name;
     public String otherName;
-    public Menu(){
+    private Menu(){
         frame = new JFrame("菜单");
         frame.setSize(400,300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -104,24 +104,31 @@ public class Menu {
                         ObjectInputStream ois = new ObjectInputStream(roomInfoSocket.getInputStream());
                         Info info = (Info) ois.readObject();
 
+                        ObjectOutputStream oos = new ObjectOutputStream(roomInfoSocket.getOutputStream());
+                        oos.writeObject(new Info(name));
+
                         if(info.getString() != null){
                             otherName = info.getString();
                         }
 
-                        Server.connect.set(true);
-
                         if (info.getRoom() != null) {
-                            Player.instance = new Player(Integer.parseInt(port), info.getRoom().getRow(),
+                            System.out.println("创建玩家");
+                            new Player(Integer.parseInt(port), info.getRoom().getRow(),
                                     info.getRoom().getColumn(), false);
                         } else {
                             unlock();
                             resultField.setText("?...房间不存在");
                         }
-
-                    }finally {
+                        ois.close();
+                        oos.close();
+                    }catch (Exception exception){
+                        exception.printStackTrace();
+                    }
+                    finally {
                         roomInfoSocket.close();
                     }
                 } catch (Exception ex) {
+                    ex.printStackTrace();
                     unlock();
                     resultField.setText("该端口未开房");
                 }

@@ -1,5 +1,6 @@
 package src.UI;
 
+import src.Info;
 import src.Player;
 import src.Room;
 import src.Server;
@@ -10,6 +11,7 @@ import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
@@ -43,12 +45,11 @@ public class Creat extends JFrame{
         new Thread(()->{
             try {
                 Result result = new Result(false,this,Status.WAIT);
-//                while(!Server.connect.get()){
-//                    System.out.println(1);
-//                    Thread.sleep(1000);
-//                }
-                result.close();
-                Player.instance = new Player(port,row,column,true);
+                ObjectInputStream ois = new ObjectInputStream(new Socket("127.0.0.1",port).getInputStream());
+                String name = ((Info) ois.readObject()).getString();
+                result.dispose();
+                Menu.instance.otherName = name;
+                new Player(port,row,column,true);
             }catch (Exception ex){
                 ex.printStackTrace();
             }
@@ -59,6 +60,7 @@ public class Creat extends JFrame{
 
 
     private static Room isValid(String row,String column){
+
         if(row.equals("") && column.equals("")){
 //            return new Room(15,15);
             return new Room(6,6);

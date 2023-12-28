@@ -13,10 +13,8 @@ import java.net.Socket;
 import java.util.concurrent.*;
 
 public class Player {
-    public static Player instance;
-    private Socket socket;
-    private boolean isRoomOwner;
-
+    private static Socket socket;
+    private static boolean isRoomOwner;
     private String name;
     public Player(int port,int row,int column,boolean isRoomOwner) throws Exception {
         this.isRoomOwner = isRoomOwner;
@@ -25,7 +23,7 @@ public class Player {
         socket = new Socket("127.0.0.1", port);
         System.out.println(socket);
 
-        Game.instance = new Game(row,column);
+        new Game(row,column);
 
         ExecutorService pool = new ThreadPoolExecutor(12 * 2, 12 * 2, 0, TimeUnit.SECONDS,
                 new ArrayBlockingQueue<>(8) , Executors.defaultThreadFactory(),
@@ -37,10 +35,12 @@ public class Player {
         pool.shutdown();
     }
 
-    public void closeSocket() {
+    private void test1(){}
+
+    public static void closeSocket() {
         try {
-            if (Player.instance.socket != null && !Player.instance.socket.isClosed()) {
-                Player.instance.socket.close();
+            if (Player.socket != null && !Player.socket.isClosed()) {
+                Player.socket.close();
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -48,7 +48,7 @@ public class Player {
     }
 
     public static void main(String[] args) throws Exception {
-        Player.instance = new Player(8080,15,15,false);
+        new Player(8080,15,15,false);
     }
 
 
@@ -61,7 +61,7 @@ public class Player {
     }
 
     public static boolean isRoomOwner() {
-        return Player.instance.isRoomOwner;
+        return isRoomOwner;
     }
 
 

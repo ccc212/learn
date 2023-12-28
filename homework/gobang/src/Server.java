@@ -21,7 +21,7 @@ public class Server {
     public static List<Socket> onLineSockets = new ArrayList<>(2);
     public static int port;
     private static ServerSocket serverSocket;
-    public static AtomicBoolean connect = new AtomicBoolean(false);
+
     public Server(int port) throws Exception {
         this.port = port;
         System.out.println("-----房间已创建-------");
@@ -62,7 +62,7 @@ public class Server {
 
     public void broadcastRoomInfo(Socket newSocket) {
 //        System.out.println("发送房间信息");
-        Info info = new Info(Creat.getRoom(),null,Menu.instance.name,false);
+        Info info = new Info(Creat.getRoom(),null,Menu.instance.name);
         if(info.getRoom() == null)return;
         try {
             ObjectOutputStream oos = new ObjectOutputStream(newSocket.getOutputStream());

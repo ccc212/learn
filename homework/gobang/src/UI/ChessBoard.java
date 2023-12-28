@@ -124,7 +124,7 @@ public class ChessBoard extends JPanel {
         Logic.victory(board,rows,columns,player,this);
         updateUI();
 
-                Gobang.display(board);
+//                Gobang.display(board);
     }
 
     public Point getLastClickPoint() {

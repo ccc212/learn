@@ -12,6 +12,7 @@ import java.net.Socket;
 public class OutRunnable implements Runnable{
     private Socket socket;
     public static ObjectOutputStream oos;
+    public static boolean currentPlayer = false;
     public OutRunnable(Socket socket){
         this.socket = socket;
     }
@@ -23,18 +24,18 @@ public class OutRunnable implements Runnable{
             e.printStackTrace();
         }
         while(true) {
-            Point lastClickPoint = Game.instance.getChessBoard().getLastClickPoint();
+            Point lastClickPoint = Game.getChessBoard().getLastClickPoint();
             try {
 //                synchronized (Game.instance.getLock()) {
                 if(lastClickPoint != null) {
-                    oos.writeObject(new Info(lastClickPoint,false));
+                    oos.writeObject(new Info(lastClickPoint));
                     oos.flush();
                 }
 //                    Game.instance.getLock().notify();
 //                }
                 Thread.sleep(10);
             } catch (Exception e) {
-                Logic.leave(Game.instance.getChessBoard(), Player.isRoomOwner());
+                Logic.leave(Game.getChessBoard(), Player.isRoomOwner());
                 break;
             }
         }
