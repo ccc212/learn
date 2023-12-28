@@ -2,6 +2,7 @@ package src;
 
 import src.UI.ChessBoard;
 import src.UI.ChessPiece;
+import src.UI.Menu;
 import src.UI.Result;
 import src.UI.Status;
 
@@ -35,7 +36,7 @@ public class Logic extends JPanel {
     }
 
     public static void victory(int[][] board,int rows,
-                        int columns,boolean player,
+                        int columns,String player,
                         ChessBoard chessBoard) {
         //横
         flag1:
@@ -47,14 +48,14 @@ public class Logic extends JPanel {
             while (r < columns) {
                 if(r + 1 == columns)break;
                 if (Math.abs(temp) == 5) {
-                    new Result(!player,chessBoard, Status.WIN);
+                    new Result(player,chessBoard, Status.WIN);
                     ChessBoard.isWinMode = true;
                     break flag1;
                 }
                 temp -= board[i][l++];
                 temp += board[i][(r++) + 1];
                 if (Math.abs(temp) == 5) {
-                    new Result(!player,chessBoard,Status.WIN);
+                    new Result(player,chessBoard,Status.WIN);
                     ChessBoard.isWinMode = true;
                     break flag1;
                 }
@@ -71,14 +72,14 @@ public class Logic extends JPanel {
             while (r < rows) {
                 if(r + 1 == rows)break;
                 if (Math.abs(temp) == 5) {
-                    new Result(!player,chessBoard,Status.WIN);
+                    new Result(player,chessBoard,Status.WIN);
                     ChessBoard.isWinMode = true;
                     break flag2;
                 }
                 temp -= board[l++][i];
                 temp += board[(r++) + 1][i];
                 if (Math.abs(temp) == 5) {
-                    new Result(!player,chessBoard,Status.WIN);
+                    new Result(player,chessBoard,Status.WIN);
                     ChessBoard.isWinMode = true;
                     break flag2;
                 }
@@ -97,7 +98,7 @@ public class Logic extends JPanel {
                     if(board[i+k][j+k]!=top)break;
                 }
                 if(k == 5){
-                    new Result(!player,chessBoard,Status.WIN);
+                    new Result(player,chessBoard,Status.WIN);
                     ChessBoard.isWinMode = true;
                     break flag3;
                 }
@@ -112,7 +113,7 @@ public class Logic extends JPanel {
                     if(board[i+k][j-k]!=top)break;
                 }
                 if(k == 5){
-                    new Result(!player,chessBoard,Status.WIN);
+                    new Result(player,chessBoard,Status.WIN);
                     ChessBoard.isWinMode = true;
                     break flag3;
                 }
@@ -123,9 +124,9 @@ public class Logic extends JPanel {
 
     public static void leave(ChessBoard chessBoard,boolean isRoomOwner){
         if(isRoomOwner)
-            new Result(false,chessBoard,Status.LEAVE);
+            new Result(Menu.instance.otherName,chessBoard,Status.LEAVE);
         else
-            new Result(true,chessBoard,Status.CLOSE);
+            new Result(Menu.instance.name,chessBoard,Status.LEAVE);
     }
 
     //平局
@@ -138,7 +139,7 @@ public class Logic extends JPanel {
                 if(board[i][j] == 0)return;
             }
         }
-        new Result(false,chessBoard,Status.DRAW);
+        new Result(null,chessBoard,Status.DRAW);
     }
 
     public static boolean judge(int[][] board, int row, int column) {

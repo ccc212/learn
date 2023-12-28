@@ -4,7 +4,6 @@ import src.Info;
 import src.Player;
 import src.Room;
 import src.Server;
-import src.thread.ServerThread;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,10 +11,9 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.net.Socket;
 
-public class Creat extends JFrame{
+public class Create extends JFrame{
     private static int rowMax=30;
     private static int columnMax=30;
 
@@ -25,8 +23,9 @@ public class Creat extends JFrame{
     private static JTextField resultField;
     private int port;
     private static Room room;
+    public static Socket socket = null;
 
-    public Creat(int port){
+    public Create(int port){
         super("创建");
         this.port = port;
         placeComponents();
@@ -44,14 +43,21 @@ public class Creat extends JFrame{
 
         new Thread(()->{
             try {
-                Result result = new Result(false,this,Status.WAIT);
-                ObjectInputStream ois = new ObjectInputStream(new Socket("127.0.0.1",port).getInputStream());
+                Result result = new Result(null,this,Status.WAIT);
+                socket = new Socket("127.0.0.1",port);
+                ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
                 String name = ((Info) ois.readObject()).getString();
                 result.dispose();
                 Menu.instance.otherName = name;
                 new Player(port,row,column,true);
             }catch (Exception ex){
                 ex.printStackTrace();
+            }finally {
+                try {
+                    socket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }).start();
 

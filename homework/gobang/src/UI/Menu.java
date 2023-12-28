@@ -2,15 +2,10 @@ package src.UI;
 
 import src.Info;
 import src.Player;
-import src.Room;
-import src.Server;
-import src.thread.ServerThread;
 
 import javax.swing.*;
 import java.io.*;
 import java.net.Socket;
-import java.util.List;
-import java.util.Scanner;
 
 public class Menu {
     public static Menu instance = new Menu();
@@ -22,6 +17,7 @@ public class Menu {
     public Socket roomInfoSocket;
     public String name;
     public String otherName;
+    public String address;
     private Menu(){
         frame = new JFrame("菜单");
         frame.setSize(400,300);
@@ -88,7 +84,7 @@ public class Menu {
             if(isValid(userText.getText())) {
                 lock("创建房间 端口:" + port);
                 try {
-                    new Creat(Integer.parseInt(userText.getText()));
+                    new Create(Integer.parseInt(userText.getText()));
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
@@ -112,7 +108,6 @@ public class Menu {
                         }
 
                         if (info.getRoom() != null) {
-                            System.out.println("创建玩家");
                             new Player(Integer.parseInt(port), info.getRoom().getRow(),
                                     info.getRoom().getColumn(), false);
                         } else {
@@ -128,7 +123,6 @@ public class Menu {
                         roomInfoSocket.close();
                     }
                 } catch (Exception ex) {
-                    ex.printStackTrace();
                     unlock();
                     resultField.setText("该端口未开房");
                 }

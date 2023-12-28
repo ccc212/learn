@@ -2,13 +2,10 @@ package src;
 
 import src.UI.Game;
 import src.UI.Menu;
-import src.thread.InRunnable;
 import src.thread.OutRunnable;
+import src.thread.InRunnable;
 
-import java.awt.*;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.concurrent.*;
 
@@ -16,14 +13,18 @@ public class Player {
     private static Socket socket;
     private static boolean isRoomOwner;
     private String name;
+    public static boolean clickEnable;
     public Player(int port,int row,int column,boolean isRoomOwner) throws Exception {
         this.isRoomOwner = isRoomOwner;
         this.name = Menu.instance.name;
 
+        clickEnable = isRoomOwner;
+
         socket = new Socket("127.0.0.1", port);
         System.out.println(socket);
 
-        new Game(row,column);
+        Game.instance = new Game(row,column);
+        Game.instance.setChessBoardClickable(clickEnable);
 
         ExecutorService pool = new ThreadPoolExecutor(12 * 2, 12 * 2, 0, TimeUnit.SECONDS,
                 new ArrayBlockingQueue<>(8) , Executors.defaultThreadFactory(),
@@ -63,7 +64,6 @@ public class Player {
     public static boolean isRoomOwner() {
         return isRoomOwner;
     }
-
 
 }
 

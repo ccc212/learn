@@ -10,9 +10,9 @@ import java.io.*;
 import java.net.Socket;
 
 public class OutRunnable implements Runnable{
-    private Socket socket;
+    private final Socket socket;
     public static ObjectOutputStream oos;
-    public static boolean currentPlayer = false;
+    private Point lastSentClickPoint = null;
     public OutRunnable(Socket socket){
         this.socket = socket;
     }
@@ -21,21 +21,27 @@ public class OutRunnable implements Runnable{
         try {
             oos = new ObjectOutputStream(socket.getOutputStream());
         } catch (Exception e) {
+            Logic.leave(Game.instance.getChessBoard(), Player.isRoomOwner());
             e.printStackTrace();
         }
         while(true) {
-            Point lastClickPoint = Game.getChessBoard().getLastClickPoint();
+            Point lastClickPoint = Game.instance.getChessBoard().getLastClickPoint();
             try {
-//                synchronized (Game.instance.getLock()) {
-                if(lastClickPoint != null) {
-                    oos.writeObject(new Info(lastClickPoint));
+                if (lastClickPoint != null && !lastClickPoint.equals(lastSentClickPoint)) {
+                    Game.instance.setChessBoardClickable(false);
+
+                    Info info = new Info(lastClickPoint);
+                    info.setClickEnable(true);
+
+                    oos.writeObject(info);
                     oos.flush();
+
+                    lastSentClickPoint = lastClickPoint;
                 }
-//                    Game.instance.getLock().notify();
-//                }
                 Thread.sleep(10);
             } catch (Exception e) {
-                Logic.leave(Game.getChessBoard(), Player.isRoomOwner());
+                e.printStackTrace();
+                Logic.leave(Game.instance.getChessBoard(), Player.isRoomOwner());
                 break;
             }
         }

@@ -1,6 +1,5 @@
 package src.UI;
 
-import src.Gobang;
 import src.Info;
 import src.Logic;
 import src.thread.OutRunnable;
@@ -29,6 +28,7 @@ public class ChessBoard extends JPanel {
     public Stack<Point>stack;
     public int[][] board;
     private Point lastClickPoint;
+    private boolean clickable = true;
 
     public ChessBoard(int rows, int columns) {
         setBackground(Color.getHSBColor(
@@ -47,8 +47,10 @@ public class ChessBoard extends JPanel {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     if (isWinMode) return;
-                    click(e.getX(), e.getY());
-                    lastClickPoint = e.getPoint();
+                    if(clickable) {
+                        click(e.getX(), e.getY());
+                        lastClickPoint = e.getPoint();
+                    }
                 }
             });
 
@@ -62,18 +64,18 @@ public class ChessBoard extends JPanel {
                 @Override
                 public void keyPressed(KeyEvent e) {
                     int key = e.getKeyCode();
-                    if (key == KeyEvent.VK_R) {
-                        System.out.printf("R");
+                    if (key == KeyEvent.VK_R && !stack.empty()) {
+                        System.out.println("R");
+//                      int result = JOptionPane.showConfirmDialog(null, "确定要执行此操作吗?", "确认", JOptionPane.YES_NO_OPTION);
+//                      if(result == JOptionPane.YES_OPTION) {
                         isWinMode = false;
-//                        try {
-//                            OutRunnable.oos.writeObject(new Info("R"));
-//                        } catch (IOException ex) {
-//                            ex.printStackTrace();
-//                        }
-                        if(Logic.back(board, stack, map)) {
-                            player = !player;
-                            updateUI();
+                        try {
+                            OutRunnable.oos.writeObject(new Info("R"));
+                            Game.instance.setChessBoardClickable(!Game.instance.getChessBoard().getClickable());
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
                         }
+//                      }
                     }
                 }
 
@@ -121,7 +123,9 @@ public class ChessBoard extends JPanel {
             player = !player;
         }
 
-        Logic.victory(board,rows,columns,player,this);
+        String name = player ? Menu.instance.otherName : Menu.instance.name;
+
+        Logic.victory(board,rows,columns,name,this);
         updateUI();
 
 //                Gobang.display(board);
@@ -165,6 +169,14 @@ public class ChessBoard extends JPanel {
         player = false;
         isWinMode = false;
 
+    }
+
+    public boolean getClickable() {
+        return clickable;
+    }
+
+    public void setClickable(boolean clickable) {
+        this.clickable = clickable;
     }
 
 }

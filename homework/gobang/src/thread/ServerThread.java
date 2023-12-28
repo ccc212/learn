@@ -2,6 +2,8 @@ package src.thread;
 
 import src.Info;
 import src.Server;
+import src.UI.*;
+
 import java.io.*;
 import java.net.Socket;
 import java.util.Iterator;
@@ -25,6 +27,9 @@ public class ServerThread extends Thread{
                     }
                 } catch (IOException e) {
                     System.out.println("有人下线了：" + socket.getRemoteSocketAddress());
+                    if(socket.getRemoteSocketAddress() != Create.socket.getLocalSocketAddress()) {
+                        new Result(Menu.instance.otherName, Game.instance.getChessBoard(), Status.LEAVE);
+                    }
                     Server.onLineSockets.remove(socket);
                     ois.close();
                     socket.close();
@@ -32,19 +37,7 @@ public class ServerThread extends Thread{
                 }
             }
         } catch (Exception e) {
-            if(socket != Server.onLineSockets.get(2)) {
-                Socket socket = Server.onLineSockets.get(0);
-                try {
-//                    System.out.printf("对方已离开");
-                    oos = new ObjectOutputStream(socket.getOutputStream());
-                    oos.writeObject("对方已离开");
-                    oos.flush();
-//                oos.close();
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
-            }
-            Server.onLineSockets.remove(socket);
+//            e.printStackTrace();
         }
     }
 
