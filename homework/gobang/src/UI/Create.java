@@ -73,8 +73,7 @@ public class Create extends JFrame{
     private static Room isValid(String row,String column){
 
         if(row.equals("") && column.equals("")){
-//            return new Room(15,15);
-            return new Room(6,6);
+            return new Room(15,15);
         }
         try {
             int Row = Integer.parseInt(row);
@@ -87,7 +86,7 @@ public class Create extends JFrame{
                 resultField.setText("列数超范围了");
                 return null;
             }
-            if (Row <= 5 || Column <= 5 /*Row < 5 && Column < 5 || Row == 1 || Column == 1*/) {
+            if (Row < 5 && Column < 5 || Row == 1 || Column == 1) {
                 resultField.setText("无法创建棋盘");
                 return null;
             }

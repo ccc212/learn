@@ -1,5 +1,6 @@
 package src.UI;
 
+import src.Gobang;
 import src.Info;
 import src.Logic;
 import src.thread.OutRunnable;

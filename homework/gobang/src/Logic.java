@@ -35,97 +35,85 @@ public class Logic extends JPanel {
         return true;
     }
 
+    public static boolean win(int temp,ChessBoard chessBoard){
+        if(Math.abs(temp) == 5){
+            String name = ChessBoard.player == Player.isRoomOwner() ? Menu.instance.name : Menu.instance.otherName;
+            new Result(name,chessBoard, Status.WIN);
+            ChessBoard.isWinMode = true;
+            return true;
+        }
+        return false;
+    }
+
     public static void victory(int[][] board,int rows,
                         int columns,
                         ChessBoard chessBoard) {
-        String name = null;
         //横
         flag1:
-        for(int i=0;i<rows;i++) {
-            int l = 0, r = l + 4, temp = 0;
-            for (int j = l; j <= r; j++) {
-                temp += board[i][j];
-            }
-            while (r < columns) {
-                if(r + 1 == columns)break;
-                if (Math.abs(temp) == 5) {
-                    name = ChessBoard.player == Player.isRoomOwner() ? Menu.instance.name : Menu.instance.otherName;
-                    new Result(name,chessBoard, Status.WIN);
-                    ChessBoard.isWinMode = true;
-                    break flag1;
+        if(columns >= 5) {
+            for (int i = 0; i < rows; i++) {
+                int l = 0, r = l + 4, temp = 0;
+                for (int j = l; j <= r; j++) {
+                    temp += board[i][j];
                 }
-                temp -= board[i][l++];
-                temp += board[i][(r++) + 1];
-                if (Math.abs(temp) == 5) {
-                    name = ChessBoard.player == Player.isRoomOwner() ? Menu.instance.name : Menu.instance.otherName;
-                    new Result(name,chessBoard,Status.WIN);
-                    ChessBoard.isWinMode = true;
-                    break flag1;
+                if (win(temp, chessBoard)) break;
+                while (r < columns) {
+                    if (r + 1 == columns) break;
+                    if (win(temp, chessBoard)) break flag1;
+                    temp -= board[i][l++];
+                    temp += board[i][(r++) + 1];
+                    if (win(temp, chessBoard)) break flag1;
                 }
             }
         }
 
         //竖
         flag2:
-        for(int i=0;i<columns;i++) {
-            int l = 0, r = l + 4, temp = 0;
-            for (int j = l; j <= r; j++) {
-                temp += board[j][i];
-            }
-            while (r < rows) {
-                if(r + 1 == rows)break;
-                if (Math.abs(temp) == 5) {
-                    name = ChessBoard.player == Player.isRoomOwner() ? Menu.instance.name : Menu.instance.otherName;
-                    new Result(name,chessBoard,Status.WIN);
-                    ChessBoard.isWinMode = true;
-                    break flag2;
+        if(rows >= 5) {
+            for (int i = 0; i < columns; i++) {
+                int l = 0, r = l + 4, temp = 0;
+                for (int j = l; j <= r; j++) {
+                    temp += board[j][i];
                 }
-                temp -= board[l++][i];
-                temp += board[(r++) + 1][i];
-                if (Math.abs(temp) == 5) {
-                    name = ChessBoard.player == Player.isRoomOwner() ? Menu.instance.name : Menu.instance.otherName;
-                    new Result(name,chessBoard,Status.WIN);
-                    ChessBoard.isWinMode = true;
-                    break flag2;
+                if (win(temp, chessBoard)) break;
+                while (r < rows) {
+                    if (r + 1 == rows) break;
+                    if (win(temp, chessBoard)) break flag2;
+                    temp -= board[l++][i];
+                    temp += board[(r++) + 1][i];
+                    if (win(temp, chessBoard)) break flag2;
                 }
             }
         }
 
         //斜
         flag3:
-        for(int i = 0;i < rows - 4;i++) {
-            //左上-右下
-            for (int j = 0; j < columns - 4; j++) {
-                int top = board[i][j];
-                if(top == 0)continue;
-                int k = 1;
-                for(;k < 5;k++){
-                    if(board[i+k][j+k]!=top)break;
+        if(rows >= 5 && columns >= 5) {
+            for (int i = 0; i < rows - 4; i++) {
+                //左上-右下
+                for (int j = 0; j < columns - 4; j++) {
+                    int top = board[i][j];
+                    if (top == 0) continue;
+                    int k = 1;
+                    for (; k < 5; k++) {
+                        if (board[i + k][j + k] != top) break;
+                    }
+                    if (win(k, chessBoard)) break flag3;
                 }
-                if(k == 5){
-                    name = ChessBoard.player == Player.isRoomOwner() ? Menu.instance.name : Menu.instance.otherName;
-                    new Result(name,chessBoard,Status.WIN);
-                    ChessBoard.isWinMode = true;
-                    break flag3;
-                }
-            }
 
-            //左下-右上
-            for (int j = 4; j < columns; j++) {
-                int top = board[i][j];
-                if(top == 0)continue;
-                int k = 1;
-                for(;k < 5;k++){
-                    if(board[i+k][j-k]!=top)break;
-                }
-                if(k == 5){
-                    name = ChessBoard.player == Player.isRoomOwner() ? Menu.instance.name : Menu.instance.otherName;
-                    new Result(name,chessBoard,Status.WIN);
-                    ChessBoard.isWinMode = true;
-                    break flag3;
+                //左下-右上
+                for (int j = 4; j < columns; j++) {
+                    int top = board[i][j];
+                    if (top == 0) continue;
+                    int k = 1;
+                    for (; k < 5; k++) {
+                        if (board[i + k][j - k] != top) break;
+                    }
+                    if (win(k, chessBoard)) break flag3;
                 }
             }
         }
+
         draw(board,rows,columns,chessBoard);
     }
 

@@ -4,24 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10121b1c-405d-463f-8f67-99280b2a7e09" name="更改" comment="实现悔棋申请时，玩家不能点棋盘，以引起混乱；玩家离开房间时，房主显示信息；更好的名字显示）">
-      <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/learn.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="10121b1c-405d-463f-8f67-99280b2a7e09" name="更改" comment="实现悔棋申请时，玩家不能点棋盘，以引起混乱；玩家离开房间时，房主显示信息；更好的名字显示）;修正获胜信息">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Logic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/UI/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/ChessBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/Info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/Info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Create.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Create.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/Logic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/Logic.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/thread/InRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/thread/InRunnable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/thread/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/thread/ServerThread.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +214,7 @@
       <workItem from="1703226521827" duration="11500000" />
       <workItem from="1703242487454" duration="12226000" />
       <workItem from="1703774326281" duration="956000" />
-      <workItem from="1703775300047" duration="7918000" />
+      <workItem from="1703775300047" duration="11086000" />
     </task>
     <task id="LOCAL-00001" summary="五子棋斜线判断">
       <option name="closed" value="true" />
@@ -321,7 +312,23 @@
       <option name="project" value="LOCAL" />
       <updated>1703782825420</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="实现悔棋申请时，玩家不能点棋盘，以引起混乱；玩家离开房间时，房主显示信息；更好的名字显示）">
+      <option name="closed" value="true" />
+      <created>1703783459606</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1703783459606</updated>
+    </task>
+    <task id="LOCAL-00014" summary="实现悔棋申请时，玩家不能点棋盘，以引起混乱；玩家离开房间时，房主显示信息；更好的名字显示）;修正获胜信息">
+      <option name="closed" value="true" />
+      <created>1703783502750</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1703783502750</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,7 +403,9 @@
     <MESSAGE value="新增玩家离开提示；优化本地联机，只有玩家加入时，才发送房间信息；增加房主判断，通过判断显示玩家离开信息" />
     <MESSAGE value="实现申请悔棋；房主离开时提醒" />
     <MESSAGE value="实现悔棋申请时，玩家不能点棋盘，以引起混乱；玩家离开房间时，房主显示信息；更好的名字显示）" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现悔棋申请时，玩家不能点棋盘，以引起混乱；玩家离开房间时，房主显示信息；更好的名字显示）" />
+    <MESSAGE value="实现悔棋申请时，玩家不能点棋盘，以引起混乱；玩家离开房间时，房主显示信息；更好的名字显示）;" />
+    <MESSAGE value="实现悔棋申请时，玩家不能点棋盘，以引起混乱；玩家离开房间时，房主显示信息；更好的名字显示）;修正获胜信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现悔棋申请时，玩家不能点棋盘，以引起混乱；玩家离开房间时，房主显示信息；更好的名字显示）;修正获胜信息" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
