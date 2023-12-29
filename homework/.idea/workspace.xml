@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10121b1c-405d-463f-8f67-99280b2a7e09" name="更改" comment="实现悔棋申请时，玩家不能点棋盘，以引起混乱；玩家离开房间时，房主显示信息；更好的名字显示）;修正获胜信息">
+    <list default="true" id="10121b1c-405d-463f-8f67-99280b2a7e09" name="更改" comment="优化创建棋盘，实现能够创建除一行或一列外，所有能判赢的棋盘；提炼出判赢方法，保持代码简洁">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gobang/src/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/Logic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gobang/src/UI/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/ChessBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Create.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Create.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/Logic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/Logic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/UI/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/UI/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/thread/InRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/thread/InRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gobang/src/thread/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/gobang/src/thread/ServerThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/ChessBoard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/UI/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/UI/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/thread/InRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/thread/InRunnable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practice/src/thread/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practice/src/thread/ServerThread.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +216,7 @@
       <workItem from="1703226521827" duration="11500000" />
       <workItem from="1703242487454" duration="12226000" />
       <workItem from="1703774326281" duration="956000" />
-      <workItem from="1703775300047" duration="11086000" />
+      <workItem from="1703775300047" duration="17879000" />
     </task>
     <task id="LOCAL-00001" summary="五子棋斜线判断">
       <option name="closed" value="true" />
@@ -328,7 +330,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703783502750</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="优化创建棋盘，实现能够创建除一行或一列外，所有能判赢的棋盘；提炼出判赢方法，保持代码简洁">
+      <option name="closed" value="true" />
+      <created>1703825258792</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1703825258792</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,7 +415,8 @@
     <MESSAGE value="实现悔棋申请时，玩家不能点棋盘，以引起混乱；玩家离开房间时，房主显示信息；更好的名字显示）" />
     <MESSAGE value="实现悔棋申请时，玩家不能点棋盘，以引起混乱；玩家离开房间时，房主显示信息；更好的名字显示）;" />
     <MESSAGE value="实现悔棋申请时，玩家不能点棋盘，以引起混乱；玩家离开房间时，房主显示信息；更好的名字显示）;修正获胜信息" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现悔棋申请时，玩家不能点棋盘，以引起混乱；玩家离开房间时，房主显示信息；更好的名字显示）;修正获胜信息" />
+    <MESSAGE value="优化创建棋盘，实现能够创建除一行或一列外，所有能判赢的棋盘；提炼出判赢方法，保持代码简洁" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化创建棋盘，实现能够创建除一行或一列外，所有能判赢的棋盘；提炼出判赢方法，保持代码简洁" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

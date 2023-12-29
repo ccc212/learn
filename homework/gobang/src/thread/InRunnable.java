@@ -41,26 +41,31 @@ public class InRunnable implements Runnable {
                                     Logic.leave(Game.instance.getChessBoard(), Player.isRoomOwner());
                                     break label;
                                 case "R":
-                                    if (Logic.back(Game.instance.getChessBoard().board,
-                                            Game.instance.getChessBoard().stack,
-                                            Game.instance.getChessBoard().map)) {
-                                        int result = JOptionPane.showConfirmDialog(null, "对方申请悔棋", "同意", JOptionPane.YES_NO_OPTION);
-                                        if (result == JOptionPane.YES_OPTION) {
-                                            Game.instance.setChessBoardClickable(!Game.instance.getChessBoard().getClickable());
-                                            System.out.println("悔棋");
-                                            ChessBoard.player = !ChessBoard.player;
-                                            Game.instance.getChessBoard().updateUI();
-                                            OutRunnable.oos.writeObject(new Info("OK"));
-                                        }
+                                    int result = JOptionPane.showConfirmDialog(null, "对方申请悔棋", "同意", JOptionPane.YES_NO_OPTION);
+                                    if (result == JOptionPane.YES_OPTION) {
+                                        Logic.back(Game.instance.getChessBoard().board,
+                                                Game.instance.getChessBoard().stack,
+                                                Game.instance.getChessBoard().map);
+                                        Game.instance.setChessBoardClickable(!Game.instance.getChessBoard().getClickable());
+                                        System.out.println("悔棋");
+                                        ChessBoard.player = !ChessBoard.player;
+                                        Game.instance.getChessBoard().updateUI();
+                                        OutRunnable.oos.writeObject(new Info("OK"));
+                                    }else{
+                                        OutRunnable.oos.writeObject(new Info("NO"));
                                     }
                                     break;
                                 case "OK":
                                     if (Logic.back(Game.instance.getChessBoard().board, Game.instance.getChessBoard().stack, Game.instance.getChessBoard().map)) {
                                         ChessBoard.player = !ChessBoard.player;
+                                        Game.instance.setChessBoardClickable(!Game.instance.getChessBoard().getClickable());
                                         Game.instance.getChessBoard().updateUI();
                                         Game.instance.getChessBoard().keyEnable = true;
                                         Game.instance.setChessBoardClickable(true);
                                     }
+                                    break;
+                                case "NO":
+                                    Game.instance.getChessBoard().keyEnable = true;
                                     break;
                             }
                         }

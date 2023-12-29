@@ -74,7 +74,6 @@ public class ChessBoard extends JPanel {
                             isWinMode = false;
                             try {
                                 OutRunnable.oos.writeObject(new Info("R"));
-                                Game.instance.setChessBoardClickable(!Game.instance.getChessBoard().getClickable());
                                 keyEnable = false;
                                 Game.instance.setChessBoardClickable(false);
                             } catch (IOException ex) {

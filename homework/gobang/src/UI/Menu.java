@@ -137,7 +137,7 @@ public class Menu {
     private boolean isValid(String port){
         try {
             int Port = Integer.parseInt(port);
-            if(Port < 0 || Port > 65535){
+            if(Port < 1 || Port > 65535){
                 userText.setText("");
                 resultField.setText("端口范围应在0~65535中");
                 return false;

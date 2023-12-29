@@ -55,7 +55,7 @@ public class ServerThread extends Thread{
                 oos.writeObject(info);
                 oos.flush();
             } catch (IOException e) {
-                System.out.println("无法发送消息到：" + onLineSocket.getRemoteSocketAddress());
+//                System.out.println("无法发送消息到：" + onLineSocket.getRemoteSocketAddress());
                 iterator.remove();
             }
         }
