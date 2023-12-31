@@ -7,14 +7,15 @@ public class Info implements Serializable {
     private Room room;
     private Point point;
     private String string;
-    private boolean player;
+    private boolean clickEnable = false;
+    private String address;
 
-    public boolean getPlayer() {
-        return player;
+    public boolean getClickEnable() {
+        return clickEnable;
     }
 
-    public void setPlayer(boolean player) {
-        this.player = player;
+    public void setClickEnable(boolean clickEnable) {
+        this.clickEnable = clickEnable;
     }
 
     public Room getRoom() {
@@ -43,5 +44,13 @@ public class Info implements Serializable {
     }
     public Info(String string) {
         this(null,null,string);
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

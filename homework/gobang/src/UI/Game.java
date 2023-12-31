@@ -9,7 +9,8 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class Game extends JFrame{
-    private static ChessBoard chessBoard;
+    public static Game instance;
+    private ChessBoard chessBoard;
     public Game(int rows, int columns) {
         super("五子棋(按 R 悔棋)");
         JPanel panel = new JPanel(new BorderLayout());
@@ -21,8 +22,8 @@ public class Game extends JFrame{
 //        panel.setLayout(null);
 
         JPanel player1 = new JPanel();
-        JLabel name1 = new JLabel("<html>名字<br><hr>" + Menu.instance.name + "</html>");
-        name1.setFont(new Font("微软雅黑", Font.BOLD, ChessBoard.CELL_SIZE/2));
+        JLabel name1 = new JLabel("<html>你<hr>" + Menu.instance.name + "</html>");
+        name1.setFont(new Font("", Font.BOLD, ChessBoard.CELL_SIZE/2));
         player1.add(name1);
         panel.add(player1, BorderLayout.WEST);
 
@@ -31,8 +32,8 @@ public class Game extends JFrame{
         panel.add(chessBoard,BorderLayout.CENTER);
 
         JPanel player2 = new JPanel();
-        JLabel name2 = new JLabel("<html>名字<br><hr>" + Menu.instance.otherName + "</html>");
-        name2.setFont(new Font("微软雅黑", Font.BOLD, ChessBoard.CELL_SIZE/2));
+        JLabel name2 = new JLabel("<html>对方<hr>" + Menu.instance.otherName + "</html>");
+        name2.setFont(new Font("", Font.BOLD, ChessBoard.CELL_SIZE/2));
         player2.add(name2);
         panel.add(player2, BorderLayout.EAST);
 
@@ -55,8 +56,12 @@ public class Game extends JFrame{
         setResizable(false);
     }
 
-    public static ChessBoard getChessBoard() {
+    public ChessBoard getChessBoard() {
         return chessBoard;
+    }
+
+    public void setChessBoardClickable(boolean clickable) {
+        chessBoard.setClickable(clickable);
     }
 
 }

@@ -9,8 +9,35 @@ import java.awt.event.WindowEvent;
 
 public class Result extends JFrame{
     private JLabel label;
-    public Result(boolean player, Component cmp,int status) {
+    public Result(Component cmp,int status){
         super("结果");
+        set(null,cmp,status);
+    }
+    public Result(String player, Component cmp,int status) {
+        super("结果");
+        set(player,cmp,status);
+    }
+
+    private String getResultLabelText(String player, int status) {
+        switch (status) {
+            case Status.WIN:
+                return player + "获胜";
+            case Status.DRAW:
+                return "平局";
+            case Status.LEAVE:
+                return player + "已离开";
+            case Status.CLOSE:
+                return "房间已关闭";
+            case Status.LOSE:
+                return "你输了"; 
+            case Status.WAIT:
+                return "等待玩家加入";
+            default:
+                return "未知结果";
+        }
+    }
+
+    private void set(String player, Component cmp,int status) {
         setSize(300, 150);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
@@ -31,25 +58,6 @@ public class Result extends JFrame{
 
         setLocationRelativeTo(cmp);
         setVisible(true);
-    }
-
-    private String getResultLabelText(boolean player, int status) {
-        switch (status) {
-            case Status.WIN:
-                return "玩家" + (player ? "2" : "1") + "获胜";
-            case Status.DRAW:
-                return "平局";
-            case Status.LEAVE:
-                return "对手已离开";
-            case Status.CLOSE:
-                return "房间已关闭";
-            case Status.LOSE:
-                return "你输了"; 
-            case Status.WAIT:
-                return "等待玩家加入";
-            default:
-                return "未知结果";
-        }
     }
 
 }

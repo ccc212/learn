@@ -2,13 +2,14 @@ package src.thread;
 
 import src.Info;
 import src.Server;
+import src.UI.*;
+
 import java.io.*;
 import java.net.Socket;
 import java.util.Iterator;
 
 public class ServerThread extends Thread{
     private Socket socket;
-    private ObjectOutputStream oos;
     private ObjectInputStream ois;
     public ServerThread(Socket socket){
         this.socket = socket;
@@ -23,8 +24,14 @@ public class ServerThread extends Thread{
                     if(info.getPoint() != null || info.getString() != null) {
                         sendToAll(info);
                     }
+                    if(info.getAddress() != null){
+                        Server.setJoinerAddress(info.getAddress());
+                    }
                 } catch (IOException e) {
                     System.out.println("有人下线了：" + socket.getRemoteSocketAddress());
+                    if(socket.getRemoteSocketAddress().toString().equals(Server.getJoinerAddress())) {
+                        new Result(Menu.instance.otherName, Game.instance.getChessBoard(), Status.LEAVE);
+                    }
                     Server.onLineSockets.remove(socket);
                     ois.close();
                     socket.close();
@@ -32,19 +39,7 @@ public class ServerThread extends Thread{
                 }
             }
         } catch (Exception e) {
-            if(socket != Server.onLineSockets.get(2)) {
-                Socket socket = Server.onLineSockets.get(0);
-                try {
-//                    System.out.printf("对方已离开");
-                    oos = new ObjectOutputStream(socket.getOutputStream());
-                    oos.writeObject("对方已离开");
-                    oos.flush();
-//                oos.close();
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
-            }
-            Server.onLineSockets.remove(socket);
+            System.out.println();
         }
     }
 
@@ -60,7 +55,7 @@ public class ServerThread extends Thread{
                 oos.writeObject(info);
                 oos.flush();
             } catch (IOException e) {
-                System.out.println("无法发送消息到：" + onLineSocket.getRemoteSocketAddress());
+//                System.out.println("无法发送消息到：" + onLineSocket.getRemoteSocketAddress());
                 iterator.remove();
             }
         }

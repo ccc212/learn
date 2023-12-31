@@ -3,17 +3,19 @@ package src.thread;
 import src.Info;
 import src.Logic;
 import src.Player;
+import src.Server;
 import src.UI.ChessBoard;
-import src.UI.ChessPiece;
 import src.UI.Game;
+import src.UI.Result;
+import src.UI.Status;
 
-import java.awt.*;
-import java.io.InputStream;
+import javax.swing.*;
 import java.io.ObjectInputStream;
 import java.net.Socket;
+import java.net.SocketException;
 
 public class InRunnable implements Runnable {
-    private Socket socket;
+    private final Socket socket;
     private ObjectInputStream ois;
 
     public InRunnable(Socket socket){
@@ -22,39 +24,60 @@ public class InRunnable implements Runnable {
     @Override
     public void run() {
         try {
+            label:
             while (true) {
-//                synchronized (Game.instance.getLock()) {
                     try {
                         ois = new ObjectInputStream(socket.getInputStream());
 
                         Info info = (Info) ois.readObject();
 
-                        if (info.getPoint() != null && Game.getChessBoard().judge(info.getPoint().x, info.getPoint().y) == true) {
-                            Game.getChessBoard().click(info.getPoint().x, info.getPoint().y);
+                        if (info.getPoint() != null && Game.instance.getChessBoard().judge(info.getPoint().x, info.getPoint().y)) {
+                            Game.instance.getChessBoard().click(info.getPoint().x, info.getPoint().y);
                         }
 
                         if (info.getString() != null) {
-                            if (info.getString().equals("对方已离开")) {
-//                            Logic.leave(Game.instance.getChessBoard(), Player.isRoomOwner());
-//                            break;
-                            } else if (info.getString().equals("R")) {
-//                                if (Logic.back(Game.instance.getChessBoard().board,
-//                                        Game.instance.getChessBoard().stack,
-//                                        Game.instance.getChessBoard().map)){
-//                                    System.out.println("悔棋");
-//                                    ChessBoard.player = !ChessBoard.player;
-//                                    Game.instance.getChessBoard().updateUI();
-//                                }
+                            switch (info.getString()) {
+                                case "对方已离开":
+                                    Logic.leave(Game.instance.getChessBoard(), Player.isRoomOwner());
+                                    break label;
+                                case "R":
+                                    int result = JOptionPane.showConfirmDialog(null, "对方申请悔棋", "同意", JOptionPane.YES_NO_OPTION);
+                                    if (result == JOptionPane.YES_OPTION) {
+                                        Logic.back(Game.instance.getChessBoard().board,
+                                                Game.instance.getChessBoard().stack,
+                                                Game.instance.getChessBoard().map);
+                                        Game.instance.setChessBoardClickable(!Game.instance.getChessBoard().getClickable());
+                                        System.out.println("悔棋");
+                                        ChessBoard.player = !ChessBoard.player;
+                                        Game.instance.getChessBoard().updateUI();
+                                        OutRunnable.oos.writeObject(new Info("OK"));
+                                    }else{
+                                        OutRunnable.oos.writeObject(new Info("NO"));
+                                    }
+                                    break;
+                                case "OK":
+                                    if (Logic.back(Game.instance.getChessBoard().board, Game.instance.getChessBoard().stack, Game.instance.getChessBoard().map)) {
+                                        ChessBoard.player = !ChessBoard.player;
+                                        Game.instance.setChessBoardClickable(!Game.instance.getChessBoard().getClickable());
+                                        Game.instance.getChessBoard().updateUI();
+                                        Game.instance.getChessBoard().keyEnable = true;
+                                        Game.instance.setChessBoardClickable(true);
+                                    }
+                                    break;
+                                case "NO":
+                                    Game.instance.getChessBoard().keyEnable = true;
+                                    break;
                             }
                         }
 
-                    } catch (Exception e) {
-//                System.out.println("有异常");
-                        continue;
-                    }
-//                    Game.instance.getLock().notify();
-//                }
+                        if (info.getClickEnable()){
+                            Game.instance.setChessBoardClickable(true);
+                        }
 
+                    } catch (SocketException e) {
+                        new Result(null,Game.instance.getChessBoard(),Status.CLOSE);
+                        break;
+                    }
                 Thread.sleep(10);
             }
         } catch (Exception e) {

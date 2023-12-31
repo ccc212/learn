@@ -2,15 +2,10 @@ package src.UI;
 
 import src.Info;
 import src.Player;
-import src.Room;
-import src.Server;
-import src.thread.ServerThread;
 
 import javax.swing.*;
 import java.io.*;
 import java.net.Socket;
-import java.util.List;
-import java.util.Scanner;
 
 public class Menu {
     public static Menu instance = new Menu();
@@ -22,6 +17,7 @@ public class Menu {
     public Socket roomInfoSocket;
     public String name;
     public String otherName;
+    public String address;
     private Menu(){
         frame = new JFrame("菜单");
         frame.setSize(400,300);
@@ -88,7 +84,7 @@ public class Menu {
             if(isValid(userText.getText())) {
                 lock("创建房间 端口:" + port);
                 try {
-                    new Creat(Integer.parseInt(userText.getText()));
+                    new Create(Integer.parseInt(userText.getText()));
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
@@ -100,25 +96,28 @@ public class Menu {
                 lock("进入房间 端口" + port);
                 try {
                     roomInfoSocket = new Socket("127.0.0.1", Integer.parseInt(port));
+                    Player player = null;
                     try {
                         ObjectInputStream ois = new ObjectInputStream(roomInfoSocket.getInputStream());
                         Info info = (Info) ois.readObject();
-
-                        ObjectOutputStream oos = new ObjectOutputStream(roomInfoSocket.getOutputStream());
-                        oos.writeObject(new Info(name));
 
                         if(info.getString() != null){
                             otherName = info.getString();
                         }
 
                         if (info.getRoom() != null) {
-                            System.out.println("创建玩家");
-                            new Player(Integer.parseInt(port), info.getRoom().getRow(),
+                            player = new Player(Integer.parseInt(port), info.getRoom().getRow(),
                                     info.getRoom().getColumn(), false);
                         } else {
                             unlock();
                             resultField.setText("?...房间不存在");
                         }
+
+                        ObjectOutputStream oos = new ObjectOutputStream(roomInfoSocket.getOutputStream());
+                        Info info2 = new Info(name);
+                        info2.setAddress(player.getSocket().getLocalSocketAddress().toString());
+                        oos.writeObject(info2);
+
                         ois.close();
                         oos.close();
                     }catch (Exception exception){
@@ -128,7 +127,6 @@ public class Menu {
                         roomInfoSocket.close();
                     }
                 } catch (Exception ex) {
-                    ex.printStackTrace();
                     unlock();
                     resultField.setText("该端口未开房");
                 }
@@ -139,7 +137,7 @@ public class Menu {
     private boolean isValid(String port){
         try {
             int Port = Integer.parseInt(port);
-            if(Port < 0 || Port > 65535){
+            if(Port < 1 || Port > 65535){
                 userText.setText("");
                 resultField.setText("端口范围应在0~65535中");
                 return false;
