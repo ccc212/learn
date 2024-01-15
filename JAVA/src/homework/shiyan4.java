@@ -1,6 +1,7 @@
 package homework;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 //编写一个实体类(如学生、用户、老师等)，该泛型类具有插入实体对象和输出List内容的方法。

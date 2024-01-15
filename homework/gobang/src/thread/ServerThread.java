@@ -60,6 +60,17 @@ public class ServerThread extends Thread{
             }
         }
     }
+
+//    private void sendToAll(Info info) throws IOException, InterruptedException {
+//        for (Socket onLineSocket : Server.onLineSockets) {
+////            if(onLineSocket != Player.getSocket()) {
+//            ObjectOutputStream oos = new ObjectOutputStream(onLineSocket.getOutputStream());
+//            oos.writeObject(info);
+//            oos.flush();
+////                break;
+////            }
+//        }
+//    }
 }
 
 
