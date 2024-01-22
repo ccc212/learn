@@ -4,11 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ec0d005-3c83-4561-a8f5-1ee328235a4d" name="更改" comment="" />
+    <list default="true" id="8ec0d005-3c83-4561-a8f5-1ee328235a4d" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enrollment_management/src/main/java/com/example/enrollment_management/controller/DeptController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enrollment_management/src/main/java/com/example/enrollment_management/controller/EmpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enrollment_management/src/main/java/com/example/enrollment_management/mapper/DeptMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enrollment_management/src/main/java/com/example/enrollment_management/mapper/EmpMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enrollment_management/src/main/java/com/example/enrollment_management/pojo/Dept.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enrollment_management/src/main/java/com/example/enrollment_management/pojo/Emp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enrollment_management/src/main/java/com/example/enrollment_management/pojo/PageBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enrollment_management/src/main/java/com/example/enrollment_management/pojo/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enrollment_management/src/main/java/com/example/enrollment_management/service/DeptService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enrollment_management/src/main/java/com/example/enrollment_management/service/EmpService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enrollment_management/src/main/java/com/example/enrollment_management/service/impl/DeptServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enrollment_management/src/main/java/com/example/enrollment_management/service/impl/EmpServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enrollment_management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/enrollment_management/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enrollment_management/src/main/java/com/example/enrollment_management/EnrollmentManagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/enrollment_management/src/main/java/com/example/enrollment_management/EnrollmentManagementApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enrollment_management/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/enrollment_management/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -20,25 +51,44 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2ZQVpT0KKdz5PdTPrFNuVte0tDc" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "21",
-    "last_opened_file_path": "E:/gitProject/practice",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/BaiduNetdiskDownload/资料/JavaWeb/day10-SpringBootWeb案例/代码/tlias-web-management&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\gitProject\learn\practice\enrollment_management\src\main\java\com\example\enrollment_management\pojo" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="EnrollmentManagementApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="enrollment_management" />
@@ -59,10 +109,27 @@
       <workItem from="1702354473810" duration="2938000" />
       <workItem from="1702441338651" duration="995000" />
       <workItem from="1702442416163" duration="21000" />
+      <workItem from="1705290095293" duration="33383000" />
+      <workItem from="1705859198373" duration="7379000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
