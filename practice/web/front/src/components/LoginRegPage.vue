@@ -3,17 +3,17 @@
       <div class="box login" :style="{ transform: loginTransform }">
         <div class="form-content">
           <div class="avatar">
-            <div class="pic"><img src="img/0.png" alt=""></div>
+            <div class="pic"><img src="../assets/img/0.png" alt=""></div>
           </div>
           <h1>欢迎回来</h1>
           <form action="#" class="form">
             <div>
               <span class="fa fa-user-o"></span>
-              <input type="text" placeholder="用户名">
+              <input type="text" placeholder="用户名" v-model="loginForm.username">
             </div>
             <div>
               <span class="fa fa-key"></span>
-              <input type="password" placeholder="密码">
+              <input type="password" placeholder="密码" v-model="loginForm.password">
             </div>
             <div class="btn">
               <button @click="toggleLoginForm">登录</button>
@@ -27,20 +27,20 @@
       <div class="box signup" :style="{ transform: signupTransform }">
         <div class="form-content">
           <div class="avatar">
-            <div class="pic"><img src="./img/0.png" alt=""></div>
+            <div class="pic"><img src="../assets/img/0.png" alt=""></div>
           </div>
           <form action="#" class="form">
             <div>
               <span class="fa fa-user-o"></span>
-              <input type="text" placeholder="用户名">
+              <input type="text" placeholder="用户名" v-model="regForm.username">
             </div>
             <div>
               <span class="fa fa-envelope-o"></span>
-              <input type="email" placeholder="邮箱">
+              <input type="email" placeholder="邮箱" v-model="regForm.email">
             </div>
             <div>
               <span class="fa fa-key"></span>
-              <input type="password" placeholder="密码">
+              <input type="password" placeholder="密码" v-model="regForm.password">
             </div>
             <div class="btn">
               <button @click="toggleSignupForm">注册</button>
@@ -58,7 +58,16 @@
   export default {
     data() {
       return {
-        showLogin: true
+        showLogin: true,
+        regForm:{
+          username:'',
+          email:'',
+          password:''
+        },
+        loginForm:{
+          username:'',
+          password:''
+        }
       };
     },
     computed: {
@@ -71,10 +80,22 @@
     },
     methods: {
       toggleLoginForm() {
-        this.showLogin = true;
+
       },
       toggleSignupForm() {
-        this.showLogin = false;
+        console.log(this.regForm);
+        this.$axios.post('/register',{
+          username: this.regForm.username, // 从输入框获取用户名
+          email: this.regForm.email, // 从输入框获取邮箱
+          password: this.regForm.password // 从输入框获取密码
+        }).then(res=>res.data).then(res=>{
+          if(res.code === 1){
+            this.$message.success(res.msg)  
+          }
+        })
+        
+        
+
       },
       showLoginForm() {
         this.showLogin = true;

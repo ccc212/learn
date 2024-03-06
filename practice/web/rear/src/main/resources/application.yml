@@ -23,3 +23,6 @@ aliyun:
     accessKeyId: "LTAI5tQsfAhBjj9k2U12Q9mg"
     accessKeySecret: "jrvBNyh41ceQT3SoRv55l9x2wBsXQN"
     bucketName: "web-tlias-ccc212"
+
+server:
+  port: 8080

@@ -15,6 +15,7 @@ public class Self {
     private String username; //用户名
     private String password; //密码
     private Short gender; //性别 , 1 男, 2 女
+    private String email; //邮箱
     private String image; //头像url
     private LocalDate entrydate; //加入日期
     private Short isAdmin; //是否为管理员

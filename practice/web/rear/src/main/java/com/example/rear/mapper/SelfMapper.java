@@ -7,8 +7,8 @@ import org.apache.ibatis.annotations.Select;
 
 @Mapper
 public interface SelfMapper {
-    @Insert("insert into self(username,password,gender,image,entrydate,is_admin,last_login_time)" +
-            "values(#{username}, #{password}, #{gender}, #{image}, #{entrydate}, #{isAdmin}, #{lastLoginTime})")
+    @Insert("insert into self(username,password,gender,image,entrydate,is_admin,last_login_time,email)" +
+            "values(#{username}, #{password}, #{gender}, #{image}, #{entrydate}, #{isAdmin}, #{lastLoginTime}, #{email})")
     void insertSelf(Self self);
 
     @Select("select * from self where username = #{username}")
