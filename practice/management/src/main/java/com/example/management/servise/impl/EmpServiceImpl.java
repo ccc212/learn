@@ -9,6 +9,7 @@ import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -18,15 +19,16 @@ public class EmpServiceImpl implements EmpService {
     private EmpMapper empMapper;
 
     @Override
-    public PageBean query(Integer page, Integer pageSize) {
+    public PageBean query(Integer page, Integer pageSize, String name, Short gender, LocalDate begin, LocalDate end) {
         PageHelper.startPage(page,pageSize);
-        List<Emp>empList = empMapper.list();
-        Page<Emp>p = (Page<Emp>) empList;
-        return new PageBean(p.getTotal(),p.getResult());
+        List<Emp> empList = empMapper.list(name, gender, begin, end);
+        Page<Emp> p = (Page<Emp>) empList;
+        PageBean pageBean = new PageBean(p.getTotal(), p.getResult());
+        return pageBean;
     }
 
     @Override
-    public void delete(Integer ids) {
+    public void delete(List<Integer> ids) {
         empMapper.delete(ids);
     }
 
@@ -40,5 +42,11 @@ public class EmpServiceImpl implements EmpService {
     @Override
     public Emp getById(Integer id) {
         return empMapper.getById(id);
+    }
+
+    @Override
+    public void update(Emp emp) {
+        emp.setUpdateTime(LocalDateTime.now());
+        empMapper.update(emp);
     }
 }
