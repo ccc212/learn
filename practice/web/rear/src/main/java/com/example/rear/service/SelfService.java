@@ -7,4 +7,6 @@ public interface SelfService {
     Self findByUsername(String username);
 
     Self register(Self self);
+
+    Self authenticate(Self username);
 }

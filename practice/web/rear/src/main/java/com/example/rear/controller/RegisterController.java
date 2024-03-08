@@ -3,16 +3,15 @@ package com.example.rear.controller;
 import com.example.rear.pojo.Result;
 import com.example.rear.pojo.Self;
 import com.example.rear.service.SelfService;
-import com.example.rear.utils.JwtUtils;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashMap;
-import java.util.Map;
-
+@Tag(name = "注册")
 @Slf4j
 @RestController
 public class RegisterController {
@@ -21,8 +20,20 @@ public class RegisterController {
     private SelfService selfService;
 
     @PostMapping("/register")
+    @Operation(summary = "注册")
     public Result register(@RequestBody Self self){
         log.info("员工注册: {}", self);
+
+        if(self.getUsername() == ""){
+            return Result.error("用户名不能为空");
+        }
+        else if(self.getEmail() == ""){
+            return Result.error("邮箱不能为空");
+        }
+        else if(self.getPassword() == ""){
+            return Result.error("密码不能为空");
+        }
+
 
         // 检查用户名是否已经存在
         Self existingSelf = selfService.findByUsername(self.getUsername());
@@ -32,21 +43,9 @@ public class RegisterController {
 
         // 注册新员工
         Self registeredSelf = selfService.register(self);
+        log.info("注册:{}",registeredSelf);
 
-        System.out.println(registeredSelf);
-
-        // 注册成功，生成令牌
-        if (registeredSelf != null){
-            Map<String, Object> claims = new HashMap<>();
-            claims.put("id", registeredSelf.getId());
-            claims.put("username", registeredSelf.getUsername());
-
-            String jwt = JwtUtils.generateJwt(claims); //jwt包含了当前注册的员工信息
-            return Result.success(jwt);
-        }
-
-        // 注册失败
-        return Result.error("注册失败，请稍后重试");
+        return Result.success("注册成功");
     }
 
 }

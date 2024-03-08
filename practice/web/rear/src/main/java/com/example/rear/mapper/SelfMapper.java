@@ -13,4 +13,7 @@ public interface SelfMapper {
 
     @Select("select * from self where username = #{username}")
     Self findByUsername(String username);
+
+    @Select("select * from self where username = #{username} and password = #{password}")
+    Self authenticate(Self self);
 }

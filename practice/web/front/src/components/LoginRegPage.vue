@@ -80,6 +80,21 @@
     },
     methods: {
       toggleLoginForm() {
+        console.log(this.loginForm);
+        this.$axios.post('/login',{
+          username: this.loginForm.username,
+          password: this.loginForm.password
+        }).then(res=>res.data).then(res=>{
+          if(res.code === 1){
+            this.$message.success(res.msg);
+          }
+          else if(res.code === 0){
+            this.$message.error(res.msg);
+          }
+          else{
+            this.$message.error("服务器异常");
+          }
+        })
 
       },
       toggleSignupForm() {
@@ -90,7 +105,13 @@
           password: this.regForm.password // 从输入框获取密码
         }).then(res=>res.data).then(res=>{
           if(res.code === 1){
-            this.$message.success(res.msg)  
+            this.$message.success(res.msg);
+          }
+          else if(res.code === 0){
+            this.$message.error(res.msg);
+          }
+          else{
+            this.$message.error("服务器异常");
           }
         })
         

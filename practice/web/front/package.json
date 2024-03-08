@@ -1,5 +1,5 @@
 {
-  "name": "front3",
+  "name": "front",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,8 @@
     "axios": "^1.6.7",
     "core-js": "^3.8.3",
     "element-ui": "^2.15.14",
-    "vue": "^2.6.14"
+    "vue": "^2.6.14",
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

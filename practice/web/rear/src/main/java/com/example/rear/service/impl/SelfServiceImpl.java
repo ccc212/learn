@@ -24,8 +24,12 @@ public class SelfServiceImpl implements SelfService {
     }
 
     @Override
+    public Self authenticate(Self self) {
+        return selfMapper.authenticate(self);
+    }
+
+    @Override
     public Self findByUsername(String username) {
-        Self self = selfMapper.findByUsername(username);
-        return self;
+        return selfMapper.findByUsername(username);
     }
 }
