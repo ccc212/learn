@@ -76,6 +76,9 @@
       },
       signupTransform() {
         return this.showLogin ? 'rotateY(-180deg)' : 'rotateY(0deg)';
+      },
+      username() {
+        return this.$route.params.username
       }
     },
     methods: {
@@ -87,6 +90,7 @@
         }).then(res=>res.data).then(res=>{
           if(res.code === 1){
             this.$message.success(res.msg);
+            this.$router.push('/index')
           }
           else if(res.code === 0){
             this.$message.error(res.msg);
@@ -123,6 +127,10 @@
       },
       showSignupForm() {
         this.showLogin = false;
+      },
+
+      goback() {
+        window.history.length > 1 ? this.$router.go(-1) : this.$ruter.push('/');
       }
     }
   };

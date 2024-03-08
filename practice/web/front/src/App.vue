@@ -1,17 +1,17 @@
 <template>
-    <login-reg-page></login-reg-page>
+    <router-view></router-view>
 </template>
 
 <script>
-import LoginRegPage from './components/LoginRegPage.vue'
+// import LoginRegPage from './components/LoginRegPage.vue'
 
 export default {
   name: 'App',
-  components: {
-    LoginRegPage
-  }
+  // components: {
+  //   LoginRegPage
+  // }
 }
 </script>
 
 <style>
-</style>./components/webFront.vue
+</style>
