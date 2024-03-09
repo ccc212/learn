@@ -1,5 +1,6 @@
 package homework;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -13,7 +14,7 @@ interface Entity{
     String getId();
     String getName();
 }
-class Stu implements Entity{
+class Stu implements Entity,Serializable{
 
     private String id;
     private String name;
@@ -43,7 +44,7 @@ class Stu implements Entity{
         return name;
     }
 }
-class MyList<T extends Entity>{
+class MyList<T extends Entity> implements Serializable {
     private List<T> MyList;
     public MyList(){
         MyList = new ArrayList<>();

@@ -5,36 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e81661c8-b727-49a3-94ad-25b5e64f383f" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/homework/out/production/practice/src/Info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/learn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/learn.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA/src/homework/shiyan6_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/src/homework/shiyan6_1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/homework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/homework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/gobang/src/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework/gobang/src/Info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/gobang/src/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework/gobang/src/Logic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/gobang/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework/gobang/src/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/gobang/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework/gobang/src/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/gobang/src/UI/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework/gobang/src/UI/ChessBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/gobang/src/UI/Creat.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework/gobang/src/UI/Create.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/gobang/src/UI/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework/gobang/src/UI/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/gobang/src/UI/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework/gobang/src/UI/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/gobang/src/UI/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework/gobang/src/UI/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/gobang/src/thread/InRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework/gobang/src/thread/InRunnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/gobang/src/thread/OutRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework/gobang/src/thread/OutRunnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/gobang/src/thread/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework/gobang/src/thread/ServerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/out/production/practice/src/Logic.class" beforeDir="false" afterPath="$PROJECT_DIR$/homework/out/production/practice/src/Logic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/out/production/practice/src/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/homework/out/production/practice/src/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/out/production/practice/src/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/homework/out/production/practice/src/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/out/production/practice/src/UI/ChessBoard$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/homework/out/production/practice/src/UI/ChessBoard$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/out/production/practice/src/UI/ChessBoard$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/homework/out/production/practice/src/UI/ChessBoard$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/out/production/practice/src/UI/ChessBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/homework/out/production/practice/src/UI/ChessBoard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/out/production/practice/src/UI/Creat$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/out/production/practice/src/UI/Creat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/out/production/practice/src/UI/Game$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/homework/out/production/practice/src/UI/Game$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/out/production/practice/src/UI/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/homework/out/production/practice/src/UI/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/out/production/practice/src/UI/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/homework/out/production/practice/src/UI/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/out/production/practice/src/UI/Result$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/homework/out/production/practice/src/UI/Result$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/out/production/practice/src/UI/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/homework/out/production/practice/src/UI/Result.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/out/production/practice/src/thread/InRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/homework/out/production/practice/src/thread/InRunnable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/out/production/practice/src/thread/OutRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/homework/out/production/practice/src/thread/OutRunnable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/out/production/practice/src/thread/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/homework/out/production/practice/src/thread/ServerThread.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,14 +52,14 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "21",
-    "last_opened_file_path": "D:/gitProject/learn",
+    "last_opened_file_path": "D:/gitProject/learn/JAVA",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "模块",
+    "project.structure.last.edited": "项目",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
@@ -100,13 +74,26 @@
       <recent name="com.ccc212.spingbootwebreqresp.service.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpingbootWebReqRespApplication">
+  <component name="RunManager" selected="应用程序.shiyan6_1">
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.itheima.Server" />
       <module name="learn" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.itheima.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="shiyan6_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.shiyan6_1" />
+      <module name="learn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homework.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,6 +117,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.shiyan6_1" />
         <item itemvalue="应用程序.Server" />
       </list>
     </recent_temporary>
@@ -145,6 +133,7 @@
       <workItem from="1702012430401" duration="27342000" />
       <workItem from="1702355359209" duration="50000" />
       <workItem from="1703773832553" duration="221000" />
+      <workItem from="1703848524235" duration="1550000" />
     </task>
     <servers />
   </component>

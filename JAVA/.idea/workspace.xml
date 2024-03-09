@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="32db480c-138c-4c37-856c-84a20b26b6ff" name="变更" comment="变更">
       <change afterPath="$PROJECT_DIR$/out/production/learn/day10/_thread/d1_create_thread/MyCallable.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/learn/day10/_thread/d1_create_thread/MyRunnable.class" afterDir="false" />
@@ -134,6 +135,39 @@
       <change beforePath="$PROJECT_DIR$/../homework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homework/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../homework/gobang/src/thread/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homework/gobang/src/thread/ServerThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../homework/out/production/practice/src/thread/InRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homework/out/production/practice/src/thread/InRunnable.class" afterDir="false" />
+=======
+    <list default="true" id="32db480c-138c-4c37-856c-84a20b26b6ff" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/myList.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/homework/test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/learn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/learn.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/Entity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/MyList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/MyList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/Stu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/Stu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/shiyan4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/shiyan4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/shiyan5$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/shiyan5$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/shiyan5$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/shiyan5$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/shiyan5$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/shiyan5$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/shiyan5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/shiyan5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/shiyan6_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/shiyan6_1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/shiyan6_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/shiyan6_2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/shiyan6_3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/shiyan6_3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/shiyan7_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/shiyan7_1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/shiyan7_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/shiyan7_2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/learn/homework/shiyan8_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/learn/homework/shiyan8_1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/homework/shiyan4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/homework/shiyan4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/homework/shiyan6_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/homework/shiyan6_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/homework/shiyan6_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/homework/shiyan6_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/homework/shiyan6_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/homework/shiyan6_3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/homework/shiyan7_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/homework/shiyan7_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/homework/shiyan7_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/homework/shiyan7_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/homework/软件1223_赖明轩（实验三）.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homework/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,6 +208,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< Updated upstream
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -193,10 +228,31 @@
   <component name="RunManager" selected="应用程序.shiyan5">
     <configuration name="ActionListenerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="day6._listener.ActionListenerTest" />
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/gitProject/learn/JAVA&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="应用程序.shiyan8_1">
+    <configuration name="shiyan6_3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.shiyan6_3" />
+>>>>>>> Stashed changes
       <module name="learn" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day6._listener.*" />
+          <option name="PATTERN" value="homework.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -204,12 +260,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KeyListenerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day6._listener.KeyListenerTest" />
+    <configuration name="shiyan7_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.shiyan7_1" />
       <module name="learn" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day6._listener.*" />
+          <option name="PATTERN" value="homework.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -217,8 +273,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< Updated upstream
     <configuration name="shiyan5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="homework.shiyan5" />
+=======
+    <configuration name="shiyan7_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.shiyan7_2" />
+>>>>>>> Stashed changes
       <module name="learn" />
       <extension name="coverage">
         <pattern>
@@ -230,8 +291,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< Updated upstream
     <configuration name="shiyan5_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="homework.shiyan5_2" />
+=======
+    <configuration name="shiyan8_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.shiyan8_1" />
+>>>>>>> Stashed changes
       <module name="learn" />
       <extension name="coverage">
         <pattern>
@@ -243,8 +309,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< Updated upstream
     <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="day10._thread.d9_tz.test" />
+=======
+    <configuration name="shiyan8_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.shiyan8_2" />
+>>>>>>> Stashed changes
       <module name="learn" />
       <extension name="coverage">
         <pattern>
@@ -257,6 +328,7 @@
       </method>
     </configuration>
     <list>
+<<<<<<< Updated upstream
       <item itemvalue="应用程序.shiyan5" />
       <item itemvalue="应用程序.test" />
       <item itemvalue="应用程序.shiyan5_2" />
@@ -270,6 +342,21 @@
         <item itemvalue="应用程序.shiyan5_2" />
         <item itemvalue="应用程序.ActionListenerTest" />
         <item itemvalue="应用程序.KeyListenerTest" />
+=======
+      <item itemvalue="应用程序.shiyan6_3" />
+      <item itemvalue="应用程序.shiyan7_1" />
+      <item itemvalue="应用程序.shiyan7_2" />
+      <item itemvalue="应用程序.shiyan8_1" />
+      <item itemvalue="应用程序.shiyan8_2" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.shiyan8_1" />
+        <item itemvalue="应用程序.shiyan8_2" />
+        <item itemvalue="应用程序.shiyan7_1" />
+        <item itemvalue="应用程序.shiyan7_2" />
+        <item itemvalue="应用程序.shiyan6_3" />
+>>>>>>> Stashed changes
       </list>
     </recent_temporary>
   </component>
@@ -293,6 +380,7 @@
       <workItem from="1702098842027" duration="25129000" />
       <workItem from="1702184736376" duration="2505000" />
       <workItem from="1702452503948" duration="2305000" />
+<<<<<<< Updated upstream
       <workItem from="1702719464116" duration="12086000" />
       <workItem from="1702911236534" duration="4252000" />
       <workItem from="1702951409414" duration="9965000" />
@@ -300,6 +388,11 @@
       <workItem from="1703171346574" duration="883000" />
       <workItem from="1703226492377" duration="27000" />
       <workItem from="1705290028264" duration="65000" />
+=======
+      <workItem from="1702719464116" duration="2643000" />
+      <workItem from="1703855975477" duration="6002000" />
+      <workItem from="1703912098603" duration="10000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
