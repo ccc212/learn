@@ -77,9 +77,7 @@
       signupTransform() {
         return this.showLogin ? 'rotateY(-180deg)' : 'rotateY(0deg)';
       },
-      username() {
-        return this.$route.params.username
-      }
+      
     },
     methods: {
       toggleLoginForm() {
