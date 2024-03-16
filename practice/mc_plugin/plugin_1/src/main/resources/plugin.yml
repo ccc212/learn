@@ -1,0 +1,10 @@
+name: plugin_1
+version: '${project.version}'
+main: com.ccc212.Plugin_1
+commands:
+  ccc212:
+    description: "第一个插件"
+    aliases: c
+  backup:
+    description: "备份"
+    aliases: b

@@ -1,106 +1,84 @@
+<!-- <template>
+  <div class="file-management">
+    <el-header>
+      <el-avatar :src="avatarUrl" @click="handleAvatarClick" class="avatar"></el-avatar>
+    </el-header>
+    <el-main>
+      <el-upload
+        class="upload-demo"
+        action="/upload"
+        :on-preview="handlePreview"
+        :on-remove="handleRemove"
+        :file-list="fileList"
+        list-type="text">
+        <el-button slot="trigger" type="primary">点击上传</el-button>
+        <el-button type="success" class="upload-demo-delete" icon="el-icon-delete" circle></el-button>
+      </el-upload>
+      <el-table :data="fileList" style="width: 100%">
+        <el-table-column prop="name" label="文件名" sortable></el-table-column>
+        <el-table-column prop="size" label="大小" sortable></el-table-column>
+        <el-table-column prop="date" label="上传时间" sortable></el-table-column>
+        <el-table-column label="操作">
+          <template slot-scope="scope">
+            <el-button @click="handleDownload(scope.row)">下载</el-button>
+          </template>
+        </el-table-column>
+      </el-table>
+    </el-main>
+    
+  </div>
+</template>
 
-<template>
-    <el-container style="height: 500px; border: 1px solid #eee">
-      <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-        <el-menu :default-openeds="['1', '3']">
-          <el-submenu index="1">
-            <template slot="title"><i class="el-icon-message"></i>Navigator One</template>
-            <el-menu-item-group>
-              <template slot="title">Group 1</template>
-              <el-menu-item index="1-1">Option 1</el-menu-item>
-              <el-menu-item index="1-2">Option 2</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group title="Group 2">
-              <el-menu-item index="1-3">Option 3</el-menu-item>
-            </el-menu-item-group>
-            <el-submenu index="1-4">
-              <template slot="title">Option4</template>
-              <el-menu-item index="1-4-1">Option 4-1</el-menu-item>
-            </el-submenu>
-          </el-submenu>
-          <el-submenu index="2">
-            <template slot="title"><i class="el-icon-menu"></i>Navigator Two</template>
-            <el-menu-item-group>
-              <template slot="title">Group 1</template>
-              <el-menu-item index="2-1">Option 1</el-menu-item>
-              <el-menu-item index="2-2">Option 2</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group title="Group 2">
-              <el-menu-item index="2-3">Option 3</el-menu-item>
-            </el-menu-item-group>
-            <el-submenu index="2-4">
-              <template slot="title">Option 4</template>
-              <el-menu-item index="2-4-1">Option 4-1</el-menu-item>
-            </el-submenu>
-          </el-submenu>
-          <el-submenu index="3">
-            <template slot="title"><i class="el-icon-setting"></i>Navigator Three</template>
-            <el-menu-item-group>
-              <template slot="title">Group 1</template>
-              <el-menu-item index="3-1">Option 1</el-menu-item>
-              <el-menu-item index="3-2">Option 2</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group title="Group 2">
-              <el-menu-item index="3-3">Option 3</el-menu-item>
-            </el-menu-item-group>
-            <el-submenu index="3-4">
-              <template slot="title">Option 4</template>
-              <el-menu-item index="3-4-1">Option 4-1</el-menu-item>
-            </el-submenu>
-          </el-submenu>
-        </el-menu>
-      </el-aside>
-  
-      <el-container>
-        <el-header style="text-align: right; font-size: 12px">
-          <el-dropdown>
-            <i class="el-icon-setting" style="margin-right: 15px"></i>
-            <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>View</el-dropdown-item>
-              <el-dropdown-item>Add</el-dropdown-item>
-              <el-dropdown-item>Delete</el-dropdown-item>
-            </el-dropdown-menu>
-          </el-dropdown>
-          <span>Tom</span>
-        </el-header>
-  
-        <el-main>
-          <el-table :data="tableData">
-            <el-table-column prop="date" label="Date" width="140">
-            </el-table-column>
-            <el-table-column prop="name" label="Name" width="120">
-            </el-table-column>
-            <el-table-column prop="address" label="Address">
-            </el-table-column>
-          </el-table>
-        </el-main>
-      </el-container>
-    </el-container>
-  </template>
-  
-  <style>
-    .el-header {
-      background-color: #B3C0D1;
-      color: #333;
-      line-height: 60px;
-    }
-  
-    .el-aside {
-      color: #333;
-    }
-  </style>
-  
-  <script>
-    export default {
-      data() {
-        const item = {
-          date: '2016-05-02',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles'
-        };
-        return {
-          tableData: Array(20).fill(item)
-        }
-      }
+<script>
+export default {
+  data() {
+    return {
+      avatarUrl: '../assets/img/0.png',
+      fileList: [
+        { name: 'file1.txt', size: '100KB', date: '2024-03-10' },
+        { name: 'file2.jpg', size: '200KB', date: '2024-03-11' },
+        { name: 'file3.pdf', size: '300KB', date: '2024-03-12' }
+      ]
     };
-  </script>
+  },
+  methods: {
+    handleAvatarClick() {
+      // 处理点击个人头像事件
+    },
+    handlePreview(file) {
+      // 处理文件预览事件
+    },
+    handleRemove(file, fileList) {
+      // 处理文件删除事件
+    },
+    handleDownload(file) {
+      // 处理文件下载事件
+    }
+  }
+};
+</script>
+
+<style>
+.file-management {
+  width: 800px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+}
+.glass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(100px); /* 毛玻璃效果 */
+}
+.avatar {
+  float: right;
+  margin-top: 15px;
+}
+
+  @import url('../lib/font-awesome-4.7.0/css/font-awesome.min.css');
+  @import url('./index.css');
+</style> -->
