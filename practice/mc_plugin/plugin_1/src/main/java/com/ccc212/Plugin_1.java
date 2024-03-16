@@ -9,6 +9,8 @@ public final class Plugin_1 extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        instance = this;
+
         Bukkit.getPluginCommand("ccc212").setExecutor(new MyCommand());
         Bukkit.getPluginManager().registerEvents(new MyListener(),this);
 

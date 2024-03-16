@@ -12,10 +12,12 @@ public class MyCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         if(strings.length == 1 && strings[0].equals("help")){
+            Bukkit.broadcastMessage("------------------------");
             Bukkit.broadcastMessage("ccc212 --- help");
             Bukkit.broadcastMessage("/c say + [话]     --- 匿名讲话");
             Bukkit.broadcastMessage("/c open    --- 打开你的箱子");
             Bukkit.broadcastMessage("/c reload    --- 重新加载配置文件");
+            Bukkit.broadcastMessage("------------------------");
             return true;
         }
 

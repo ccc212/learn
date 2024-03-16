@@ -3,6 +3,7 @@ package com.ccc212.backupCode;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Date;
 
 import com.ccc212.Plugin_1;
@@ -30,10 +31,19 @@ public class BackupManager {
         File[] files = backupFolder.listFiles();
         if(files != null && files.length >= backupMaxFiles){
             Arrays.sort(files);
-            for(int i = 0; i < files.length - backupMaxFiles; i++){
+            for(int i = 0; i <= files.length - backupMaxFiles; i++){
                 files[i].delete();
             }
         }
+
+        Arrays.sort(files);
+
+        Bukkit.broadcastMessage("------------------------");
+        Bukkit.broadcastMessage("备份:");
+        for (int i = 0; i < files.length; i++) {
+            Bukkit.broadcastMessage((i+1) + ":  " + files[i].getName());
+        }
+        Bukkit.broadcastMessage("------------------------");
 
         try {
             ZipUtil.toZip(new File("./world"),new File("./backup/" + timestamp + ".zip"));

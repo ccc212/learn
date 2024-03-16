@@ -16,10 +16,12 @@ public class BackupCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         if(strings.length == 1 && strings[0].equals("help")){
+            Bukkit.broadcastMessage("------------------------");
             Bukkit.broadcastMessage("backup --- help");
             Bukkit.broadcastMessage("/backup 或 /b   --- 备份");
             Bukkit.broadcastMessage("/b show    --- 展示备份文件");
             Bukkit.broadcastMessage("/b to [数字]   --- 回到指定档");
+            Bukkit.broadcastMessage("------------------------");
             return true;
         }
 
