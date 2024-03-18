@@ -1,6 +1,7 @@
 com\ccc212\command\BackupCommand.class
 com\ccc212\backupCode\BackupShow.class
 com\ccc212\MyListener.class
+com\ccc212\FolderUtils.class
 com\ccc212\backupCode\BackupManager.class
 com\ccc212\backupCode\BackupTask.class
 com\ccc212\Plugin_1.class

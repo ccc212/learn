@@ -21,7 +21,7 @@ public class BackupManager {
         }
 
         // 生成时间戳
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd-HHmmss");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
         String timestamp = dateFormat.format(new Date());
 
         // 备份文件夹路径
@@ -37,13 +37,6 @@ public class BackupManager {
         }
 
         Arrays.sort(files);
-
-        Bukkit.broadcastMessage("------------------------");
-        Bukkit.broadcastMessage("备份:");
-        for (int i = 0; i < files.length; i++) {
-            Bukkit.broadcastMessage((i+1) + ":  " + files[i].getName());
-        }
-        Bukkit.broadcastMessage("------------------------");
 
         try {
             ZipUtil.toZip(new File("./world"),new File("./backup/" + timestamp + ".zip"));

@@ -1,5 +1,6 @@
 package com.ccc212.command;
 
+import com.ccc212.FolderUtils;
 import com.ccc212.backupCode.BackupManager;
 import com.ccc212.backupCode.BackupShow;
 import com.ccc212.backupCode.BackupTask;
@@ -38,6 +39,10 @@ public class BackupCommand implements CommandExecutor {
         }
 
         if(strings.length == 2 && strings[0].equals("to")){
+            if(!FolderUtils.isFolderEmpty(new File("./backup"))){
+                Bukkit.broadcastMessage("备份文件夹为空");
+            }
+
             try {
                 int num = Integer.parseInt(strings[1]);
                 new BackupTo(num);

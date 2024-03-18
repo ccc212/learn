@@ -17,9 +17,6 @@ public final class Plugin_1 extends JavaPlugin {
         // 注册备份命令
         Bukkit.getPluginCommand("backup").setExecutor(new com.ccc212.command.BackupCommand());
 
-        // 定时任务：每30分钟执行一次备份
-        Bukkit.getScheduler().runTaskTimer(this, new BackupTask(), 0, 20 * 60 * instance.getConfig().getInt("backupGap"));
-
         //生成配置文件
         saveDefaultConfig();
 
