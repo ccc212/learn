@@ -12,8 +12,8 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.scheduler.BukkitTask;
 
 public class MyListener implements Listener {
-    private int taskID;
-    private boolean isPaused = false;
+    private static int taskID;
+    private static boolean isPaused = false;
     private BukkitTask backupTask;
 
     @EventHandler   //处理事件
@@ -57,21 +57,21 @@ public class MyListener implements Listener {
         }
     }
 
-    private void pauseTime() {
+    public static void pauseTime() {
         if (!isPaused) {
+            Bukkit.broadcastMessage("暂停");
             World world = Bukkit.getWorlds().get(0);
-            taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Plugin_1.instance, () -> {
-                if (!isPaused) {
-                    long currentTime = world.getTime();
-                    world.setFullTime(currentTime);
-                }
-            }, 0L, 1L);
-            isPaused = true;
+            taskID = Bukkit.getScheduler().runTask(Plugin_1.instance, () -> {
+                long currentTime = world.getTime();
+                world.setFullTime(currentTime);
+                isPaused = true;
+            }).getTaskId();
         }
     }
 
-    private void resumeTime() {
+    public static void resumeTime() {
         if (isPaused) {
+            Bukkit.broadcastMessage("启动");
             Bukkit.getScheduler().cancelTask(taskID);
             isPaused = false;
         }

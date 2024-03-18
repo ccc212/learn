@@ -1,6 +1,7 @@
 package com.ccc212.command;
 
 import com.ccc212.FolderUtils;
+import com.ccc212.MyListener;
 import com.ccc212.backupCode.BackupManager;
 import com.ccc212.backupCode.BackupShow;
 import com.ccc212.backupCode.BackupTask;
@@ -16,6 +17,16 @@ public class BackupCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
+        if(strings.length == 1 && strings[0].equals("stop")){
+            MyListener.pauseTime();
+            return true;
+        }
+
+        if(strings.length == 1 && strings[0].equals("start")){
+            MyListener.resumeTime();
+            return true;
+        }
+
         if(strings.length == 1 && strings[0].equals("help")){
             Bukkit.broadcastMessage("------------------------");
             Bukkit.broadcastMessage("backup --- help");
