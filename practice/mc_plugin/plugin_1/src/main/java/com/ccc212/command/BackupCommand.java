@@ -17,16 +17,6 @@ public class BackupCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
-        if(strings.length == 1 && strings[0].equals("stop")){
-            MyListener.pauseTime();
-            return true;
-        }
-
-        if(strings.length == 1 && strings[0].equals("start")){
-            MyListener.resumeTime();
-            return true;
-        }
-
         if(strings.length == 1 && strings[0].equals("help")){
             Bukkit.broadcastMessage("------------------------");
             Bukkit.broadcastMessage("backup --- help");

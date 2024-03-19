@@ -4,6 +4,7 @@ import com.ccc212.command.MyCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
+
 public final class Plugin_1 extends JavaPlugin {
     public static Plugin_1 instance;
 
@@ -21,6 +22,10 @@ public final class Plugin_1 extends JavaPlugin {
         saveDefaultConfig();
 
         reloadConfig();
+    }
+
+    public static void main(String[] args) {
+
     }
 
     @Override

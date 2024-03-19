@@ -18,10 +18,6 @@ public class MyListener implements Listener {
 
     @EventHandler   //处理事件
     public void playerJoin(PlayerJoinEvent playerJoinEvent){
-        if (backupTask == null) {
-            startBackupTask();
-        }
-
         playerJoinEvent.setJoinMessage(
                 Plugin_1.instance.getConfig().getString("joinMessage").replace("%player%",
                         playerJoinEvent.getPlayer().getName()));
@@ -39,41 +35,8 @@ public class MyListener implements Listener {
 
             // 当玩家下线时检查是否还有其他玩家在线
             if (Plugin_1.instance.getServer().getOnlinePlayers().size() == 0) { // 在线玩家数量为1，即只剩下本身
-                stopBackupTask();
                 new BackupTask().run();
             }
         }, 20L); // 延迟一秒发送消息，以确保玩家完全离开服务器
-    }
-
-    private void startBackupTask() {
-        int interval = 20 * 60 * Plugin_1.instance.getConfig().getInt("backupGap");
-        // 在异步线程中执行备份任务
-        backupTask = Bukkit.getScheduler().runTaskTimerAsynchronously(Plugin_1.instance, new BackupTask(), 0, interval);
-    }
-
-    private void stopBackupTask() {
-        if (backupTask != null) {
-            backupTask.cancel();
-        }
-    }
-
-    public static void pauseTime() {
-        if (!isPaused) {
-            Bukkit.broadcastMessage("暂停");
-            World world = Bukkit.getWorlds().get(0);
-            taskID = Bukkit.getScheduler().runTask(Plugin_1.instance, () -> {
-                long currentTime = world.getTime();
-                world.setFullTime(currentTime);
-                isPaused = true;
-            }).getTaskId();
-        }
-    }
-
-    public static void resumeTime() {
-        if (isPaused) {
-            Bukkit.broadcastMessage("启动");
-            Bukkit.getScheduler().cancelTask(taskID);
-            isPaused = false;
-        }
     }
 }
