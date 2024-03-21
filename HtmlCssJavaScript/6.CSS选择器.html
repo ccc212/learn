@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS选择器</title>
+    <style>
+        /* 元素选择器 */
+        h2 {
+            color: aqua;
+        }
+
+        /* 类选择器 */
+        .highlight {
+            background-color: yellow;
+        }
+
+        /* id选择器 */
+        #header {
+            font-size: 35px;
+        }
+
+        /* 通用选择器 */
+        * {
+            font-family: 'KaiTi';
+            font-weight: bolder;
+        }
+
+        /* 子元素选择器 */
+        .father > .son {
+            color: yellowgreen;
+        }
+
+        /* 后代选择器 */
+        .father p {
+            color: brown;
+            font-size: larger;
+        }
+
+        /* 相邻元素选择器 */
+        h3 + p {
+            background-color: red;
+        }
+
+        /* 伪类选择器 */
+        #element:hover {
+            background-color: blueviolet;
+        }
+        
+        /* 
+        选中第一个子元素 :first-child
+                        :nth-child()
+                        :active
+        */
+
+        /* 
+        伪元素选择器
+                ::after
+                ::before
+        */
+    </style>
+</head>
+<body>
+    <h1>不同类型的CSS选择器</h1>
+    
+    <h2>元素选择器</h2>
+    <h3 class="highlight">类选择器</h3>
+    <h4 id="header">id选择器</h4>
+
+    <div class="father">
+        <p class="son">子元素选择器</p>
+        <div>
+            <p class="grandson">后代选择器</p>
+        </div>
+    </div>
+
+    <p>这是一个普通p标签</p>
+    <h3>相邻兄弟选择器</h3>
+    <p>另一个p标签</p>
+
+    <h3 id="element">伪类选择器</h3>
+</body>
+</html>

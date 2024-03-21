@@ -1,31 +1,40 @@
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
-import java.nio.file.StandardCopyOption;
 
 public class FolderUtils {
-
-    /**
-     * 将源文件夹复制到目标位置，并覆盖同名文件夹
-     * @param sourceFolderPath 源文件夹路径
-     * @param destinationFolderPath 目标文件夹路径
-     * @throws IOException 如果复制过程中发生错误
-     */
-    public static void copyFolder(String sourceFolderPath, String destinationFolderPath) throws IOException {
-        File sourceFolder = new File(sourceFolderPath);
-        File destinationFolder = new File(destinationFolderPath);
-
-        if (!sourceFolder.exists() || !sourceFolder.isDirectory()) {
-            throw new IllegalArgumentException("源文件夹不存在或不是一个文件夹！");
+    public static void copyFolder(File sourceFolder, File destFolder) throws IOException {
+        if (!destFolder.exists()) {
+            destFolder.mkdirs(); // 创建目标文件夹
         }
 
-        if (destinationFolder.exists()) {
-            // 如果目标文件夹存在，则先删除
-            deleteFolder(destinationFolder);
+        if (sourceFolder.isFile()) {
+            copyFile(sourceFolder, new File(destFolder, sourceFolder.getName()));
         }
 
-        // 复制源文件夹到目标位置
-        Files.copy(sourceFolder.toPath(), destinationFolder.toPath(), StandardCopyOption.REPLACE_EXISTING);
+        // 获取源文件夹下所有文件和文件夹
+        File[] files = sourceFolder.listFiles();
+        if (files != null) {
+            for (File file : files) {
+                if (file.isDirectory()) {
+                    // 如果是文件夹，则递归拷贝文件夹内的内容
+                    copyFolder(file, new File(destFolder, file.getName()));
+                } else {
+                    // 如果是文件，则直接拷贝文件内容
+                    copyFile(file, new File(destFolder, file.getName()));
+                }
+            }
+        }
+    }
+
+    public static void copyFile(File sourceFile, File destFile) throws IOException {
+        try (InputStream input = Files.newInputStream(sourceFile.toPath());
+             OutputStream output = Files.newOutputStream(destFile.toPath())) {
+            byte[] buffer = new byte[1024];
+            int bytesRead;
+            while ((bytesRead = input.read(buffer)) != -1) {
+                output.write(buffer, 0, bytesRead);
+            }
+        }
     }
 
     // 递归删除文件夹及其内容

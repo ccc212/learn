@@ -1,3 +1,0 @@
-joinMessage: "%player% 进入了服务器"
-backupMaxFiles: 5
-backupGap: 60 #分钟

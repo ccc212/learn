@@ -9,31 +9,26 @@ import org.bukkit.command.CommandSender;
 public class TimeCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
-        if (s.equalsIgnoreCase("settimemultiplier")) {
+        if (s.equalsIgnoreCase("setTimeRate")) {
             if (strings.length == 1) {
                 try {
                     double multiplier = Double.parseDouble(strings[0]);
-                    setTimeMultiplier(multiplier);
-                    commandSender.sendMessage("时间倍率已设置为 " + multiplier);
-                } catch (NumberFormatException e) {
+                    setTimeRate(multiplier);
+                    commandSender.sendMessage("时间倍率已设置为 " + multiplier + " 倍");
+                } catch (Exception e) {
                     commandSender.sendMessage("无效的倍率值！");
                 }
             } else {
-                commandSender.sendMessage("用法: /settimemultiplier <倍率>");
+                commandSender.sendMessage("用法: /setTimeRate <倍率>");
             }
             return true;
         }
         return false;
     }
 
-    private void setTimeMultiplier(double multiplier) {
+    public static void setTimeRate(double multiplier) {
         double timeMultiplier = multiplier;
         for (World world : Bukkit.getWorlds()) {
-            world.setGameRuleValue("doDaylightCycle", "true");
-            world.setGameRuleValue("doWeatherCycle", "true");
-            world.setGameRuleValue("doMobSpawning", "true");
-            world.setGameRuleValue("doEntityDrops", "true");
-            world.setGameRuleValue("doTileDrops", "true");
             world.setGameRuleValue("randomTickSpeed", String.valueOf((int) (3 * timeMultiplier)));
         }
     }

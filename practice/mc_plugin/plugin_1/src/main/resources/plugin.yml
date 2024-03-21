@@ -8,3 +8,5 @@ commands:
   backup:
     description: "备份"
     aliases: b
+  setTimeRate:
+    description: "改变时间流速"

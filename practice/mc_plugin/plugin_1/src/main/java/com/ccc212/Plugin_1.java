@@ -1,6 +1,7 @@
 package com.ccc212;
 import com.ccc212.backupCode.BackupTask;
 import com.ccc212.command.MyCommand;
+import com.ccc212.command.TimeCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -17,6 +18,8 @@ public final class Plugin_1 extends JavaPlugin {
 
         // 注册备份命令
         Bukkit.getPluginCommand("backup").setExecutor(new com.ccc212.command.BackupCommand());
+
+        Bukkit.getPluginCommand("setTimeRate").setExecutor(new TimeCommand());
 
         //生成配置文件
         saveDefaultConfig();
