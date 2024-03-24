@@ -15,7 +15,7 @@ public class MyCommand implements CommandExecutor {
             Bukkit.broadcastMessage("------------------------");
             Bukkit.broadcastMessage("ccc212 --- help");
             Bukkit.broadcastMessage("/c say + [话]     --- 匿名讲话");
-            Bukkit.broadcastMessage("/c open    --- 打开你的箱子");
+//            Bukkit.broadcastMessage("/c open    --- 打开你的箱子");
             Bukkit.broadcastMessage("/c reload    --- 重新加载配置文件");
             Bukkit.broadcastMessage("------------------------");
             return true;
@@ -27,12 +27,12 @@ public class MyCommand implements CommandExecutor {
             return true;
         }
 
-        if(strings.length == 1 && strings[0].equals("open")){
-            Inventory inventory = Bukkit.createInventory(null,36, commandSender.getName() +"的箱子");
-            Player player = (Player)commandSender;
-            player.openInventory(inventory);
-            return true;
-        }
+//        if(strings.length == 1 && strings[0].equals("open")){
+//            Inventory inventory = Bukkit.createInventory(null,36, commandSender.getName() +"的箱子");
+//            Player player = (Player)commandSender;
+//            player.openInventory(inventory);
+//            return true;
+//        }
 
         if(strings.length == 1 && strings[0].equals("reload")){
             Plugin_1.instance.reloadConfig();

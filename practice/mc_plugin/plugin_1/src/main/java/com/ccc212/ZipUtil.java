@@ -18,7 +18,7 @@ public class ZipUtil {
      * @param out        压缩文件输出流
      * @throws RuntimeException 压缩失败会抛出运行时异常
      */
-    public static void toZip(File sourceFile, File out) throws RuntimeException {
+    public static void Zip(File sourceFile, File out) throws RuntimeException {
         ZipOutputStream zos = null;
         FileOutputStream fos;
         try {
@@ -76,7 +76,7 @@ public class ZipUtil {
      * @param destDir 目标路径
      */
     @SuppressWarnings("all")
-    public static void decompress(File zipFile, File destDir) {
+    public static void UnZip(File zipFile, File destDir) {
         byte[] buffer = new byte[1024];
         try (ZipInputStream zis = new ZipInputStream(new FileInputStream(zipFile))) {
             ZipEntry entry = zis.getNextEntry();
@@ -88,6 +88,10 @@ public class ZipUtil {
                     File parent = file.getParentFile();
                     if (!parent.exists()) {
                         parent.mkdirs();
+                    }
+                    // 如果目标文件已存在，则先删除
+                    if (file.exists()) {
+                        file.delete();
                     }
                     try (FileOutputStream fos = new FileOutputStream(file)) {
                         int len;

@@ -5,9 +5,7 @@ import java.nio.file.Files;
 
 public class FolderUtils {
     public static void copyFolder(File sourceFolder, File destFolder) throws IOException {
-        if (!destFolder.exists()) {
-            destFolder.mkdirs(); // 创建目标文件夹
-        }
+        destFolder.mkdirs(); // 创建目标文件夹
 
         if (sourceFolder.isFile()) {
             copyFile(sourceFolder, new File(destFolder, sourceFolder.getName()));

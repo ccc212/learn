@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>test</artifactId>
+    <artifactId>FolderTest</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
@@ -13,7 +13,7 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.10.2</version>
-            <scope>test</scope>
+            <scope>FolderTest</scope>
         </dependency>
     </dependencies>
 

@@ -39,7 +39,7 @@ public class BackupManager {
         Arrays.sort(files);
 
         try {
-            ZipUtil.toZip(new File("./world"),new File("./backup/" + timestamp + ".zip"));
+            ZipUtil.Zip(new File("./world"),new File("./backup/" + timestamp + ".zip"));
             Bukkit.broadcastMessage("备份成功");
         }catch (Exception e){
             Bukkit.broadcastMessage("备份失败");
