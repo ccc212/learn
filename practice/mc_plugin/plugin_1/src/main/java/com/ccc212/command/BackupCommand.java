@@ -22,7 +22,7 @@ public class BackupCommand implements CommandExecutor {
             Bukkit.broadcastMessage("backup --- help");
             Bukkit.broadcastMessage("/backup 或 /b   --- 备份");
             Bukkit.broadcastMessage("/b show    --- 展示备份文件");
-            Bukkit.broadcastMessage("/b to [数字]   --- 回到指定档");
+//            Bukkit.broadcastMessage("/b to [数字]   --- 回到指定档");
             Bukkit.broadcastMessage("------------------------");
             return true;
         }
@@ -39,19 +39,19 @@ public class BackupCommand implements CommandExecutor {
             return true;
         }
 
-        if(strings.length == 2 && strings[0].equals("to")){
-            if(!FolderUtils.isFolderEmpty(new File("./backup"))){
-                Bukkit.broadcastMessage("备份文件夹为空");
-            }
-
-            try {
-                int num = Integer.parseInt(strings[1]);
-                new BackupTo(num);
-            } catch (NumberFormatException e) {
-                Bukkit.broadcastMessage("输入数字来回到对应的档");
-                return true;
-            }
-        }
+//        if(strings.length == 2 && strings[0].equals("to")){
+//            if(!FolderUtils.isFolderEmpty(new File("./backup"))){
+//                Bukkit.broadcastMessage("备份文件夹为空");
+//            }
+//
+//            try {
+//                int num = Integer.parseInt(strings[1]);
+//                new BackupTo(num);
+//            } catch (NumberFormatException e) {
+//                Bukkit.broadcastMessage("输入数字来回到对应的档");
+//                return true;
+//            }
+//        }
 
         return false;
     }
