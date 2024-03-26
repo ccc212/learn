@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //创建set集合
+        let fruits = new Set(['apple','orange','banana'])
+        console.log(fruits);
+
+        //add
+        fruits.add('mango')
+        console.log(fruits);
+
+        //delete
+        fruits.delete('banana')
+        console.log(fruits);
+
+        //has
+        console.log(fruits.has('banana'))
+
+        //size
+        console.log(fruits.size);
+
+        //Set => Array
+        let arr = Array.from(fruits)
+        console.log(arr);
+
+        let arr2 = [...fruits]
+        console.log(arr2);
+
+        //扩展运算符: 展开可迭代对象
+        let web = "#.com"
+        let webArr = [...web]
+        console.log(webArr);
+
+        //使用for...of循环遍历Set集合
+        for(let item of fruits) {
+            console.log("for...of",item)
+        }
+        
+        //forEach
+        fruits.forEach((value,index)=>{
+            console.log("forEach",value,"index",index)
+        })
+        
+        //Array => Set
+        let numberArr = [1,2,3,3,2,1]
+        let numberSet = new Set(numberArr)
+    </script>
+</body>
+</html>

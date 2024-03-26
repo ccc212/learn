@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let [x,y] = [1,2]
+        console.log("x:",x,"y:",y);
+
+        let [,,c] = [10,20,30]
+        console.log("c:",c);
+
+        let [A,...B] = [1,2,3,4,5,6]
+        console.log("A:",A,"B:",B);
+
+        let [x2,y2=200] = [100]
+        console.log("x2:",x2,"y2:",y2);
+
+        //两数交换
+        letx3=10
+        lety3=20;//不加分号会报错
+        [x3,y3]=[y3,x3]
+        console.log("x3:", x3, "y3:", y3)
+
+        //对象解构
+        let person = {
+            name:"邓瑞",
+            gender:"男",
+            web:"dengruicode.com"
+        }
+        
+        let {name} =person
+        console.log("name:",name)
+        
+        let {name:userName,gender,web} = person
+        console.log("userName:",userName,"gender:",gender,"web:",web)
+    </script>
+</body>
+</html>

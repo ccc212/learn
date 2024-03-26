@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person {
+            name
+            #web
+            constructor(name, web) {
+                this.name = name
+                this.#web = web
+            }
+
+            get web() {
+                return this.#web
+            }
+
+            set web(value) {
+                this.#web = value
+            }
+
+            info() {
+                // return "姓名:"+this.name +"个人网站："+this.web
+                return `姓名:${this.name} 个人网站:${this.web}`
+            }
+        }
+        let person = new Person("邓瑞","dengruicode.com")
+        console.log(person.web)
+
+        person.web = "123.com"
+        console.log(person.web);
+
+        console.log(person.info());
+
+    </script>
+</body>
+</html>

@@ -21,7 +21,7 @@ public class BackupManager {
         }
 
         // 生成时间戳
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
         String timestamp = dateFormat.format(new Date());
 
         // 备份文件夹路径

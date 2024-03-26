@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //定义数组
+        let arr = [10,11]
+        console.log("arr",arr);
+
+        //push 向末尾添加一个或多个元素，返回修改后数组长度
+        let arrLength = arr.push(12,13)
+        console.log("arr",arr);
+        console.log("arrLength",arrLength);
+
+        //unshift 向开头添加一个或多个元素，返回修改后数组长度
+        arrLength = arr.unshift(8,9)
+        console.log("arr",arr);
+        console.log("arrLength",arrLength);
+
+        //shift 删除第一个元素,返回删除的元素
+        let delElement = arr.shift()
+        console.log("arr",arr);
+        console.log("delElement",delElement);
+
+        //pop 删除第一个元素,返回删除的元素
+        delElement = arr.pop()
+        console.log("arr",arr);
+        console.log("delElement",delElement);
+
+        //删除元素，并返回包含被删除元素的数组splice（要删除元素的索引位置，要删除的元素数量）
+        let delArr = arr.splice(2,2)
+        console.log("arr",arr)
+        console.log("delArr",delArr)
+        
+        //颠倒数组中元素的顺序
+        arr.reverse()
+        console.log("arr",arr)
+
+        //数组中的元素按照首字母顺序排序
+        let arr2 = ["banana","apple","orange"]
+        arr2.sort()
+        console.log("arr2",arr2)
+        
+        let arr3 =[5,20,13,1,4]
+        arr3.sort((a,b)=>a-b)
+        console.log("arr3",arr3)
+        
+        //筛选符合条件的元素，返回一个新的数组
+        let arr4 = [10,11,12,13,14,15]
+        let newArr = arr4.filter((value)=>{
+            return value >= 12
+        })
+        console.log("newArr",newArr)
+
+        //使用for...of循环遍历数组
+        let arr6 = ["邓瑞","dengruicode.com",100]
+        for(let value of arr6) {
+            console.log("for...of",value)
+        }
+        
+        //使用forEach方法来遍历数组
+        arr6.forEach(value => {
+            console.log("for...of",value)
+        })
+    </script>
+</body>
+</html>

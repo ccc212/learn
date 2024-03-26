@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //pending待处理 fulfilled已履行 rejected被驳回
+        let promise = new Promise((resolve,reject) => {
+            // resolve("还钱了")
+            reject("没有还钱")
+        })
+        console.log("promise:",promise);
+
+        promise.then(result => {
+            console.log("result:",result);
+        }).catch(error => {
+            console.log("error:",error);
+        }).finally(()=>{
+            console.log("异步执行结束");
+        })
+    </script>
+</body>
+</html>

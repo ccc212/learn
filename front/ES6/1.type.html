@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //字符串类型string
+        let name="邓瑞"
+        console.log(name)
+        console.log(typeof name)
+        
+        //数值类型number
+        let balance=100;
+        console.log("余额",balance)
+        console.log(typeof balance)
+        
+        //布尔类型
+        let tv=true;
+        console.log("tv",tv)
+        console.log(typeof tv)
+
+        //对象
+        let boy = {
+            name: "张三",
+            age: 20,
+            weight: 60.5
+        };      
+        console.log("boy",boy)
+        console.log(typeof boy)
+
+        //map
+        let girl = new Map([
+            ["name","Lisi"],
+            ["age",18]
+        ])
+        console.log("girl",girl)
+        console.log(typeof girl)
+
+        //set
+        let number = new Set([1,2,3,2,1,"2"])
+        console.log("number",number)
+        console.log(typeof number)
+
+        //数组
+        let arr = ["a","b","c","b",1]
+        console.log("arr",arr)
+        console.log(typeof arr)
+
+        //函数
+        function add(x,y) {
+            console.log(x + y)
+        }
+        add(20,30)
+
+        //类class
+        class Person {
+            name
+            age
+            constructor(name,age) {
+                this.name = name
+                this.age = age
+            }
+
+            info() {
+                console.log("name",this.name,"age",this.age);
+            }
+        }
+
+        let person = new Person("王五",22)
+        person.info()
+    </script>
+</body>
+</html>

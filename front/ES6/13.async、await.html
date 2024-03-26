@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <script>
+
+    //回调地狱是指过度使用嵌套的回调函数,导致代码难以阅读和维护
+    //get请求
+    axios.get('http://127.0.0.1/get').then(response => {
+      console.log("get.data:", response.data)
+      if (response.data.data.web == "dengruicode.com") {
+
+        //get请求2
+        return axios.get('http://127.0.0.1/article/get/id/1').then(response2 => {
+          console.log("get2.data:", response2.data)
+          if (response2.data.data.name == "邓瑞") {
+
+            //get请求3
+            return axios.get('http://127.0.0.1/article/get/search/title/入门').then(response3 => {
+              console.log("get3.data:", response3.data)
+            })
+          }
+        })
+      }
+    }).catch(error => {
+      console.log("get.error:", error)
+    }).finally(() => {
+      console.log("get.finally")
+    })
+
+    //async/await 使用同步的方式编写异步代码, 避免回调地狱
+    //优势 在处理多个异步操作的情况下, 可以使代码更简洁易读
+    const getData = async () => {
+      try {
+        //get请求
+        const response = await axios.get('http://127.0.0.1/get')
+        console.log("async.get.data:", response.data)
+        if (response.data.data.web === "dengruicode.com") {
+
+          //get请求2
+          const response2 = await axios.get('http://127.0.0.1/article/get/id/1')
+          console.log("async.get2.data:", response2.data)
+          if (response2.data.data.name === "邓瑞") {
+
+            //get请求3
+            const response3 = await axios.get('http://127.0.0.1/article/get/search/title/入门')
+            console.log("async.get3.data:", response3.data)
+          }
+        }
+
+      } catch (error) {
+        console.log("async.get.error:", error)
+      } finally {
+        console.log("async.get.finally")
+      }
+    }
+
+    getData()
+
+  </script>
+</body>
+
+</html>

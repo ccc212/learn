@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let teacher = {
+            name: "张三",
+            gender: "男",
+            web: "#.com"
+        }
+        console.log(teacher);
+
+        teacher.height = 175
+        teacher.web = "123.com"
+        console.log(teacher);
+
+        //delete
+        delete teacher.gender
+        console.log(teacher);
+
+        let has = "gender" in teacher
+        console.log(has);
+
+        console.log(Object.keys(teacher).length)
+
+        for(let key in teacher) {
+            console.log("for...in key",key,"value",teacher[key]);
+        }
+
+        console.log(Object.entries(teacher));
+
+        Object.entries(teacher).forEach(([key,value]) => {
+            console.log("for...in key",key,"value",teacher[key]);
+        })
+    </script>
+</body>
+</html>

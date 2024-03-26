@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ec0d005-3c83-4561-a8f5-1ee328235a4d" name="更改" comment="" />
+    <list default="true" id="8ec0d005-3c83-4561-a8f5-1ee328235a4d" name="更改" comment="更改">
+      <change beforePath="$PROJECT_DIR$/../.idea/aws.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/learn.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mc_plugin/plugin_1/src/main/java/com/ccc212/backupCode/BackupManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/mc_plugin/plugin_1/src/main/java/com/ccc212/backupCode/BackupManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/front/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/web/front/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/front/src/components/LoginRegPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/front/src/components/LoginRegPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/front/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/front/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/front/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/front/vue.config.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,9 +37,6 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
-}</component>
   <component name="ProjectId" id="2ZQVpT0KKdz5PdTPrFNuVte0tDc" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -35,32 +45,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "21",
-    "last_opened_file_path": "E:/gitProject/learn/practice/management",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
-    ]
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\gitProject\learn\practice\enrollment_management\src\main\java\com\example\enrollment_management\pojo" />
@@ -88,6 +78,7 @@
       <workItem from="1702442416163" duration="21000" />
       <workItem from="1705290095293" duration="33383000" />
       <workItem from="1705859198373" duration="12202000" />
+      <workItem from="1711377181354" duration="4000" />
     </task>
     <servers />
   </component>
@@ -104,6 +95,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

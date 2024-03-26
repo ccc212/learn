@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+        //从 index.js 文件中导入 title、web、getWeb 变量/函数
+        // import { title as webTitle, web, getWeb } from './index.js'
+        // console.log(webTitle)
+        // console.log(web)
+        // console.log(getWeb())
+
+        //加default
+        // import obj from "./index.js"
+        // console.log(obj.title)
+        // console.log(obj.web)
+        // console.log(obj.getWeb())
+
+        import * as obj from "./index.js"
+        console.log(obj.title)
+        console.log(obj.web)
+        console.log(obj.getWeb())
+    </script>
+</body>
+</html>

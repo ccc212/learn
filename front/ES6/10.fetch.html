@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         /*
+        fetch 是基于 Promise 的 api, 它可以发送http请求并接收服务器返回的响应数据
+        fetch 返回的是一个 Promise 对象
+        */
+
+        //get请求
+        fetch('http://127.0.0.1/get').then(response => {
+            //返回的解析后的json数据会传递给下一个 then() 方法中的回调函数作为参数,这个参数就是 data
+            return response.json() //response.json() 用于将响应数据解析为json格式的数据
+        }).then(data => { //data 解析后的json数据
+            console.log("get.data:", data)
+        }).catch(error => {
+            console.log("get.error:", error.message)
+        }).finally(() => {
+            console.log("get.finally")
+        })
+
+        //post请求 post
+        fetch('http://127.0.0.1/post', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },            
+            body: new URLSearchParams({//URLSearchParams 用于处理键值对类型的数据,并将其编码为url查询字符串
+                name: '邓瑞',
+                web: 'dengruicode.com',
+            }),
+        }).then(response => {
+            return response.json()
+        }).then(data => {
+            console.log("post.data:", data)
+        }).catch(error => {
+            console.log("post.error:", error.message)
+        }).finally(() => {
+            console.log("post.finally")
+        })
+
+        //post请求 postJson
+        fetch('http://127.0.0.1/postJson', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({//JSON.stringify 用于将对象转换为json字符串
+                name: '邓瑞编程',
+                web: 'www.dengruicode.com',
+            }),
+        }).then(response => {
+            return response.json()
+        }).then(data => {
+            console.log("postJson.data:", data)
+        }).catch(error => {
+            console.log("postJson.error:", error.message)
+        }).finally(() => {
+            console.log("postJson.finally")
+        })
+    </script>
+</body>
+</html>
